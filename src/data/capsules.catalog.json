@@ -1,0 +1,3677 @@
+{
+  "product": "THE PILL",
+  "version": "1.7.0",
+  "naming": {
+    "filePattern": "{sourceOriginal}",
+    "rules": [
+      "Every public name is unique",
+      "On-disk file names match sourceOriginal",
+      "No capsule named Reset or Trance (state labels only)",
+      "RESET warm-up remains Start Again / Astral Projection Prep as source",
+      "PRO is THE PILL+ only (pro: true)"
+    ]
+  },
+  "states": [
+    "CALM",
+    "SLEEP",
+    "FOCUS",
+    "EUPHORIA",
+    "RESET",
+    "TRANCE",
+    "DREAM",
+    "ENERGY",
+    "CREATIVE",
+    "GROUND",
+    "PRO"
+  ],
+  "capsules": [
+    {
+      "code": "C-01",
+      "state": "CALM",
+      "name": "Calm ME",
+      "file": "Calm ME.mp3",
+      "sourceOriginal": "Calm ME.mp3",
+      "free": true,
+      "v1": true,
+      "pro": false,
+      "description": "A quiet break to unwind.",
+      "descriptionTr": "Gevşemek için sakin bir mola.",
+      "translations": {
+        "en": {
+          "name": "Calm ME",
+          "description": "A quiet break to unwind."
+        },
+        "tr": {
+          "name": "Calm ME",
+          "description": "Gevşemek için sakin bir mola."
+        },
+        "fr": {
+          "name": "Calm ME",
+          "description": "Une pause pour décompresser."
+        },
+        "es": {
+          "name": "Calm ME",
+          "description": "Una pausa para relajarte."
+        },
+        "ru": {
+          "name": "Calm ME",
+          "description": "Тихая пауза для отдыха."
+        },
+        "de": {
+          "name": "Calm ME",
+          "description": "Eine ruhige Pause zum Abschalten."
+        }
+      }
+    },
+    {
+      "code": "C-02",
+      "state": "CALM",
+      "name": "Serene",
+      "file": "Serene.mp3",
+      "sourceOriginal": "Serene.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A moment of mental stillness.",
+      "descriptionTr": "Zihinsel dinginlik için bir an.",
+      "translations": {
+        "en": {
+          "name": "Serene",
+          "description": "A moment of mental stillness."
+        },
+        "tr": {
+          "name": "Serene",
+          "description": "Zihinsel dinginlik için bir an."
+        },
+        "fr": {
+          "name": "Serene",
+          "description": "Un instant de calme mental."
+        },
+        "es": {
+          "name": "Serene",
+          "description": "Un momento de calma mental."
+        },
+        "ru": {
+          "name": "Serene",
+          "description": "Момент спокойствия ума."
+        },
+        "de": {
+          "name": "Serene",
+          "description": "Ein Moment geistiger Ruhe."
+        }
+      }
+    },
+    {
+      "code": "C-03",
+      "state": "CALM",
+      "name": "Tranquil",
+      "file": "Tranquil.mp3",
+      "sourceOriginal": "Tranquil.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A peaceful, drifting atmosphere.",
+      "descriptionTr": "Huzurlu ve süzülen bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Tranquil",
+          "description": "A peaceful, drifting atmosphere."
+        },
+        "tr": {
+          "name": "Tranquil",
+          "description": "Huzurlu ve süzülen bir atmosfer."
+        },
+        "fr": {
+          "name": "Tranquil",
+          "description": "Une ambiance paisible et flottante."
+        },
+        "es": {
+          "name": "Tranquil",
+          "description": "Un ambiente tranquilo y flotante."
+        },
+        "ru": {
+          "name": "Tranquil",
+          "description": "Спокойная, парящая атмосфера."
+        },
+        "de": {
+          "name": "Tranquil",
+          "description": "Eine friedliche, schwebende Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "C-04",
+      "state": "CALM",
+      "name": "Content",
+      "file": "Content.mp3",
+      "sourceOriginal": "Content.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Pause and enjoy the present.",
+      "descriptionTr": "Dur ve içinde olduğun anı yaşa.",
+      "translations": {
+        "en": {
+          "name": "Content",
+          "description": "Pause and enjoy the present."
+        },
+        "tr": {
+          "name": "Content",
+          "description": "Dur ve içinde olduğun anı yaşa."
+        },
+        "fr": {
+          "name": "Content",
+          "description": "Une pause pour savourer le présent."
+        },
+        "es": {
+          "name": "Content",
+          "description": "Pausa y disfruta del presente."
+        },
+        "ru": {
+          "name": "Content",
+          "description": "Остановись и побудь в настоящем."
+        },
+        "de": {
+          "name": "Content",
+          "description": "Innehalten und den Moment genießen."
+        }
+      }
+    },
+    {
+      "code": "C-05",
+      "state": "CALM",
+      "name": "Kava",
+      "file": "Kava.mp3",
+      "sourceOriginal": "Kava.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An earthy, laid-back mood.",
+      "descriptionTr": "Topraksı ve rahat bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Kava",
+          "description": "An earthy, laid-back mood."
+        },
+        "tr": {
+          "name": "Kava",
+          "description": "Topraksı ve rahat bir atmosfer."
+        },
+        "fr": {
+          "name": "Kava",
+          "description": "Une ambiance terreuse et détendue."
+        },
+        "es": {
+          "name": "Kava",
+          "description": "Un ambiente terrenal y relajado."
+        },
+        "ru": {
+          "name": "Kava",
+          "description": "Приземлённая, расслабленная атмосфера."
+        },
+        "de": {
+          "name": "Kava",
+          "description": "Eine erdige, gelassene Stimmung."
+        }
+      }
+    },
+    {
+      "code": "C-06",
+      "state": "CALM",
+      "name": "AntiMigraine",
+      "file": "AntiMigraine.mp3",
+      "sourceOriginal": "AntiMigraine.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A quiet listening break.",
+      "descriptionTr": "Sessiz bir dinleme molası.",
+      "translations": {
+        "en": {
+          "name": "AntiMigraine",
+          "description": "A quiet listening break."
+        },
+        "tr": {
+          "name": "AntiMigraine",
+          "description": "Sessiz bir dinleme molası."
+        },
+        "fr": {
+          "name": "AntiMigraine",
+          "description": "Une pause d’écoute tranquille."
+        },
+        "es": {
+          "name": "AntiMigraine",
+          "description": "Una pausa de escucha tranquila."
+        },
+        "ru": {
+          "name": "AntiMigraine",
+          "description": "Спокойная пауза для прослушивания."
+        },
+        "de": {
+          "name": "AntiMigraine",
+          "description": "Eine ruhige Hörpause."
+        }
+      }
+    },
+    {
+      "code": "C-07",
+      "state": "CALM",
+      "name": "Gray-B-Gone",
+      "file": "Gray-B-Gone.mp3",
+      "sourceOriginal": "Gray-B-Gone.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A brighter mood for a gray day.",
+      "descriptionTr": "Gri bir güne daha aydınlık bir tema.",
+      "translations": {
+        "en": {
+          "name": "Gray-B-Gone",
+          "description": "A brighter mood for a gray day."
+        },
+        "tr": {
+          "name": "Gray-B-Gone",
+          "description": "Gri bir güne daha aydınlık bir tema."
+        },
+        "fr": {
+          "name": "Gray-B-Gone",
+          "description": "Une touche lumineuse pour un jour gris."
+        },
+        "es": {
+          "name": "Gray-B-Gone",
+          "description": "Un toque luminoso para un día gris."
+        },
+        "ru": {
+          "name": "Gray-B-Gone",
+          "description": "Светлая тема для серого дня."
+        },
+        "de": {
+          "name": "Gray-B-Gone",
+          "description": "Ein helleres Thema für graue Tage."
+        }
+      }
+    },
+    {
+      "code": "C-08",
+      "state": "CALM",
+      "name": "Aftermath",
+      "file": "Aftermath.mp3",
+      "sourceOriginal": "Aftermath.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A gentle pause after intensity.",
+      "descriptionTr": "Yoğunluk sonrası yumuşak bir mola.",
+      "translations": {
+        "en": {
+          "name": "Aftermath",
+          "description": "A gentle pause after intensity."
+        },
+        "tr": {
+          "name": "Aftermath",
+          "description": "Yoğunluk sonrası yumuşak bir mola."
+        },
+        "fr": {
+          "name": "Aftermath",
+          "description": "Une pause douce après l’intensité."
+        },
+        "es": {
+          "name": "Aftermath",
+          "description": "Una pausa suave tras la intensidad."
+        },
+        "ru": {
+          "name": "Aftermath",
+          "description": "Мягкая пауза после интенсивности."
+        },
+        "de": {
+          "name": "Aftermath",
+          "description": "Eine sanfte Pause nach intensiven Momenten."
+        }
+      }
+    },
+    {
+      "code": "S-01",
+      "state": "SLEEP",
+      "name": "Sleeping Angel",
+      "file": "Sleeping Angel.mp3",
+      "sourceOriginal": "Sleeping Angel.mp3",
+      "free": true,
+      "v1": true,
+      "pro": false,
+      "description": "A soft start to your night.",
+      "descriptionTr": "Geceye yumuşak bir başlangıç.",
+      "translations": {
+        "en": {
+          "name": "Sleeping Angel",
+          "description": "A soft start to your night."
+        },
+        "tr": {
+          "name": "Sleeping Angel",
+          "description": "Geceye yumuşak bir başlangıç."
+        },
+        "fr": {
+          "name": "Sleeping Angel",
+          "description": "Un début de nuit en douceur."
+        },
+        "es": {
+          "name": "Sleeping Angel",
+          "description": "Un comienzo suave de la noche."
+        },
+        "ru": {
+          "name": "Sleeping Angel",
+          "description": "Мягкое начало ночи."
+        },
+        "de": {
+          "name": "Sleeping Angel",
+          "description": "Ein sanfter Start in die Nacht."
+        }
+      }
+    },
+    {
+      "code": "S-02",
+      "state": "SLEEP",
+      "name": "Insomniac",
+      "file": "Insomniac.mp3",
+      "sourceOriginal": "Insomniac.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An evening wind-down ritual.",
+      "descriptionTr": "Akşam sakinleşme ritüeli.",
+      "translations": {
+        "en": {
+          "name": "Insomniac",
+          "description": "An evening wind-down ritual."
+        },
+        "tr": {
+          "name": "Insomniac",
+          "description": "Akşam sakinleşme ritüeli."
+        },
+        "fr": {
+          "name": "Insomniac",
+          "description": "Un rituel pour ralentir le soir."
+        },
+        "es": {
+          "name": "Insomniac",
+          "description": "Un ritual para bajar el ritmo de noche."
+        },
+        "ru": {
+          "name": "Insomniac",
+          "description": "Вечерний ритуал отдыха."
+        },
+        "de": {
+          "name": "Insomniac",
+          "description": "Ein Ritual zum abendlichen Abschalten."
+        }
+      }
+    },
+    {
+      "code": "S-03",
+      "state": "SLEEP",
+      "name": "Delta",
+      "file": "Delta.mp3",
+      "sourceOriginal": "Delta.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Deep-rest listening for bedtime.",
+      "descriptionTr": "Uyku öncesi derin dinlenme teması.",
+      "translations": {
+        "en": {
+          "name": "Delta",
+          "description": "Deep-rest listening for bedtime."
+        },
+        "tr": {
+          "name": "Delta",
+          "description": "Uyku öncesi derin dinlenme teması."
+        },
+        "fr": {
+          "name": "Delta",
+          "description": "Une écoute de repos avant le coucher."
+        },
+        "es": {
+          "name": "Delta",
+          "description": "Una escucha de descanso antes de dormir."
+        },
+        "ru": {
+          "name": "Delta",
+          "description": "Тема глубокого отдыха перед сном."
+        },
+        "de": {
+          "name": "Delta",
+          "description": "Ein Ruhethema vor dem Schlafengehen."
+        }
+      }
+    },
+    {
+      "code": "S-04",
+      "state": "SLEEP",
+      "name": "Soft Fall",
+      "file": "Soft Fall.mp3",
+      "sourceOriginal": "Soft Fall.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A slow, sinking atmosphere.",
+      "descriptionTr": "Yavaşça alçalan bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Soft Fall",
+          "description": "A slow, sinking atmosphere."
+        },
+        "tr": {
+          "name": "Soft Fall",
+          "description": "Yavaşça alçalan bir atmosfer."
+        },
+        "fr": {
+          "name": "Soft Fall",
+          "description": "Une ambiance de lente descente."
+        },
+        "es": {
+          "name": "Soft Fall",
+          "description": "Una atmósfera de descenso lento."
+        },
+        "ru": {
+          "name": "Soft Fall",
+          "description": "Атмосфера медленного погружения."
+        },
+        "de": {
+          "name": "Soft Fall",
+          "description": "Eine Atmosphäre langsamen Sinkens."
+        }
+      }
+    },
+    {
+      "code": "S-05",
+      "state": "SLEEP",
+      "name": "Anesthesia",
+      "file": "Anesthesia.mp3",
+      "sourceOriginal": "Anesthesia.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A quiet fade into the night.",
+      "descriptionTr": "Geceye doğru sessiz bir geçiş.",
+      "translations": {
+        "en": {
+          "name": "Anesthesia",
+          "description": "A quiet fade into the night."
+        },
+        "tr": {
+          "name": "Anesthesia",
+          "description": "Geceye doğru sessiz bir geçiş."
+        },
+        "fr": {
+          "name": "Anesthesia",
+          "description": "Un fondu paisible vers la nuit."
+        },
+        "es": {
+          "name": "Anesthesia",
+          "description": "Una transición tranquila hacia la noche."
+        },
+        "ru": {
+          "name": "Anesthesia",
+          "description": "Тихий переход в ночь."
+        },
+        "de": {
+          "name": "Anesthesia",
+          "description": "Ein stiller Übergang in die Nacht."
+        }
+      }
+    },
+    {
+      "code": "S-06",
+      "state": "SLEEP",
+      "name": "Poppy",
+      "file": "Poppy.mp3",
+      "sourceOriginal": "Poppy.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A dark, dreamlike night theme.",
+      "descriptionTr": "Karanlık ve düşsel bir gece teması.",
+      "translations": {
+        "en": {
+          "name": "Poppy",
+          "description": "A dark, dreamlike night theme."
+        },
+        "tr": {
+          "name": "Poppy",
+          "description": "Karanlık ve düşsel bir gece teması."
+        },
+        "fr": {
+          "name": "Poppy",
+          "description": "Un thème nocturne sombre et onirique."
+        },
+        "es": {
+          "name": "Poppy",
+          "description": "Un tema nocturno oscuro y onírico."
+        },
+        "ru": {
+          "name": "Poppy",
+          "description": "Тёмная, сновидческая ночная тема."
+        },
+        "de": {
+          "name": "Poppy",
+          "description": "Ein dunkles, traumhaftes Nachtthema."
+        }
+      }
+    },
+    {
+      "code": "S-07",
+      "state": "SLEEP",
+      "name": "Morpheus",
+      "file": "Morpheus.mp3",
+      "sourceOriginal": "Morpheus.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Warmth and stillness before bed.",
+      "descriptionTr": "Uyku öncesi sıcaklık ve dinginlik.",
+      "translations": {
+        "en": {
+          "name": "Morpheus",
+          "description": "Warmth and stillness before bed."
+        },
+        "tr": {
+          "name": "Morpheus",
+          "description": "Uyku öncesi sıcaklık ve dinginlik."
+        },
+        "fr": {
+          "name": "Morpheus",
+          "description": "Chaleur et calme avant le coucher."
+        },
+        "es": {
+          "name": "Morpheus",
+          "description": "Calidez y quietud antes de dormir."
+        },
+        "ru": {
+          "name": "Morpheus",
+          "description": "Тепло и покой перед сном."
+        },
+        "de": {
+          "name": "Morpheus",
+          "description": "Wärme und Stille vor dem Schlafen."
+        }
+      }
+    },
+    {
+      "code": "F-01",
+      "state": "FOCUS",
+      "name": "Laser Focus",
+      "file": "Laser Focus.mp3",
+      "sourceOriginal": "Laser Focus.mp3",
+      "free": true,
+      "v1": true,
+      "pro": false,
+      "description": "A session centered on one task.",
+      "descriptionTr": "Tek işe odaklı bir seans.",
+      "translations": {
+        "en": {
+          "name": "Laser Focus",
+          "description": "A session centered on one task."
+        },
+        "tr": {
+          "name": "Laser Focus",
+          "description": "Tek işe odaklı bir seans."
+        },
+        "fr": {
+          "name": "Laser Focus",
+          "description": "Une séance centrée sur une tâche."
+        },
+        "es": {
+          "name": "Laser Focus",
+          "description": "Una sesión centrada en una tarea."
+        },
+        "ru": {
+          "name": "Laser Focus",
+          "description": "Сеанс с фокусом на одной задаче."
+        },
+        "de": {
+          "name": "Laser Focus",
+          "description": "Eine Session für eine einzelne Aufgabe."
+        }
+      }
+    },
+    {
+      "code": "F-02",
+      "state": "FOCUS",
+      "name": "Beta",
+      "file": "Beta.mp3",
+      "sourceOriginal": "Beta.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An alert, attentive listening theme.",
+      "descriptionTr": "Uyanıklık ve dikkat temalı dinleme.",
+      "translations": {
+        "en": {
+          "name": "Beta",
+          "description": "An alert, attentive listening theme."
+        },
+        "tr": {
+          "name": "Beta",
+          "description": "Uyanıklık ve dikkat temalı dinleme."
+        },
+        "fr": {
+          "name": "Beta",
+          "description": "Un thème d’écoute attentif et éveillé."
+        },
+        "es": {
+          "name": "Beta",
+          "description": "Un tema de escucha atento y despierto."
+        },
+        "ru": {
+          "name": "Beta",
+          "description": "Тема бодрости и внимания."
+        },
+        "de": {
+          "name": "Beta",
+          "description": "Ein aufmerksames, waches Hörthema."
+        }
+      }
+    },
+    {
+      "code": "F-03",
+      "state": "FOCUS",
+      "name": "Brain +",
+      "file": "Brain +.mp3",
+      "sourceOriginal": "Brain +.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Space to think through an idea.",
+      "descriptionTr": "Bir fikri düşünmek için alan.",
+      "translations": {
+        "en": {
+          "name": "Brain +",
+          "description": "Space to think through an idea."
+        },
+        "tr": {
+          "name": "Brain +",
+          "description": "Bir fikri düşünmek için alan."
+        },
+        "fr": {
+          "name": "Brain +",
+          "description": "De l’espace pour réfléchir à une idée."
+        },
+        "es": {
+          "name": "Brain +",
+          "description": "Espacio para pensar una idea."
+        },
+        "ru": {
+          "name": "Brain +",
+          "description": "Пространство для размышления."
+        },
+        "de": {
+          "name": "Brain +",
+          "description": "Raum, um eine Idee zu durchdenken."
+        }
+      }
+    },
+    {
+      "code": "F-04",
+      "state": "FOCUS",
+      "name": "Condition",
+      "file": "Condition.mp3",
+      "sourceOriginal": "Condition.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A ritual before focused work.",
+      "descriptionTr": "Odaklı çalışma öncesi bir ritüel.",
+      "translations": {
+        "en": {
+          "name": "Condition",
+          "description": "A ritual before focused work."
+        },
+        "tr": {
+          "name": "Condition",
+          "description": "Odaklı çalışma öncesi bir ritüel."
+        },
+        "fr": {
+          "name": "Condition",
+          "description": "Un rituel avant un travail concentré."
+        },
+        "es": {
+          "name": "Condition",
+          "description": "Un ritual antes del trabajo concentrado."
+        },
+        "ru": {
+          "name": "Condition",
+          "description": "Ритуал перед сосредоточенной работой."
+        },
+        "de": {
+          "name": "Condition",
+          "description": "Ein Ritual vor konzentrierter Arbeit."
+        }
+      }
+    },
+    {
+      "code": "F-05",
+      "state": "FOCUS",
+      "name": "Confidence",
+      "file": "Confidence.mp3",
+      "sourceOriginal": "Confidence.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of confidence and resolve.",
+      "descriptionTr": "Özgüven ve kararlılık teması.",
+      "translations": {
+        "en": {
+          "name": "Confidence",
+          "description": "A theme of confidence and resolve."
+        },
+        "tr": {
+          "name": "Confidence",
+          "description": "Özgüven ve kararlılık teması."
+        },
+        "fr": {
+          "name": "Confidence",
+          "description": "Un thème de confiance et de résolution."
+        },
+        "es": {
+          "name": "Confidence",
+          "description": "Un tema de confianza y decisión."
+        },
+        "ru": {
+          "name": "Confidence",
+          "description": "Тема уверенности и решимости."
+        },
+        "de": {
+          "name": "Confidence",
+          "description": "Ein Thema von Selbstvertrauen und Entschlossenheit."
+        }
+      }
+    },
+    {
+      "code": "F-06",
+      "state": "FOCUS",
+      "name": "Ginko",
+      "file": "Ginko.mp3",
+      "sourceOriginal": "Ginko.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Clear thinking, one idea at a time.",
+      "descriptionTr": "Her seferinde tek fikre alan aç.",
+      "translations": {
+        "en": {
+          "name": "Ginko",
+          "description": "Clear thinking, one idea at a time."
+        },
+        "tr": {
+          "name": "Ginko",
+          "description": "Her seferinde tek fikre alan aç."
+        },
+        "fr": {
+          "name": "Ginko",
+          "description": "Une idée à la fois, en toute clarté."
+        },
+        "es": {
+          "name": "Ginko",
+          "description": "Una idea a la vez, con claridad."
+        },
+        "ru": {
+          "name": "Ginko",
+          "description": "Ясность, одна мысль за раз."
+        },
+        "de": {
+          "name": "Ginko",
+          "description": "Klar denken, eine Idee nach der anderen."
+        }
+      }
+    },
+    {
+      "code": "F-07",
+      "state": "FOCUS",
+      "name": "Gamma",
+      "file": "Gamma.mp3",
+      "sourceOriginal": "Gamma.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A listening theme for close attention.",
+      "descriptionTr": "Ayrıntılara dikkat temalı bir seans.",
+      "translations": {
+        "en": {
+          "name": "Gamma",
+          "description": "A listening theme for close attention."
+        },
+        "tr": {
+          "name": "Gamma",
+          "description": "Ayrıntılara dikkat temalı bir seans."
+        },
+        "fr": {
+          "name": "Gamma",
+          "description": "Un thème d’écoute attentif aux détails."
+        },
+        "es": {
+          "name": "Gamma",
+          "description": "Un tema de escucha atento al detalle."
+        },
+        "ru": {
+          "name": "Gamma",
+          "description": "Тема внимания к деталям."
+        },
+        "de": {
+          "name": "Gamma",
+          "description": "Ein Hörthema für genaue Aufmerksamkeit."
+        }
+      }
+    },
+    {
+      "code": "E-01",
+      "state": "EUPHORIA",
+      "name": "Euphoria Box",
+      "file": "Euphoria Box.mp3",
+      "sourceOriginal": "Euphoria Box.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An expansive, uplifting mood.",
+      "descriptionTr": "Geniş ve neşeli bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Euphoria Box",
+          "description": "An expansive, uplifting mood."
+        },
+        "tr": {
+          "name": "Euphoria Box",
+          "description": "Geniş ve neşeli bir atmosfer."
+        },
+        "fr": {
+          "name": "Euphoria Box",
+          "description": "Une ambiance ample et joyeuse."
+        },
+        "es": {
+          "name": "Euphoria Box",
+          "description": "Un ambiente amplio y alegre."
+        },
+        "ru": {
+          "name": "Euphoria Box",
+          "description": "Просторная, радостная атмосфера."
+        },
+        "de": {
+          "name": "Euphoria Box",
+          "description": "Eine weite, heitere Stimmung."
+        }
+      }
+    },
+    {
+      "code": "E-02",
+      "state": "EUPHORIA",
+      "name": "Bliss",
+      "file": "Bliss.mp3",
+      "sourceOriginal": "Bliss.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Warmth, openness and closeness.",
+      "descriptionTr": "Sıcaklık, açıklık ve yakınlık.",
+      "translations": {
+        "en": {
+          "name": "Bliss",
+          "description": "Warmth, openness and closeness."
+        },
+        "tr": {
+          "name": "Bliss",
+          "description": "Sıcaklık, açıklık ve yakınlık."
+        },
+        "fr": {
+          "name": "Bliss",
+          "description": "Chaleur, ouverture et proximité."
+        },
+        "es": {
+          "name": "Bliss",
+          "description": "Calidez, apertura y cercanía."
+        },
+        "ru": {
+          "name": "Bliss",
+          "description": "Тепло, открытость и близость."
+        },
+        "de": {
+          "name": "Bliss",
+          "description": "Wärme, Offenheit und Nähe."
+        }
+      }
+    },
+    {
+      "code": "E-03",
+      "state": "EUPHORIA",
+      "name": "Quick Happy",
+      "file": "Quick Happy.mp3",
+      "sourceOriginal": "Quick Happy.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A brief, cheerful listening break.",
+      "descriptionTr": "Kısa ve neşeli bir dinleme molası.",
+      "translations": {
+        "en": {
+          "name": "Quick Happy",
+          "description": "A brief, cheerful listening break."
+        },
+        "tr": {
+          "name": "Quick Happy",
+          "description": "Kısa ve neşeli bir dinleme molası."
+        },
+        "fr": {
+          "name": "Quick Happy",
+          "description": "Une courte pause d’écoute joyeuse."
+        },
+        "es": {
+          "name": "Quick Happy",
+          "description": "Una breve pausa de escucha alegre."
+        },
+        "ru": {
+          "name": "Quick Happy",
+          "description": "Короткая, радостная пауза."
+        },
+        "de": {
+          "name": "Quick Happy",
+          "description": "Eine kurze, fröhliche Hörpause."
+        }
+      }
+    },
+    {
+      "code": "E-04",
+      "state": "EUPHORIA",
+      "name": "AntiSad",
+      "file": "AntiSad.mp3",
+      "sourceOriginal": "AntiSad.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A lighter theme for heavy days.",
+      "descriptionTr": "Ağır günler için hafif bir tema.",
+      "translations": {
+        "en": {
+          "name": "AntiSad",
+          "description": "A lighter theme for heavy days."
+        },
+        "tr": {
+          "name": "AntiSad",
+          "description": "Ağır günler için hafif bir tema."
+        },
+        "fr": {
+          "name": "AntiSad",
+          "description": "Un thème léger pour les jours difficiles."
+        },
+        "es": {
+          "name": "AntiSad",
+          "description": "Un tema ligero para días difíciles."
+        },
+        "ru": {
+          "name": "AntiSad",
+          "description": "Лёгкая тема для тяжёлых дней."
+        },
+        "de": {
+          "name": "AntiSad",
+          "description": "Ein leichtes Thema für schwere Tage."
+        }
+      }
+    },
+    {
+      "code": "E-05",
+      "state": "EUPHORIA",
+      "name": "Afterglow",
+      "file": "Afterglow.mp3",
+      "sourceOriginal": "Afterglow.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "The quiet glow after a high point.",
+      "descriptionTr": "Güzel bir anın ardından kalan ışıltı.",
+      "translations": {
+        "en": {
+          "name": "Afterglow",
+          "description": "The quiet glow after a high point."
+        },
+        "tr": {
+          "name": "Afterglow",
+          "description": "Güzel bir anın ardından kalan ışıltı."
+        },
+        "fr": {
+          "name": "Afterglow",
+          "description": "La lueur calme après un beau moment."
+        },
+        "es": {
+          "name": "Afterglow",
+          "description": "El brillo tranquilo tras un buen momento."
+        },
+        "ru": {
+          "name": "Afterglow",
+          "description": "Тихий свет после яркого момента."
+        },
+        "de": {
+          "name": "Afterglow",
+          "description": "Der stille Nachglanz eines schönen Moments."
+        }
+      }
+    },
+    {
+      "code": "E-06",
+      "state": "EUPHORIA",
+      "name": "Victory",
+      "file": "Victory.mp3",
+      "sourceOriginal": "Victory.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of triumph and celebration.",
+      "descriptionTr": "Zafer ve kutlama teması.",
+      "translations": {
+        "en": {
+          "name": "Victory",
+          "description": "A theme of triumph and celebration."
+        },
+        "tr": {
+          "name": "Victory",
+          "description": "Zafer ve kutlama teması."
+        },
+        "fr": {
+          "name": "Victory",
+          "description": "Un thème de triomphe et de fête."
+        },
+        "es": {
+          "name": "Victory",
+          "description": "Un tema de triunfo y celebración."
+        },
+        "ru": {
+          "name": "Victory",
+          "description": "Тема триумфа и праздника."
+        },
+        "de": {
+          "name": "Victory",
+          "description": "Ein Thema von Triumph und Feiern."
+        }
+      }
+    },
+    {
+      "code": "E-07",
+      "state": "EUPHORIA",
+      "name": "5HTP",
+      "file": "5HTP.mp3",
+      "sourceOriginal": "5HTP.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A gentle, quietly joyful mood.",
+      "descriptionTr": "Yumuşak ve sessiz bir sevinç teması.",
+      "translations": {
+        "en": {
+          "name": "5HTP",
+          "description": "A gentle, quietly joyful mood."
+        },
+        "tr": {
+          "name": "5HTP",
+          "description": "Yumuşak ve sessiz bir sevinç teması."
+        },
+        "fr": {
+          "name": "5HTP",
+          "description": "Une joie douce et discrète."
+        },
+        "es": {
+          "name": "5HTP",
+          "description": "Una alegría suave y tranquila."
+        },
+        "ru": {
+          "name": "5HTP",
+          "description": "Мягкая, тихая радость."
+        },
+        "de": {
+          "name": "5HTP",
+          "description": "Eine sanfte, stille Freude."
+        }
+      }
+    },
+    {
+      "code": "E-08",
+      "state": "EUPHORIA",
+      "name": "!RAVE!",
+      "file": "!RAVE!.mp3",
+      "sourceOriginal": "!RAVE!.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A nightlife and shared-rhythm theme.",
+      "descriptionTr": "Gece hayatı ve ortak ritim teması.",
+      "translations": {
+        "en": {
+          "name": "!RAVE!",
+          "description": "A nightlife and shared-rhythm theme."
+        },
+        "tr": {
+          "name": "!RAVE!",
+          "description": "Gece hayatı ve ortak ritim teması."
+        },
+        "fr": {
+          "name": "!RAVE!",
+          "description": "Un thème de nuit et de rythme partagé."
+        },
+        "es": {
+          "name": "!RAVE!",
+          "description": "Un tema de vida nocturna y ritmo compartido."
+        },
+        "ru": {
+          "name": "!RAVE!",
+          "description": "Тема ночной жизни и общего ритма."
+        },
+        "de": {
+          "name": "!RAVE!",
+          "description": "Ein Thema von Nachtleben und gemeinsamem Rhythmus."
+        }
+      }
+    },
+    {
+      "code": "R-01",
+      "state": "RESET",
+      "name": "Reset",
+      "file": "Reset.mp3",
+      "sourceOriginal": "Reset.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A fresh start between tasks.",
+      "descriptionTr": "İki iş arasında yeni bir başlangıç.",
+      "translations": {
+        "en": {
+          "name": "Reset",
+          "description": "A fresh start between tasks."
+        },
+        "tr": {
+          "name": "Reset",
+          "description": "İki iş arasında yeni bir başlangıç."
+        },
+        "fr": {
+          "name": "Reset",
+          "description": "Un nouveau départ entre deux tâches."
+        },
+        "es": {
+          "name": "Reset",
+          "description": "Un nuevo comienzo entre tareas."
+        },
+        "ru": {
+          "name": "Reset",
+          "description": "Новое начало между задачами."
+        },
+        "de": {
+          "name": "Reset",
+          "description": "Ein Neuanfang zwischen Aufgaben."
+        }
+      }
+    },
+    {
+      "code": "R-02",
+      "state": "RESET",
+      "name": "Hangover Cure",
+      "file": "Hangover Cure.mp3",
+      "sourceOriginal": "Hangover Cure.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A gentle morning listening break.",
+      "descriptionTr": "Sabah için yumuşak bir dinleme molası.",
+      "translations": {
+        "en": {
+          "name": "Hangover Cure",
+          "description": "A gentle morning listening break."
+        },
+        "tr": {
+          "name": "Hangover Cure",
+          "description": "Sabah için yumuşak bir dinleme molası."
+        },
+        "fr": {
+          "name": "Hangover Cure",
+          "description": "Une douce pause d’écoute matinale."
+        },
+        "es": {
+          "name": "Hangover Cure",
+          "description": "Una suave pausa de escucha matutina."
+        },
+        "ru": {
+          "name": "Hangover Cure",
+          "description": "Мягкая утренняя пауза."
+        },
+        "de": {
+          "name": "Hangover Cure",
+          "description": "Eine sanfte morgendliche Hörpause."
+        }
+      }
+    },
+    {
+      "code": "R-03",
+      "state": "RESET",
+      "name": "QUIT!",
+      "file": "QUIT!.mp3",
+      "sourceOriginal": "QUIT!.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of breaking old patterns.",
+      "descriptionTr": "Eski kalıpları geride bırakma teması.",
+      "translations": {
+        "en": {
+          "name": "QUIT!",
+          "description": "A theme of breaking old patterns."
+        },
+        "tr": {
+          "name": "QUIT!",
+          "description": "Eski kalıpları geride bırakma teması."
+        },
+        "fr": {
+          "name": "QUIT!",
+          "description": "Un thème pour quitter les vieux schémas."
+        },
+        "es": {
+          "name": "QUIT!",
+          "description": "Un tema de dejar atrás viejos patrones."
+        },
+        "ru": {
+          "name": "QUIT!",
+          "description": "Тема выхода из старых привычек."
+        },
+        "de": {
+          "name": "QUIT!",
+          "description": "Ein Thema zum Verlassen alter Muster."
+        }
+      }
+    },
+    {
+      "code": "R-04",
+      "state": "RESET",
+      "name": "Prozium",
+      "file": "Prozium.mp3",
+      "sourceOriginal": "Prozium.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An even, emotionally neutral atmosphere.",
+      "descriptionTr": "Dengeli ve duygusal olarak nötr atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Prozium",
+          "description": "An even, emotionally neutral atmosphere."
+        },
+        "tr": {
+          "name": "Prozium",
+          "description": "Dengeli ve duygusal olarak nötr atmosfer."
+        },
+        "fr": {
+          "name": "Prozium",
+          "description": "Une ambiance stable et émotionnellement neutre."
+        },
+        "es": {
+          "name": "Prozium",
+          "description": "Un ambiente estable y emocionalmente neutro."
+        },
+        "ru": {
+          "name": "Prozium",
+          "description": "Ровная, эмоционально нейтральная атмосфера."
+        },
+        "de": {
+          "name": "Prozium",
+          "description": "Eine ausgeglichene, emotional neutrale Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "R-05",
+      "state": "RESET",
+      "name": "Extend",
+      "file": "Extend.mp3",
+      "sourceOriginal": "Extend.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Explore the feeling of passing time.",
+      "descriptionTr": "Zamanın geçiş hissini keşfet.",
+      "translations": {
+        "en": {
+          "name": "Extend",
+          "description": "Explore the feeling of passing time."
+        },
+        "tr": {
+          "name": "Extend",
+          "description": "Zamanın geçiş hissini keşfet."
+        },
+        "fr": {
+          "name": "Extend",
+          "description": "Explorez la sensation du temps qui passe."
+        },
+        "es": {
+          "name": "Extend",
+          "description": "Explora la sensación del paso del tiempo."
+        },
+        "ru": {
+          "name": "Extend",
+          "description": "Исследуй ощущение течения времени."
+        },
+        "de": {
+          "name": "Extend",
+          "description": "Erkunde das Gefühl vergehender Zeit."
+        }
+      }
+    },
+    {
+      "code": "T-01",
+      "state": "TRANCE",
+      "name": "Genesis",
+      "file": "Genesis.mp3",
+      "sourceOriginal": "Genesis.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An introduction to immersive listening.",
+      "descriptionTr": "Derin dinlemeye bir giriş.",
+      "translations": {
+        "en": {
+          "name": "Genesis",
+          "description": "An introduction to immersive listening."
+        },
+        "tr": {
+          "name": "Genesis",
+          "description": "Derin dinlemeye bir giriş."
+        },
+        "fr": {
+          "name": "Genesis",
+          "description": "Une introduction à l’écoute immersive."
+        },
+        "es": {
+          "name": "Genesis",
+          "description": "Una introducción a la escucha inmersiva."
+        },
+        "ru": {
+          "name": "Genesis",
+          "description": "Введение в погружение в звук."
+        },
+        "de": {
+          "name": "Genesis",
+          "description": "Ein Einstieg ins immersive Hören."
+        }
+      }
+    },
+    {
+      "code": "T-02",
+      "state": "TRANCE",
+      "name": "Theta",
+      "file": "Theta.mp3",
+      "sourceOriginal": "Theta.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A drifting, dreamlike atmosphere.",
+      "descriptionTr": "Süzülen ve düşsel bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Theta",
+          "description": "A drifting, dreamlike atmosphere."
+        },
+        "tr": {
+          "name": "Theta",
+          "description": "Süzülen ve düşsel bir atmosfer."
+        },
+        "fr": {
+          "name": "Theta",
+          "description": "Une ambiance flottante et onirique."
+        },
+        "es": {
+          "name": "Theta",
+          "description": "Un ambiente flotante y onírico."
+        },
+        "ru": {
+          "name": "Theta",
+          "description": "Парящая, сновидческая атмосфера."
+        },
+        "de": {
+          "name": "Theta",
+          "description": "Eine schwebende, traumhafte Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "T-03",
+      "state": "TRANCE",
+      "name": "Alpha",
+      "file": "Alpha.mp3",
+      "sourceOriginal": "Alpha.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Between wakefulness and daydreaming.",
+      "descriptionTr": "Uyanıklık ile hayal kurma arasında.",
+      "translations": {
+        "en": {
+          "name": "Alpha",
+          "description": "Between wakefulness and daydreaming."
+        },
+        "tr": {
+          "name": "Alpha",
+          "description": "Uyanıklık ile hayal kurma arasında."
+        },
+        "fr": {
+          "name": "Alpha",
+          "description": "Entre éveil et rêverie."
+        },
+        "es": {
+          "name": "Alpha",
+          "description": "Entre vigilia y ensueño."
+        },
+        "ru": {
+          "name": "Alpha",
+          "description": "Между бодрствованием и грёзами."
+        },
+        "de": {
+          "name": "Alpha",
+          "description": "Zwischen Wachsein und Tagträumen."
+        }
+      }
+    },
+    {
+      "code": "T-04",
+      "state": "TRANCE",
+      "name": "Trip",
+      "file": "Trip.mp3",
+      "sourceOriginal": "Trip.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An open-ended journey of imagination.",
+      "descriptionTr": "Hayal gücünde açık uçlu bir yolculuk.",
+      "translations": {
+        "en": {
+          "name": "Trip",
+          "description": "An open-ended journey of imagination."
+        },
+        "tr": {
+          "name": "Trip",
+          "description": "Hayal gücünde açık uçlu bir yolculuk."
+        },
+        "fr": {
+          "name": "Trip",
+          "description": "Un voyage imaginaire sans destination."
+        },
+        "es": {
+          "name": "Trip",
+          "description": "Un viaje imaginativo sin destino fijo."
+        },
+        "ru": {
+          "name": "Trip",
+          "description": "Путешествие воображения без заданной цели."
+        },
+        "de": {
+          "name": "Trip",
+          "description": "Eine offene Reise der Fantasie."
+        }
+      }
+    },
+    {
+      "code": "T-05",
+      "state": "TRANCE",
+      "name": "Desert Bloom",
+      "file": "Desert Bloom.mp3",
+      "sourceOriginal": "Desert Bloom.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A desert-inspired inner journey.",
+      "descriptionTr": "Çölden ilham alan bir iç yolculuk.",
+      "translations": {
+        "en": {
+          "name": "Desert Bloom",
+          "description": "A desert-inspired inner journey."
+        },
+        "tr": {
+          "name": "Desert Bloom",
+          "description": "Çölden ilham alan bir iç yolculuk."
+        },
+        "fr": {
+          "name": "Desert Bloom",
+          "description": "Un voyage intérieur inspiré du désert."
+        },
+        "es": {
+          "name": "Desert Bloom",
+          "description": "Un viaje interior inspirado en el desierto."
+        },
+        "ru": {
+          "name": "Desert Bloom",
+          "description": "Внутреннее путешествие в образах пустыни."
+        },
+        "de": {
+          "name": "Desert Bloom",
+          "description": "Eine innere Reise mit Wüstenbildern."
+        }
+      }
+    },
+    {
+      "code": "T-06",
+      "state": "TRANCE",
+      "name": "Oracle",
+      "file": "Oracle.mp3",
+      "sourceOriginal": "Oracle.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An unfamiliar, nature-inspired atmosphere.",
+      "descriptionTr": "Doğadan ilham alan yabancı bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Oracle",
+          "description": "An unfamiliar, nature-inspired atmosphere."
+        },
+        "tr": {
+          "name": "Oracle",
+          "description": "Doğadan ilham alan yabancı bir atmosfer."
+        },
+        "fr": {
+          "name": "Oracle",
+          "description": "Une ambiance insolite inspirée de la nature."
+        },
+        "es": {
+          "name": "Oracle",
+          "description": "Un ambiente extraño inspirado en la naturaleza."
+        },
+        "ru": {
+          "name": "Oracle",
+          "description": "Незнакомая атмосфера, вдохновлённая природой."
+        },
+        "de": {
+          "name": "Oracle",
+          "description": "Eine fremde, naturinspirierte Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "T-07",
+      "state": "TRANCE",
+      "name": "Breakthrough",
+      "file": "Breakthrough.mp3",
+      "sourceOriginal": "Breakthrough.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An intense threshold-crossing theme.",
+      "descriptionTr": "Yoğun bir eşik aşma teması.",
+      "translations": {
+        "en": {
+          "name": "Breakthrough",
+          "description": "An intense threshold-crossing theme."
+        },
+        "tr": {
+          "name": "Breakthrough",
+          "description": "Yoğun bir eşik aşma teması."
+        },
+        "fr": {
+          "name": "Breakthrough",
+          "description": "Un thème intense de franchissement."
+        },
+        "es": {
+          "name": "Breakthrough",
+          "description": "Un tema intenso de cruzar un umbral."
+        },
+        "ru": {
+          "name": "Breakthrough",
+          "description": "Интенсивная тема перехода через порог."
+        },
+        "de": {
+          "name": "Breakthrough",
+          "description": "Ein intensives Thema des Überschreitens."
+        }
+      }
+    },
+    {
+      "code": "T-08",
+      "state": "TRANCE",
+      "name": "Lucy",
+      "file": "Lucy.mp3",
+      "sourceOriginal": "Lucy.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of shifting patterns and color.",
+      "descriptionTr": "Değişen desenler ve renkler teması.",
+      "translations": {
+        "en": {
+          "name": "Lucy",
+          "description": "A theme of shifting patterns and color."
+        },
+        "tr": {
+          "name": "Lucy",
+          "description": "Değişen desenler ve renkler teması."
+        },
+        "fr": {
+          "name": "Lucy",
+          "description": "Un thème de motifs et couleurs changeants."
+        },
+        "es": {
+          "name": "Lucy",
+          "description": "Un tema de patrones y colores cambiantes."
+        },
+        "ru": {
+          "name": "Lucy",
+          "description": "Тема меняющихся узоров и цветов."
+        },
+        "de": {
+          "name": "Lucy",
+          "description": "Ein Thema wechselnder Muster und Farben."
+        }
+      }
+    },
+    {
+      "code": "T-09",
+      "state": "TRANCE",
+      "name": "Kaleidoscope",
+      "file": "Kaleidoscope.mp3",
+      "sourceOriginal": "Kaleidoscope.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Colorful, abstract listening imagery.",
+      "descriptionTr": "Renkli ve soyut dinleme imgeleri.",
+      "translations": {
+        "en": {
+          "name": "Kaleidoscope",
+          "description": "Colorful, abstract listening imagery."
+        },
+        "tr": {
+          "name": "Kaleidoscope",
+          "description": "Renkli ve soyut dinleme imgeleri."
+        },
+        "fr": {
+          "name": "Kaleidoscope",
+          "description": "Des images d’écoute colorées et abstraites."
+        },
+        "es": {
+          "name": "Kaleidoscope",
+          "description": "Imágenes sonoras coloridas y abstractas."
+        },
+        "ru": {
+          "name": "Kaleidoscope",
+          "description": "Красочные, абстрактные образы."
+        },
+        "de": {
+          "name": "Kaleidoscope",
+          "description": "Bunte, abstrakte Bilder zum Hören."
+        }
+      }
+    },
+    {
+      "code": "T-10",
+      "state": "TRANCE",
+      "name": "Weightless",
+      "file": "Weightless.mp3",
+      "sourceOriginal": "Weightless.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An imagined sense of floating and distance.",
+      "descriptionTr": "Hayali süzülme ve uzaklık teması.",
+      "translations": {
+        "en": {
+          "name": "Weightless",
+          "description": "An imagined sense of floating and distance."
+        },
+        "tr": {
+          "name": "Weightless",
+          "description": "Hayali süzülme ve uzaklık teması."
+        },
+        "fr": {
+          "name": "Weightless",
+          "description": "Une sensation imaginaire de flottement et de distance."
+        },
+        "es": {
+          "name": "Weightless",
+          "description": "Una sensación imaginaria de flotación y distancia."
+        },
+        "ru": {
+          "name": "Weightless",
+          "description": "Воображаемое парение и расстояние."
+        },
+        "de": {
+          "name": "Weightless",
+          "description": "Ein vorgestelltes Gefühl von Schweben und Ferne."
+        }
+      }
+    },
+    {
+      "code": "T-11",
+      "state": "TRANCE",
+      "name": "Slow Motion",
+      "file": "Slow Motion.mp3",
+      "sourceOriginal": "Slow Motion.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A slow, otherworldly drifting theme.",
+      "descriptionTr": "Yavaş ve yabancı bir süzülme teması.",
+      "translations": {
+        "en": {
+          "name": "Slow Motion",
+          "description": "A slow, otherworldly drifting theme."
+        },
+        "tr": {
+          "name": "Slow Motion",
+          "description": "Yavaş ve yabancı bir süzülme teması."
+        },
+        "fr": {
+          "name": "Slow Motion",
+          "description": "Une dérive lente et irréelle."
+        },
+        "es": {
+          "name": "Slow Motion",
+          "description": "Una deriva lenta e irreal."
+        },
+        "ru": {
+          "name": "Slow Motion",
+          "description": "Медленное, нездешнее парение."
+        },
+        "de": {
+          "name": "Slow Motion",
+          "description": "Ein langsames, unwirkliches Driften."
+        }
+      }
+    },
+    {
+      "code": "T-12",
+      "state": "TRANCE",
+      "name": "Sonoran",
+      "file": "Sonoran.mp3",
+      "sourceOriginal": "Sonoran.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An intense, unfamiliar listening journey.",
+      "descriptionTr": "Yoğun ve alışılmadık bir ses yolculuğu.",
+      "translations": {
+        "en": {
+          "name": "Sonoran",
+          "description": "An intense, unfamiliar listening journey."
+        },
+        "tr": {
+          "name": "Sonoran",
+          "description": "Yoğun ve alışılmadık bir ses yolculuğu."
+        },
+        "fr": {
+          "name": "Sonoran",
+          "description": "Un voyage sonore intense et insolite."
+        },
+        "es": {
+          "name": "Sonoran",
+          "description": "Un viaje sonoro intenso e inusual."
+        },
+        "ru": {
+          "name": "Sonoran",
+          "description": "Интенсивное, необычное звуковое путешествие."
+        },
+        "de": {
+          "name": "Sonoran",
+          "description": "Eine intensive, ungewohnte Klangreise."
+        }
+      }
+    },
+    {
+      "code": "T-13",
+      "state": "TRANCE",
+      "name": "Epsilon",
+      "file": "Epsilon.mp3",
+      "sourceOriginal": "Epsilon.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of distance and vast space.",
+      "descriptionTr": "Uzaklık ve engin boşluk teması.",
+      "translations": {
+        "en": {
+          "name": "Epsilon",
+          "description": "A theme of distance and vast space."
+        },
+        "tr": {
+          "name": "Epsilon",
+          "description": "Uzaklık ve engin boşluk teması."
+        },
+        "fr": {
+          "name": "Epsilon",
+          "description": "Un thème de distance et d’espace immense."
+        },
+        "es": {
+          "name": "Epsilon",
+          "description": "Un tema de distancia y espacio inmenso."
+        },
+        "ru": {
+          "name": "Epsilon",
+          "description": "Тема расстояния и бескрайнего пространства."
+        },
+        "de": {
+          "name": "Epsilon",
+          "description": "Ein Thema von Ferne und weitem Raum."
+        }
+      }
+    },
+    {
+      "code": "T-14",
+      "state": "TRANCE",
+      "name": "God's Touch",
+      "file": "God's Touch.mp3",
+      "sourceOriginal": "God's Touch.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A vast, imposing atmosphere.",
+      "descriptionTr": "Engin ve heybetli bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "God's Touch",
+          "description": "A vast, imposing atmosphere."
+        },
+        "tr": {
+          "name": "God's Touch",
+          "description": "Engin ve heybetli bir atmosfer."
+        },
+        "fr": {
+          "name": "God's Touch",
+          "description": "Une ambiance immense et imposante."
+        },
+        "es": {
+          "name": "God's Touch",
+          "description": "Una atmósfera inmensa e imponente."
+        },
+        "ru": {
+          "name": "God's Touch",
+          "description": "Безмерная, величественная атмосфера."
+        },
+        "de": {
+          "name": "God's Touch",
+          "description": "Eine weite, eindrucksvolle Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "T-15",
+      "state": "TRANCE",
+      "name": "Gate of Hell",
+      "file": "Gate of Hell.mp3",
+      "sourceOriginal": "Gate of Hell.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A dark session centered on fear.",
+      "descriptionTr": "Korku odaklı karanlık bir seans.",
+      "translations": {
+        "en": {
+          "name": "Gate of Hell",
+          "description": "A dark session centered on fear."
+        },
+        "tr": {
+          "name": "Gate of Hell",
+          "description": "Korku odaklı karanlık bir seans."
+        },
+        "fr": {
+          "name": "Gate of Hell",
+          "description": "Une séance sombre centrée sur la peur."
+        },
+        "es": {
+          "name": "Gate of Hell",
+          "description": "Una sesión oscura centrada en el miedo."
+        },
+        "ru": {
+          "name": "Gate of Hell",
+          "description": "Мрачный сеанс на тему страха."
+        },
+        "de": {
+          "name": "Gate of Hell",
+          "description": "Eine dunkle Session rund um Angst."
+        }
+      }
+    },
+    {
+      "code": "T-16",
+      "state": "TRANCE",
+      "name": "Mystery",
+      "file": "Mystery.mp3",
+      "sourceOriginal": "Mystery.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An atmosphere of mystery and suspense.",
+      "descriptionTr": "Gizem ve gerilim atmosferi.",
+      "translations": {
+        "en": {
+          "name": "Mystery",
+          "description": "An atmosphere of mystery and suspense."
+        },
+        "tr": {
+          "name": "Mystery",
+          "description": "Gizem ve gerilim atmosferi."
+        },
+        "fr": {
+          "name": "Mystery",
+          "description": "Une ambiance de mystère et de suspense."
+        },
+        "es": {
+          "name": "Mystery",
+          "description": "Una atmósfera de misterio y suspenso."
+        },
+        "ru": {
+          "name": "Mystery",
+          "description": "Атмосфера тайны и напряжения."
+        },
+        "de": {
+          "name": "Mystery",
+          "description": "Eine Atmosphäre von Geheimnis und Spannung."
+        }
+      }
+    },
+    {
+      "code": "T-17",
+      "state": "TRANCE",
+      "name": "You-Choose",
+      "file": "You-Choose.mp3",
+      "sourceOriginal": "You-Choose.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Let your imagination choose the direction.",
+      "descriptionTr": "Yönü hayal gücün seçsin.",
+      "translations": {
+        "en": {
+          "name": "You-Choose",
+          "description": "Let your imagination choose the direction."
+        },
+        "tr": {
+          "name": "You-Choose",
+          "description": "Yönü hayal gücün seçsin."
+        },
+        "fr": {
+          "name": "You-Choose",
+          "description": "Laissez votre imagination choisir la direction."
+        },
+        "es": {
+          "name": "You-Choose",
+          "description": "Deja que tu imaginación elija el rumbo."
+        },
+        "ru": {
+          "name": "You-Choose",
+          "description": "Пусть воображение выберет направление."
+        },
+        "de": {
+          "name": "You-Choose",
+          "description": "Lass deine Fantasie die Richtung wählen."
+        }
+      }
+    },
+    {
+      "code": "D-01",
+      "state": "DREAM",
+      "name": "Lucid Dream",
+      "file": "Lucid Dream.mp3",
+      "sourceOriginal": "Lucid Dream.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of awareness within dreams.",
+      "descriptionTr": "Rüya içinde farkındalık teması.",
+      "translations": {
+        "en": {
+          "name": "Lucid Dream",
+          "description": "A theme of awareness within dreams."
+        },
+        "tr": {
+          "name": "Lucid Dream",
+          "description": "Rüya içinde farkındalık teması."
+        },
+        "fr": {
+          "name": "Lucid Dream",
+          "description": "Un thème de conscience dans les rêves."
+        },
+        "es": {
+          "name": "Lucid Dream",
+          "description": "Un tema de consciencia dentro del sueño."
+        },
+        "ru": {
+          "name": "Lucid Dream",
+          "description": "Тема осознанности внутри сновидений."
+        },
+        "de": {
+          "name": "Lucid Dream",
+          "description": "Ein Thema von Bewusstheit im Traum."
+        }
+      }
+    },
+    {
+      "code": "D-02",
+      "state": "DREAM",
+      "name": "Astral Projection",
+      "file": "Astral Projection.mp3",
+      "sourceOriginal": "Astral Projection.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An imagined journey beyond the body.",
+      "descriptionTr": "Bedenin ötesine hayali bir yolculuk.",
+      "translations": {
+        "en": {
+          "name": "Astral Projection",
+          "description": "An imagined journey beyond the body."
+        },
+        "tr": {
+          "name": "Astral Projection",
+          "description": "Bedenin ötesine hayali bir yolculuk."
+        },
+        "fr": {
+          "name": "Astral Projection",
+          "description": "Un voyage imaginaire au-delà du corps."
+        },
+        "es": {
+          "name": "Astral Projection",
+          "description": "Un viaje imaginario más allá del cuerpo."
+        },
+        "ru": {
+          "name": "Astral Projection",
+          "description": "Воображаемое путешествие за пределы тела."
+        },
+        "de": {
+          "name": "Astral Projection",
+          "description": "Eine vorgestellte Reise über den Körper hinaus."
+        }
+      }
+    },
+    {
+      "code": "D-03",
+      "state": "DREAM",
+      "name": "Astral Travel",
+      "file": "Astral Travel.mp3",
+      "sourceOriginal": "Astral Travel.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An imagined journey through dream worlds.",
+      "descriptionTr": "Düş dünyalarında hayali bir yolculuk.",
+      "translations": {
+        "en": {
+          "name": "Astral Travel",
+          "description": "An imagined journey through dream worlds."
+        },
+        "tr": {
+          "name": "Astral Travel",
+          "description": "Düş dünyalarında hayali bir yolculuk."
+        },
+        "fr": {
+          "name": "Astral Travel",
+          "description": "Un voyage imaginaire à travers les rêves."
+        },
+        "es": {
+          "name": "Astral Travel",
+          "description": "Un viaje imaginario por mundos de ensueño."
+        },
+        "ru": {
+          "name": "Astral Travel",
+          "description": "Воображаемое путешествие по мирам снов."
+        },
+        "de": {
+          "name": "Astral Travel",
+          "description": "Eine Fantasiereise durch Traumwelten."
+        }
+      }
+    },
+    {
+      "code": "D-04",
+      "state": "DREAM",
+      "name": "Out of Body",
+      "file": "Out of Body.mp3",
+      "sourceOriginal": "Out of Body.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A body-detachment theme for the imagination.",
+      "descriptionTr": "Hayal gücü için bedenden ayrılma teması.",
+      "translations": {
+        "en": {
+          "name": "Out of Body",
+          "description": "A body-detachment theme for the imagination."
+        },
+        "tr": {
+          "name": "Out of Body",
+          "description": "Hayal gücü için bedenden ayrılma teması."
+        },
+        "fr": {
+          "name": "Out of Body",
+          "description": "Un thème imaginaire de détachement du corps."
+        },
+        "es": {
+          "name": "Out of Body",
+          "description": "Un tema imaginario de separación del cuerpo."
+        },
+        "ru": {
+          "name": "Out of Body",
+          "description": "Воображаемая тема отделения от тела."
+        },
+        "de": {
+          "name": "Out of Body",
+          "description": "Ein Fantasiethema der Loslösung vom Körper."
+        }
+      }
+    },
+    {
+      "code": "N-01",
+      "state": "ENERGY",
+      "name": "Energizer",
+      "file": "Energizer.mp3",
+      "sourceOriginal": "Energizer.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A fresh-start energy theme.",
+      "descriptionTr": "Yeni başlangıçlar için enerji teması.",
+      "translations": {
+        "en": {
+          "name": "Energizer",
+          "description": "A fresh-start energy theme."
+        },
+        "tr": {
+          "name": "Energizer",
+          "description": "Yeni başlangıçlar için enerji teması."
+        },
+        "fr": {
+          "name": "Energizer",
+          "description": "Un thème énergique de nouveau départ."
+        },
+        "es": {
+          "name": "Energizer",
+          "description": "Un tema energético de nuevo comienzo."
+        },
+        "ru": {
+          "name": "Energizer",
+          "description": "Энергичная тема нового начала."
+        },
+        "de": {
+          "name": "Energizer",
+          "description": "Ein Energiethema für einen neuen Anfang."
+        }
+      }
+    },
+    {
+      "code": "N-02",
+      "state": "ENERGY",
+      "name": "Adrenaline",
+      "file": "Adrenaline.mp3",
+      "sourceOriginal": "Adrenaline.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of urgency and excitement.",
+      "descriptionTr": "Heyecan ve harekete geçme teması.",
+      "translations": {
+        "en": {
+          "name": "Adrenaline",
+          "description": "A theme of urgency and excitement."
+        },
+        "tr": {
+          "name": "Adrenaline",
+          "description": "Heyecan ve harekete geçme teması."
+        },
+        "fr": {
+          "name": "Adrenaline",
+          "description": "Un thème d’urgence et d’excitation."
+        },
+        "es": {
+          "name": "Adrenaline",
+          "description": "Un tema de urgencia y emoción."
+        },
+        "ru": {
+          "name": "Adrenaline",
+          "description": "Тема стремительности и возбуждения."
+        },
+        "de": {
+          "name": "Adrenaline",
+          "description": "Ein Thema von Dringlichkeit und Aufregung."
+        }
+      }
+    },
+    {
+      "code": "N-03",
+      "state": "ENERGY",
+      "name": "Rush",
+      "file": "Rush.mp3",
+      "sourceOriginal": "Rush.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A fast-moving, restless mood.",
+      "descriptionTr": "Hızlı ve yerinde duramayan bir tema.",
+      "translations": {
+        "en": {
+          "name": "Rush",
+          "description": "A fast-moving, restless mood."
+        },
+        "tr": {
+          "name": "Rush",
+          "description": "Hızlı ve yerinde duramayan bir tema."
+        },
+        "fr": {
+          "name": "Rush",
+          "description": "Une ambiance rapide et agitée."
+        },
+        "es": {
+          "name": "Rush",
+          "description": "Un ambiente rápido e inquieto."
+        },
+        "ru": {
+          "name": "Rush",
+          "description": "Быстрая, неугомонная атмосфера."
+        },
+        "de": {
+          "name": "Rush",
+          "description": "Eine schnelle, rastlose Stimmung."
+        }
+      }
+    },
+    {
+      "code": "N-04",
+      "state": "ENERGY",
+      "name": "Sevoflurane",
+      "file": "Sevoflurane.mp3",
+      "sourceOriginal": "Sevoflurane.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A bright, high-intensity rush.",
+      "descriptionTr": "Parlak, yüksek yoğunluklu bir yükseliş.",
+      "translations": {
+        "en": {
+          "name": "Sevoflurane",
+          "description": "A bright, high-intensity rush."
+        },
+        "tr": {
+          "name": "Sevoflurane",
+          "description": "Parlak, yüksek yoğunluklu bir yükseliş."
+        },
+        "fr": {
+          "name": "Sevoflurane",
+          "description": "Une montée vive et intense."
+        },
+        "es": {
+          "name": "Sevoflurane",
+          "description": "Una subida brillante e intensa."
+        },
+        "ru": {
+          "name": "Sevoflurane",
+          "description": "Яркий, высокоинтенсивный подъём."
+        },
+        "de": {
+          "name": "Sevoflurane",
+          "description": "Ein heller, hochintensiver Rausch."
+        }
+      }
+    },
+    {
+      "code": "N-05",
+      "state": "ENERGY",
+      "name": "Isoflurane",
+      "file": "Isoflurane.mp3",
+      "sourceOriginal": "Isoflurane.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A sharp, electric atmosphere.",
+      "descriptionTr": "Keskin, elektrik yüklü bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Isoflurane",
+          "description": "A sharp, electric atmosphere."
+        },
+        "tr": {
+          "name": "Isoflurane",
+          "description": "Keskin, elektrik yüklü bir atmosfer."
+        },
+        "fr": {
+          "name": "Isoflurane",
+          "description": "Une atmosphère vive et électrique."
+        },
+        "es": {
+          "name": "Isoflurane",
+          "description": "Una atmósfera aguda y eléctrica."
+        },
+        "ru": {
+          "name": "Isoflurane",
+          "description": "Резкая, электрическая атмосфера."
+        },
+        "de": {
+          "name": "Isoflurane",
+          "description": "Eine scharfe, elektrische Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "N-06",
+      "state": "ENERGY",
+      "name": "Desflurane",
+      "file": "Desflurane.mp3",
+      "sourceOriginal": "Desflurane.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An intense, forceful listening theme.",
+      "descriptionTr": "Yoğun, güçlü bir dinleme teması.",
+      "translations": {
+        "en": {
+          "name": "Desflurane",
+          "description": "An intense, forceful listening theme."
+        },
+        "tr": {
+          "name": "Desflurane",
+          "description": "Yoğun, güçlü bir dinleme teması."
+        },
+        "fr": {
+          "name": "Desflurane",
+          "description": "Un thème d'écoute intense et puissant."
+        },
+        "es": {
+          "name": "Desflurane",
+          "description": "Un tema de escucha intenso y potente."
+        },
+        "ru": {
+          "name": "Desflurane",
+          "description": "Интенсивная, мощная тема для прослушивания."
+        },
+        "de": {
+          "name": "Desflurane",
+          "description": "Ein intensives, kraftvolles Hörthema."
+        }
+      }
+    },
+    {
+      "code": "N-07",
+      "state": "ENERGY",
+      "name": "Impact",
+      "file": "Impact.mp3",
+      "sourceOriginal": "Impact.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An alternate high-intensity cut.",
+      "descriptionTr": "Yüksek yoğunluklu alternatif bir kesit.",
+      "translations": {
+        "en": {
+          "name": "Impact",
+          "description": "An alternate high-intensity cut."
+        },
+        "tr": {
+          "name": "Impact",
+          "description": "Yüksek yoğunluklu alternatif bir kesit."
+        },
+        "fr": {
+          "name": "Impact",
+          "description": "Une version alternative à haute intensité."
+        },
+        "es": {
+          "name": "Impact",
+          "description": "Una toma alternativa de alta intensidad."
+        },
+        "ru": {
+          "name": "Impact",
+          "description": "Альтернативный высокоинтенсивный вариант."
+        },
+        "de": {
+          "name": "Impact",
+          "description": "Ein alternativer hochintensiver Cut."
+        }
+      }
+    },
+    {
+      "code": "N-08",
+      "state": "ENERGY",
+      "name": "Ignition",
+      "file": "Ignition.mp3",
+      "sourceOriginal": "Ignition.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of drive and concentration.",
+      "descriptionTr": "İlerleme ve konsantrasyon teması.",
+      "translations": {
+        "en": {
+          "name": "Ignition",
+          "description": "A theme of drive and concentration."
+        },
+        "tr": {
+          "name": "Ignition",
+          "description": "İlerleme ve konsantrasyon teması."
+        },
+        "fr": {
+          "name": "Ignition",
+          "description": "Un thème d’élan et de concentration."
+        },
+        "es": {
+          "name": "Ignition",
+          "description": "Un tema de impulso y concentración."
+        },
+        "ru": {
+          "name": "Ignition",
+          "description": "Тема движения и концентрации."
+        },
+        "de": {
+          "name": "Ignition",
+          "description": "Ein Thema von Antrieb und Konzentration."
+        }
+      }
+    },
+    {
+      "code": "N-09",
+      "state": "ENERGY",
+      "name": "Red Hot",
+      "file": "Red Hot.mp3",
+      "sourceOriginal": "Red Hot.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A restless late-night atmosphere.",
+      "descriptionTr": "Hareketli bir gece atmosferi.",
+      "translations": {
+        "en": {
+          "name": "Red Hot",
+          "description": "A restless late-night atmosphere."
+        },
+        "tr": {
+          "name": "Red Hot",
+          "description": "Hareketli bir gece atmosferi."
+        },
+        "fr": {
+          "name": "Red Hot",
+          "description": "Une ambiance nocturne agitée."
+        },
+        "es": {
+          "name": "Red Hot",
+          "description": "Un ambiente nocturno inquieto."
+        },
+        "ru": {
+          "name": "Red Hot",
+          "description": "Неугомонная ночная атмосфера."
+        },
+        "de": {
+          "name": "Red Hot",
+          "description": "Eine rastlose Nachtatmosphäre."
+        }
+      }
+    },
+    {
+      "code": "N-10",
+      "state": "ENERGY",
+      "name": "Crossfire",
+      "file": "Crossfire.mp3",
+      "sourceOriginal": "Crossfire.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An alert, forward-moving mood.",
+      "descriptionTr": "Uyanık ve ileriye dönük bir tema.",
+      "translations": {
+        "en": {
+          "name": "Crossfire",
+          "description": "An alert, forward-moving mood."
+        },
+        "tr": {
+          "name": "Crossfire",
+          "description": "Uyanık ve ileriye dönük bir tema."
+        },
+        "fr": {
+          "name": "Crossfire",
+          "description": "Une ambiance éveillée tournée vers l’avant."
+        },
+        "es": {
+          "name": "Crossfire",
+          "description": "Un ambiente despierto y dinámico."
+        },
+        "ru": {
+          "name": "Crossfire",
+          "description": "Бодрая атмосфера движения вперёд."
+        },
+        "de": {
+          "name": "Crossfire",
+          "description": "Eine wache, vorwärtsgerichtete Stimmung."
+        }
+      }
+    },
+    {
+      "code": "N-11",
+      "state": "ENERGY",
+      "name": "JuiceIT!",
+      "file": "JuiceIT!.mp3",
+      "sourceOriginal": "JuiceIT!.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A full-energy listening theme.",
+      "descriptionTr": "Tam enerji temalı bir seans.",
+      "translations": {
+        "en": {
+          "name": "JuiceIT!",
+          "description": "A full-energy listening theme."
+        },
+        "tr": {
+          "name": "JuiceIT!",
+          "description": "Tam enerji temalı bir seans."
+        },
+        "fr": {
+          "name": "JuiceIT!",
+          "description": "Un thème d’écoute plein d’énergie."
+        },
+        "es": {
+          "name": "JuiceIT!",
+          "description": "Un tema de escucha lleno de energía."
+        },
+        "ru": {
+          "name": "JuiceIT!",
+          "description": "Тема полной энергии."
+        },
+        "de": {
+          "name": "JuiceIT!",
+          "description": "Ein Hörthema voller Energie."
+        }
+      }
+    },
+    {
+      "code": "N-12",
+      "state": "ENERGY",
+      "name": "Excite",
+      "file": "Excite.mp3",
+      "sourceOriginal": "Excite.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A lively, excitable atmosphere.",
+      "descriptionTr": "Canlı ve heyecanlı bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Excite",
+          "description": "A lively, excitable atmosphere."
+        },
+        "tr": {
+          "name": "Excite",
+          "description": "Canlı ve heyecanlı bir atmosfer."
+        },
+        "fr": {
+          "name": "Excite",
+          "description": "Une ambiance vive et enthousiaste."
+        },
+        "es": {
+          "name": "Excite",
+          "description": "Un ambiente vivo y entusiasta."
+        },
+        "ru": {
+          "name": "Excite",
+          "description": "Живая, возбуждённая атмосфера."
+        },
+        "de": {
+          "name": "Excite",
+          "description": "Eine lebhafte, aufgeregte Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "N-13",
+      "state": "ENERGY",
+      "name": "French Roast",
+      "file": "French Roast.mp3",
+      "sourceOriginal": "French Roast.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A coffee-inspired morning ritual.",
+      "descriptionTr": "Kahveden ilham alan sabah ritüeli.",
+      "translations": {
+        "en": {
+          "name": "French Roast",
+          "description": "A coffee-inspired morning ritual."
+        },
+        "tr": {
+          "name": "French Roast",
+          "description": "Kahveden ilham alan sabah ritüeli."
+        },
+        "fr": {
+          "name": "French Roast",
+          "description": "Un rituel matinal inspiré du café."
+        },
+        "es": {
+          "name": "French Roast",
+          "description": "Un ritual matutino inspirado en el café."
+        },
+        "ru": {
+          "name": "French Roast",
+          "description": "Утренний ритуал в духе кофе."
+        },
+        "de": {
+          "name": "French Roast",
+          "description": "Ein vom Kaffee inspiriertes Morgenritual."
+        }
+      }
+    },
+    {
+      "code": "N-14",
+      "state": "ENERGY",
+      "name": "A-BOMB",
+      "file": "A-BOMB.mp3",
+      "sourceOriginal": "A-BOMB.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An explosive, high-intensity theme.",
+      "descriptionTr": "Patlayıcı ve yüksek yoğunluklu bir tema.",
+      "translations": {
+        "en": {
+          "name": "A-BOMB",
+          "description": "An explosive, high-intensity theme."
+        },
+        "tr": {
+          "name": "A-BOMB",
+          "description": "Patlayıcı ve yüksek yoğunluklu bir tema."
+        },
+        "fr": {
+          "name": "A-BOMB",
+          "description": "Un thème explosif et intense."
+        },
+        "es": {
+          "name": "A-BOMB",
+          "description": "Un tema explosivo e intenso."
+        },
+        "ru": {
+          "name": "A-BOMB",
+          "description": "Взрывная, интенсивная тема."
+        },
+        "de": {
+          "name": "A-BOMB",
+          "description": "Ein explosives, intensives Thema."
+        }
+      }
+    },
+    {
+      "code": "N-15",
+      "state": "ENERGY",
+      "name": "Scarlet",
+      "file": "Scarlet.mp3",
+      "sourceOriginal": "Scarlet.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A vivid, high-tension atmosphere.",
+      "descriptionTr": "Canlı ve yüksek gerilimli bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Scarlet",
+          "description": "A vivid, high-tension atmosphere."
+        },
+        "tr": {
+          "name": "Scarlet",
+          "description": "Canlı ve yüksek gerilimli bir atmosfer."
+        },
+        "fr": {
+          "name": "Scarlet",
+          "description": "Une ambiance vive et tendue."
+        },
+        "es": {
+          "name": "Scarlet",
+          "description": "Un ambiente vivo y tenso."
+        },
+        "ru": {
+          "name": "Scarlet",
+          "description": "Яркая, напряжённая атмосфера."
+        },
+        "de": {
+          "name": "Scarlet",
+          "description": "Eine lebhafte, spannungsgeladene Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "A-01",
+      "state": "CREATIVE",
+      "name": "Inspire",
+      "file": "Inspire.mp3",
+      "sourceOriginal": "Inspire.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Make room for a new idea.",
+      "descriptionTr": "Yeni bir fikre yer aç.",
+      "translations": {
+        "en": {
+          "name": "Inspire",
+          "description": "Make room for a new idea."
+        },
+        "tr": {
+          "name": "Inspire",
+          "description": "Yeni bir fikre yer aç."
+        },
+        "fr": {
+          "name": "Inspire",
+          "description": "Faites place à une nouvelle idée."
+        },
+        "es": {
+          "name": "Inspire",
+          "description": "Haz espacio para una idea nueva."
+        },
+        "ru": {
+          "name": "Inspire",
+          "description": "Освободи место для новой идеи."
+        },
+        "de": {
+          "name": "Inspire",
+          "description": "Schaffe Raum für eine neue Idee."
+        }
+      }
+    },
+    {
+      "code": "A-02",
+      "state": "CREATIVE",
+      "name": "Chakra",
+      "file": "Chakra.mp3",
+      "sourceOriginal": "Chakra.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of color and bodily awareness.",
+      "descriptionTr": "Renk ve beden farkındalığı teması.",
+      "translations": {
+        "en": {
+          "name": "Chakra",
+          "description": "A theme of color and bodily awareness."
+        },
+        "tr": {
+          "name": "Chakra",
+          "description": "Renk ve beden farkındalığı teması."
+        },
+        "fr": {
+          "name": "Chakra",
+          "description": "Un thème de couleur et de conscience corporelle."
+        },
+        "es": {
+          "name": "Chakra",
+          "description": "Un tema de color y consciencia corporal."
+        },
+        "ru": {
+          "name": "Chakra",
+          "description": "Тема цвета и осознания тела."
+        },
+        "de": {
+          "name": "Chakra",
+          "description": "Ein Thema von Farbe und Körperwahrnehmung."
+        }
+      }
+    },
+    {
+      "code": "A-03",
+      "state": "CREATIVE",
+      "name": "Morning Glory",
+      "file": "Morning Glory.mp3",
+      "sourceOriginal": "Morning Glory.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A dawn-inspired creative mood.",
+      "descriptionTr": "Şafaktan ilham alan yaratıcı bir tema.",
+      "translations": {
+        "en": {
+          "name": "Morning Glory",
+          "description": "A dawn-inspired creative mood."
+        },
+        "tr": {
+          "name": "Morning Glory",
+          "description": "Şafaktan ilham alan yaratıcı bir tema."
+        },
+        "fr": {
+          "name": "Morning Glory",
+          "description": "Une ambiance créative inspirée de l’aube."
+        },
+        "es": {
+          "name": "Morning Glory",
+          "description": "Un ambiente creativo inspirado en el alba."
+        },
+        "ru": {
+          "name": "Morning Glory",
+          "description": "Творческая атмосфера рассвета."
+        },
+        "de": {
+          "name": "Morning Glory",
+          "description": "Eine kreative Stimmung im Licht der Morgendämmerung."
+        }
+      }
+    },
+    {
+      "code": "A-04",
+      "state": "CREATIVE",
+      "name": "Black Sunshine",
+      "file": "Black Sunshine.mp3",
+      "sourceOriginal": "Black Sunshine.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "Explore creativity through darker imagery.",
+      "descriptionTr": "Yaratıcılığı karanlık imgelerle keşfet.",
+      "translations": {
+        "en": {
+          "name": "Black Sunshine",
+          "description": "Explore creativity through darker imagery."
+        },
+        "tr": {
+          "name": "Black Sunshine",
+          "description": "Yaratıcılığı karanlık imgelerle keşfet."
+        },
+        "fr": {
+          "name": "Black Sunshine",
+          "description": "Explorez la créativité par des images sombres."
+        },
+        "es": {
+          "name": "Black Sunshine",
+          "description": "Explora la creatividad con imágenes oscuras."
+        },
+        "ru": {
+          "name": "Black Sunshine",
+          "description": "Исследуй творчество через тёмные образы."
+        },
+        "de": {
+          "name": "Black Sunshine",
+          "description": "Erkunde Kreativität durch dunklere Bilder."
+        }
+      }
+    },
+    {
+      "code": "A-05",
+      "state": "CREATIVE",
+      "name": "Cliff Hanger",
+      "file": "Cliff Hanger.mp3",
+      "sourceOriginal": "Cliff Hanger.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of tension and anticipation.",
+      "descriptionTr": "Gerilim ve beklenti teması.",
+      "translations": {
+        "en": {
+          "name": "Cliff Hanger",
+          "description": "A theme of tension and anticipation."
+        },
+        "tr": {
+          "name": "Cliff Hanger",
+          "description": "Gerilim ve beklenti teması."
+        },
+        "fr": {
+          "name": "Cliff Hanger",
+          "description": "Un thème de tension et d’attente."
+        },
+        "es": {
+          "name": "Cliff Hanger",
+          "description": "Un tema de tensión y expectación."
+        },
+        "ru": {
+          "name": "Cliff Hanger",
+          "description": "Тема напряжения и ожидания."
+        },
+        "de": {
+          "name": "Cliff Hanger",
+          "description": "Ein Thema von Spannung und Erwartung."
+        }
+      }
+    },
+    {
+      "code": "G-01",
+      "state": "GROUND",
+      "name": "Nightcap",
+      "file": "Nightcap.mp3",
+      "sourceOriginal": "Nightcap.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A warm, relaxed social mood.",
+      "descriptionTr": "Sıcak ve rahat bir sosyallik teması.",
+      "translations": {
+        "en": {
+          "name": "Nightcap",
+          "description": "A warm, relaxed social mood."
+        },
+        "tr": {
+          "name": "Nightcap",
+          "description": "Sıcak ve rahat bir sosyallik teması."
+        },
+        "fr": {
+          "name": "Nightcap",
+          "description": "Une ambiance sociale chaleureuse et détendue."
+        },
+        "es": {
+          "name": "Nightcap",
+          "description": "Un ambiente social cálido y relajado."
+        },
+        "ru": {
+          "name": "Nightcap",
+          "description": "Тёплая, расслабленная атмосфера общения."
+        },
+        "de": {
+          "name": "Nightcap",
+          "description": "Eine warme, entspannte gesellige Stimmung."
+        }
+      }
+    },
+    {
+      "code": "G-02",
+      "state": "GROUND",
+      "name": "Green Fairy",
+      "file": "Green Fairy.mp3",
+      "sourceOriginal": "Green Fairy.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An enigmatic, dreamlike atmosphere.",
+      "descriptionTr": "Gizemli ve düşsel bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Green Fairy",
+          "description": "An enigmatic, dreamlike atmosphere."
+        },
+        "tr": {
+          "name": "Green Fairy",
+          "description": "Gizemli ve düşsel bir atmosfer."
+        },
+        "fr": {
+          "name": "Green Fairy",
+          "description": "Une ambiance énigmatique et onirique."
+        },
+        "es": {
+          "name": "Green Fairy",
+          "description": "Un ambiente enigmático y onírico."
+        },
+        "ru": {
+          "name": "Green Fairy",
+          "description": "Загадочная, сновидческая атмосфера."
+        },
+        "de": {
+          "name": "Green Fairy",
+          "description": "Eine rätselhafte, traumhafte Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "G-03",
+      "state": "GROUND",
+      "name": "Black Gold",
+      "file": "Black Gold.mp3",
+      "sourceOriginal": "Black Gold.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A slow, heavy, laid-back theme.",
+      "descriptionTr": "Yavaş, ağır ve rahat bir tema.",
+      "translations": {
+        "en": {
+          "name": "Black Gold",
+          "description": "A slow, heavy, laid-back theme."
+        },
+        "tr": {
+          "name": "Black Gold",
+          "description": "Yavaş, ağır ve rahat bir tema."
+        },
+        "fr": {
+          "name": "Black Gold",
+          "description": "Un thème lent, lourd et détendu."
+        },
+        "es": {
+          "name": "Black Gold",
+          "description": "Un tema lento, pesado y relajado."
+        },
+        "ru": {
+          "name": "Black Gold",
+          "description": "Медленная, тяжёлая, расслабленная тема."
+        },
+        "de": {
+          "name": "Black Gold",
+          "description": "Ein langsames, schweres, gelassenes Thema."
+        }
+      }
+    },
+    {
+      "code": "G-04",
+      "state": "GROUND",
+      "name": "Mary Jane",
+      "file": "Mary Jane.mp3",
+      "sourceOriginal": "Mary Jane.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A hazy, easygoing atmosphere.",
+      "descriptionTr": "Puslu ve rahat bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Mary Jane",
+          "description": "A hazy, easygoing atmosphere."
+        },
+        "tr": {
+          "name": "Mary Jane",
+          "description": "Puslu ve rahat bir atmosfer."
+        },
+        "fr": {
+          "name": "Mary Jane",
+          "description": "Une ambiance brumeuse et détendue."
+        },
+        "es": {
+          "name": "Mary Jane",
+          "description": "Un ambiente brumoso y relajado."
+        },
+        "ru": {
+          "name": "Mary Jane",
+          "description": "Дымчатая, непринуждённая атмосфера."
+        },
+        "de": {
+          "name": "Mary Jane",
+          "description": "Eine dunstige, gelassene Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "G-05",
+      "state": "GROUND",
+      "name": "Relief",
+      "file": "Relief.mp3",
+      "sourceOriginal": "Relief.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A sheltered, quiet listening theme.",
+      "descriptionTr": "Korunaklı ve sessiz bir dinleme teması.",
+      "translations": {
+        "en": {
+          "name": "Relief",
+          "description": "A sheltered, quiet listening theme."
+        },
+        "tr": {
+          "name": "Relief",
+          "description": "Korunaklı ve sessiz bir dinleme teması."
+        },
+        "fr": {
+          "name": "Relief",
+          "description": "Un thème d’écoute calme et abrité."
+        },
+        "es": {
+          "name": "Relief",
+          "description": "Un tema de escucha tranquilo y protegido."
+        },
+        "ru": {
+          "name": "Relief",
+          "description": "Тихая тема укрытия."
+        },
+        "de": {
+          "name": "Relief",
+          "description": "Ein ruhiges Hörthema der Geborgenheit."
+        }
+      }
+    },
+    {
+      "code": "G-06",
+      "state": "GROUND",
+      "name": "Comfort",
+      "file": "Comfort.mp3",
+      "sourceOriginal": "Comfort.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A soft, subdued atmosphere.",
+      "descriptionTr": "Yumuşak ve durgun bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Comfort",
+          "description": "A soft, subdued atmosphere."
+        },
+        "tr": {
+          "name": "Comfort",
+          "description": "Yumuşak ve durgun bir atmosfer."
+        },
+        "fr": {
+          "name": "Comfort",
+          "description": "Une ambiance douce et feutrée."
+        },
+        "es": {
+          "name": "Comfort",
+          "description": "Un ambiente suave y tenue."
+        },
+        "ru": {
+          "name": "Comfort",
+          "description": "Мягкая, приглушённая атмосфера."
+        },
+        "de": {
+          "name": "Comfort",
+          "description": "Eine sanfte, gedämpfte Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "G-07",
+      "state": "GROUND",
+      "name": "Slow Blue",
+      "file": "Slow Blue.mp3",
+      "sourceOriginal": "Slow Blue.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A warm, enveloping listening mood.",
+      "descriptionTr": "Sıcak ve sarmalayan bir dinleme teması.",
+      "translations": {
+        "en": {
+          "name": "Slow Blue",
+          "description": "A warm, enveloping listening mood."
+        },
+        "tr": {
+          "name": "Slow Blue",
+          "description": "Sıcak ve sarmalayan bir dinleme teması."
+        },
+        "fr": {
+          "name": "Slow Blue",
+          "description": "Une ambiance d’écoute chaude et enveloppante."
+        },
+        "es": {
+          "name": "Slow Blue",
+          "description": "Un ambiente cálido y envolvente."
+        },
+        "ru": {
+          "name": "Slow Blue",
+          "description": "Тёплая, обволакивающая атмосфера."
+        },
+        "de": {
+          "name": "Slow Blue",
+          "description": "Eine warme, umhüllende Hörstimmung."
+        }
+      }
+    },
+    {
+      "code": "G-08",
+      "state": "GROUND",
+      "name": "Halothane",
+      "file": "Halothane.mp3",
+      "sourceOriginal": "Halothane.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A heavy, slowly sinking theme.",
+      "descriptionTr": "Ağır, yavaşça çöken bir tema.",
+      "translations": {
+        "en": {
+          "name": "Halothane",
+          "description": "A heavy, slowly sinking theme."
+        },
+        "tr": {
+          "name": "Halothane",
+          "description": "Ağır, yavaşça çöken bir tema."
+        },
+        "fr": {
+          "name": "Halothane",
+          "description": "Un thème lourd qui s'enfonce lentement."
+        },
+        "es": {
+          "name": "Halothane",
+          "description": "Un tema pesado que se hunde despacio."
+        },
+        "ru": {
+          "name": "Halothane",
+          "description": "Тяжёлая, медленно погружающая тема."
+        },
+        "de": {
+          "name": "Halothane",
+          "description": "Ein schweres, langsam absinkendes Thema."
+        }
+      }
+    },
+    {
+      "code": "G-09",
+      "state": "GROUND",
+      "name": "Ember",
+      "file": "Ember.mp3",
+      "sourceOriginal": "Ember.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A small pause with a ritual feel.",
+      "descriptionTr": "Ritüel hissi veren küçük bir mola.",
+      "translations": {
+        "en": {
+          "name": "Ember",
+          "description": "A small pause with a ritual feel."
+        },
+        "tr": {
+          "name": "Ember",
+          "description": "Ritüel hissi veren küçük bir mola."
+        },
+        "fr": {
+          "name": "Ember",
+          "description": "Une petite pause aux airs de rituel."
+        },
+        "es": {
+          "name": "Ember",
+          "description": "Una pequeña pausa con aire de ritual."
+        },
+        "ru": {
+          "name": "Ember",
+          "description": "Небольшая пауза с ощущением ритуала."
+        },
+        "de": {
+          "name": "Ember",
+          "description": "Eine kleine Pause mit Ritualcharakter."
+        }
+      }
+    },
+    {
+      "code": "G-10",
+      "state": "GROUND",
+      "name": "Sweet Air",
+      "file": "Sweet Air.mp3",
+      "sourceOriginal": "Sweet Air.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A light, playful spinning theme.",
+      "descriptionTr": "Hafif ve oyunbaz bir dönme teması.",
+      "translations": {
+        "en": {
+          "name": "Sweet Air",
+          "description": "A light, playful spinning theme."
+        },
+        "tr": {
+          "name": "Sweet Air",
+          "description": "Hafif ve oyunbaz bir dönme teması."
+        },
+        "fr": {
+          "name": "Sweet Air",
+          "description": "Un thème léger de tournoiement ludique."
+        },
+        "es": {
+          "name": "Sweet Air",
+          "description": "Un tema ligero de giro juguetón."
+        },
+        "ru": {
+          "name": "Sweet Air",
+          "description": "Лёгкая, игривая тема кружения."
+        },
+        "de": {
+          "name": "Sweet Air",
+          "description": "Ein leichtes, spielerisches Kreisthema."
+        }
+      }
+    },
+    {
+      "code": "G-11",
+      "state": "GROUND",
+      "name": "Vapor",
+      "file": "Vapor.mp3",
+      "sourceOriginal": "Vapor.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An airy, distant atmosphere.",
+      "descriptionTr": "Hafif ve uzak bir atmosfer.",
+      "translations": {
+        "en": {
+          "name": "Vapor",
+          "description": "An airy, distant atmosphere."
+        },
+        "tr": {
+          "name": "Vapor",
+          "description": "Hafif ve uzak bir atmosfer."
+        },
+        "fr": {
+          "name": "Vapor",
+          "description": "Une ambiance aérienne et lointaine."
+        },
+        "es": {
+          "name": "Vapor",
+          "description": "Un ambiente ligero y distante."
+        },
+        "ru": {
+          "name": "Vapor",
+          "description": "Воздушная, отдалённая атмосфера."
+        },
+        "de": {
+          "name": "Vapor",
+          "description": "Eine luftige, ferne Atmosphäre."
+        }
+      }
+    },
+    {
+      "code": "G-12",
+      "state": "GROUND",
+      "name": "ECT",
+      "file": "ECT.mp3",
+      "sourceOriginal": "ECT.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "An abrupt change-of-scene theme.",
+      "descriptionTr": "Ani sahne değişimi teması.",
+      "translations": {
+        "en": {
+          "name": "ECT",
+          "description": "An abrupt change-of-scene theme."
+        },
+        "tr": {
+          "name": "ECT",
+          "description": "Ani sahne değişimi teması."
+        },
+        "fr": {
+          "name": "ECT",
+          "description": "Un thème de changement brusque de scène."
+        },
+        "es": {
+          "name": "ECT",
+          "description": "Un tema de cambio brusco de escena."
+        },
+        "ru": {
+          "name": "ECT",
+          "description": "Тема резкой смены обстановки."
+        },
+        "de": {
+          "name": "ECT",
+          "description": "Ein Thema des plötzlichen Szenenwechsels."
+        }
+      }
+    },
+    {
+      "code": "G-13",
+      "state": "GROUND",
+      "name": "Diet+",
+      "file": "Diet+.mp3",
+      "sourceOriginal": "Diet+.mp3",
+      "free": false,
+      "v1": true,
+      "pro": false,
+      "description": "A theme of intention and balance.",
+      "descriptionTr": "Niyet ve denge teması.",
+      "translations": {
+        "en": {
+          "name": "Diet+",
+          "description": "A theme of intention and balance."
+        },
+        "tr": {
+          "name": "Diet+",
+          "description": "Niyet ve denge teması."
+        },
+        "fr": {
+          "name": "Diet+",
+          "description": "Un thème d’intention et d’équilibre."
+        },
+        "es": {
+          "name": "Diet+",
+          "description": "Un tema de intención y equilibrio."
+        },
+        "ru": {
+          "name": "Diet+",
+          "description": "Тема намерения и равновесия."
+        },
+        "de": {
+          "name": "Diet+",
+          "description": "Ein Thema von Absicht und Balance."
+        }
+      }
+    },
+    {
+      "code": "P-01",
+      "state": "PRO",
+      "name": "Climax",
+      "file": "Climax.mp3",
+      "sourceOriginal": "Climax.mp3",
+      "free": false,
+      "pro": true,
+      "v1": true,
+      "description": "An orgasm-themed build and release.",
+      "descriptionTr": "Orgazm temalı yükseliş ve gevşeme.",
+      "translations": {
+        "en": {
+          "name": "Climax",
+          "description": "An orgasm-themed build and release."
+        },
+        "tr": {
+          "name": "Climax",
+          "description": "Orgazm temalı yükseliş ve gevşeme."
+        },
+        "fr": {
+          "name": "Climax",
+          "description": "Une montée et une détente sur le thème de l’orgasme."
+        },
+        "es": {
+          "name": "Climax",
+          "description": "Una subida y liberación de temática orgásmica."
+        },
+        "ru": {
+          "name": "Climax",
+          "description": "Тема оргазма: нарастание и разрядка."
+        },
+        "de": {
+          "name": "Climax",
+          "description": "Aufbau und Entspannung zum Thema Orgasmus."
+        }
+      }
+    },
+    {
+      "code": "P-02",
+      "state": "PRO",
+      "name": "Encore",
+      "file": "Encore.mp3",
+      "sourceOriginal": "Encore.mp3",
+      "free": false,
+      "pro": true,
+      "v1": true,
+      "description": "A theme of repeated orgasmic peaks.",
+      "descriptionTr": "Tekrarlayan orgazm dorukları teması.",
+      "translations": {
+        "en": {
+          "name": "Encore",
+          "description": "A theme of repeated orgasmic peaks."
+        },
+        "tr": {
+          "name": "Encore",
+          "description": "Tekrarlayan orgazm dorukları teması."
+        },
+        "fr": {
+          "name": "Encore",
+          "description": "Un thème de pics orgasmiques répétés."
+        },
+        "es": {
+          "name": "Encore",
+          "description": "Un tema de picos orgásmicos repetidos."
+        },
+        "ru": {
+          "name": "Encore",
+          "description": "Тема повторяющихся оргазмических пиков."
+        },
+        "de": {
+          "name": "Encore",
+          "description": "Ein Thema wiederholter orgasmischer Höhepunkte."
+        }
+      }
+    },
+    {
+      "code": "P-03",
+      "state": "PRO",
+      "name": "Heat",
+      "file": "Heat.mp3",
+      "sourceOriginal": "Heat.mp3",
+      "free": false,
+      "pro": true,
+      "v1": true,
+      "description": "A sensual session themed around sex.",
+      "descriptionTr": "Seks ve tensel yakınlık temalı seans.",
+      "translations": {
+        "en": {
+          "name": "Heat",
+          "description": "A sensual session themed around sex."
+        },
+        "tr": {
+          "name": "Heat",
+          "description": "Seks ve tensel yakınlık temalı seans."
+        },
+        "fr": {
+          "name": "Heat",
+          "description": "Une séance sensuelle sur le thème du sexe."
+        },
+        "es": {
+          "name": "Heat",
+          "description": "Una sesión sensual de temática sexual."
+        },
+        "ru": {
+          "name": "Heat",
+          "description": "Чувственный сеанс на тему секса."
+        },
+        "de": {
+          "name": "Heat",
+          "description": "Eine sinnliche Session zum Thema Sex."
+        }
+      }
+    },
+    {
+      "code": "P-04",
+      "state": "PRO",
+      "name": "Blue Pill",
+      "file": "Blue Pill.mp3",
+      "sourceOriginal": "Blue Pill.mp3",
+      "free": false,
+      "pro": true,
+      "v1": true,
+      "description": "A theme of sexual desire and arousal.",
+      "descriptionTr": "Cinsel istek ve uyarılma teması.",
+      "translations": {
+        "en": {
+          "name": "Blue Pill",
+          "description": "A theme of sexual desire and arousal."
+        },
+        "tr": {
+          "name": "Blue Pill",
+          "description": "Cinsel istek ve uyarılma teması."
+        },
+        "fr": {
+          "name": "Blue Pill",
+          "description": "Un thème de désir et d’excitation sexuelle."
+        },
+        "es": {
+          "name": "Blue Pill",
+          "description": "Un tema de deseo y excitación sexual."
+        },
+        "ru": {
+          "name": "Blue Pill",
+          "description": "Тема сексуального желания и возбуждения."
+        },
+        "de": {
+          "name": "Blue Pill",
+          "description": "Ein Thema von sexuellem Verlangen und Erregung."
+        }
+      }
+    },
+    {
+      "code": "P-05",
+      "state": "PRO",
+      "name": "Night Tide",
+      "file": "Night Tide.mp3",
+      "sourceOriginal": "Night Tide.mp3",
+      "free": false,
+      "pro": true,
+      "v1": true,
+      "description": "An erotic dream atmosphere.",
+      "descriptionTr": "Erotik rüya atmosferi.",
+      "translations": {
+        "en": {
+          "name": "Night Tide",
+          "description": "An erotic dream atmosphere."
+        },
+        "tr": {
+          "name": "Night Tide",
+          "description": "Erotik rüya atmosferi."
+        },
+        "fr": {
+          "name": "Night Tide",
+          "description": "Une ambiance de rêve érotique."
+        },
+        "es": {
+          "name": "Night Tide",
+          "description": "Una atmósfera de sueño erótico."
+        },
+        "ru": {
+          "name": "Night Tide",
+          "description": "Атмосфера эротического сна."
+        },
+        "de": {
+          "name": "Night Tide",
+          "description": "Eine erotische Traumatmosphäre."
+        }
+      }
+    },
+    {
+      "code": "P-06",
+      "state": "PRO",
+      "name": "First Love",
+      "file": "First Love.mp3",
+      "sourceOriginal": "First Love.mp3",
+      "free": false,
+      "pro": true,
+      "v1": true,
+      "description": "The excitement and closeness of first love.",
+      "descriptionTr": "İlk aşkın heyecanı ve yakınlığı.",
+      "translations": {
+        "en": {
+          "name": "First Love",
+          "description": "The excitement and closeness of first love."
+        },
+        "tr": {
+          "name": "First Love",
+          "description": "İlk aşkın heyecanı ve yakınlığı."
+        },
+        "fr": {
+          "name": "First Love",
+          "description": "L’émotion et la proximité du premier amour."
+        },
+        "es": {
+          "name": "First Love",
+          "description": "La emoción y cercanía del primer amor."
+        },
+        "ru": {
+          "name": "First Love",
+          "description": "Волнение и близость первой любви."
+        },
+        "de": {
+          "name": "First Love",
+          "description": "Aufregung und Nähe der ersten Liebe."
+        }
+      }
+    },
+    {
+      "code": "P-07",
+      "state": "PRO",
+      "name": "Succubus",
+      "file": "Succubus.mp3",
+      "sourceOriginal": "Succubus.mp3",
+      "free": false,
+      "pro": true,
+      "v1": true,
+      "description": "A sensual theme of pleasure and pain.",
+      "descriptionTr": "Haz ve acı temalı duyusal bir seans.",
+      "translations": {
+        "en": {
+          "name": "Succubus",
+          "description": "A sensual theme of pleasure and pain."
+        },
+        "tr": {
+          "name": "Succubus",
+          "description": "Haz ve acı temalı duyusal bir seans."
+        },
+        "fr": {
+          "name": "Succubus",
+          "description": "Un thème sensuel de plaisir et de douleur."
+        },
+        "es": {
+          "name": "Succubus",
+          "description": "Un tema sensual de placer y dolor."
+        },
+        "ru": {
+          "name": "Succubus",
+          "description": "Чувственная тема удовольствия и боли."
+        },
+        "de": {
+          "name": "Succubus",
+          "description": "Ein sinnliches Thema von Lust und Schmerz."
+        }
+      }
+    }
+  ]
+}
