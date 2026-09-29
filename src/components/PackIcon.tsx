@@ -39,7 +39,7 @@ const SOURCES: Record<PackIconName, ImageSourcePropType> = {
   focus: require("../../assets/icons/focus.png"),
 };
 
-/** Browse state → pack icon (from iconpack2, no label). */
+/** Browse state → pack icon (from iconpack3, no label). */
 export const STATE_PACK_ICON: Record<string, PackIconName> = {
   CALM: "calm",
   SLEEP: "sleep",
@@ -55,10 +55,10 @@ export const STATE_PACK_ICON: Record<string, PackIconName> = {
   PRO: "desire",
 };
 
-/** Default opacity — solid glyph icons (iconpack2) on dark UI. */
-export const PACK_ICON_OPACITY = 0.92;
+/** Default opacity — solid glyph icons (iconpack3) on dark UI. */
+export const PACK_ICON_OPACITY = 0.5;
 
-/** Soft 3D glyph icons from iconpack2 — transparent BG, no extra chrome. */
+/** Soft 3D glyph icons from iconpack3 — transparent BG, no extra chrome. */
 export function PackIcon({
   name,
   size = 36,
