@@ -1,38 +1,65 @@
-import { Icon } from "../../components/Icon";
 import { LinearGradient } from "expo-linear-gradient";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  ImageBackground,
+  Platform,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { useRouter } from "expo-router";
 import * as Haptics from "expo-haptics";
+import { PackIcon, STATE_PACK_ICON } from "../../components/PackIcon";
 import { Body, BrandMark, Screen, Title } from "../../components/ui";
 import { BROWSE_STATES } from "../../data/catalog";
+import { bgForState } from "../../data/groupBg";
 import { useScrollToTopOnFocus } from "../../hooks/useScrollToTopOnFocus";
 import { useT } from "../../i18n";
 import { useAppStore } from "../../store/appStore";
 import { fonts, colors, radii, space } from "../../theme/tokens";
 
-const STATE_TINT: Record<string, [string, string]> = {
-  CALM: ["rgba(120,160,220,0.55)", "rgba(30,40,80,0.9)"],
-  SLEEP: ["rgba(90,80,180,0.55)", "rgba(20,16,50,0.95)"],
-  FOCUS: ["rgba(100,200,180,0.5)", "rgba(20,50,40,0.95)"],
-  EUPHORIA: ["rgba(230,140,180,0.55)", "rgba(60,20,50,0.95)"],
-  RESET: ["rgba(140,200,220,0.5)", "rgba(20,40,50,0.95)"],
-  TRANCE: ["rgba(180,120,230,0.55)", "rgba(40,20,70,0.95)"],
-  DREAM: ["rgba(150,130,240,0.55)", "rgba(30,20,70,0.95)"],
-  ENERGY: ["rgba(240,180,80,0.55)", "rgba(60,30,10,0.95)"],
-  CREATIVE: ["rgba(240,120,160,0.5)", "rgba(50,20,40,0.95)"],
-  GROUND: ["rgba(140,180,120,0.5)", "rgba(30,40,20,0.95)"],
-  PRO: ["rgba(220,200,140,0.5)", "rgba(50,40,20,0.95)"],
-  FEAR: ["rgba(220,80,100,0.55)", "rgba(50,10,20,0.95)"],
-};
+function CellBackground({ state }: { state: (typeof BROWSE_STATES)[number] }) {
+  const source = bgForState(state);
+  const overlay = (
+    <LinearGradient
+      colors={[
+        "rgba(0,0,0,0.15)",
+        "rgba(0,0,0,0.55)",
+        "rgba(0,0,0,0.82)",
+      ]}
+      locations={[0, 0.45, 1]}
+      style={StyleSheet.absoluteFill}
+    />
+  );
 
-function stateIcon(state: string) {
-  if (state === "SLEEP" || state === "DREAM") return "moon-outline";
-  if (state === "ENERGY") return "flash-outline";
-  if (state === "FOCUS") return "scan-outline";
-  if (state === "CALM") return "water-outline";
-  if (state === "CREATIVE") return "color-palette-outline";
-  if (state === "FEAR") return "eye-outline";
-  return "sparkles-outline";
+  // Native: ImageBackground fills correctly. Web needs Image + wrapper scale.
+  if (Platform.OS === "web") {
+    return (
+      <View style={styles.cellMedia} pointerEvents="none">
+        <View style={styles.cellBgScaleWeb}>
+          <Image
+            source={source}
+            style={styles.cellBgWeb}
+            resizeMode="cover"
+            accessibilityIgnoresInvertColors
+          />
+        </View>
+        {overlay}
+      </View>
+    );
+  }
+
+  return (
+    <ImageBackground
+      source={source}
+      style={StyleSheet.absoluteFill}
+      resizeMode="cover"
+    >
+      {overlay}
+    </ImageBackground>
+  );
 }
 
 export default function BrowseScreen() {
@@ -55,7 +82,7 @@ export default function BrowseScreen() {
         <View style={styles.grid}>
           {BROWSE_STATES.map((state) => {
             const locked = state === "PRO" && !hasPlus;
-            const tint = STATE_TINT[state] ?? STATE_TINT.CALM;
+            const pack = STATE_PACK_ICON[state] ?? "calm";
             return (
               <Pressable
                 key={state}
@@ -72,13 +99,9 @@ export default function BrowseScreen() {
                   pressed && { opacity: 0.88, transform: [{ scale: 0.98 }] },
                 ]}
               >
-                <LinearGradient colors={tint} style={StyleSheet.absoluteFill} />
+                <CellBackground state={state} />
                 <View style={styles.cellIcon}>
-                  <Icon
-                    name={stateIcon(state)}
-                    size={22}
-                    color={colors.label}
-                  />
+                  <PackIcon name={pack} size={42} />
                 </View>
                 <Text style={styles.cellLabel}>{t(`state.${state}`)}</Text>
                 <Text style={styles.cellSub} numberOfLines={2}>
@@ -101,27 +124,36 @@ const styles = StyleSheet.create({
     marginTop: space.xl,
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 12,
+    justifyContent: "space-between",
+    rowGap: 12,
   },
   cell: {
-    width: "48%",
-    flexGrow: 1,
-    minHeight: 148,
+    width: "48.5%",
+    aspectRatio: 1.05,
+    flexGrow: 0,
+    flexShrink: 0,
     borderRadius: radii.lg,
     overflow: "hidden",
+    backgroundColor: "#12141f",
     padding: space.md,
     justifyContent: "flex-end",
   },
+  cellMedia: {
+    ...StyleSheet.absoluteFill,
+    overflow: "hidden",
+  },
+  cellBgScaleWeb: {
+    ...StyleSheet.absoluteFill,
+    transform: [{ scale: 1.08 }],
+  },
+  cellBgWeb: {
+    width: "100%",
+    height: "100%",
+  },
   cellIcon: {
     position: "absolute",
-    top: 14,
-    left: 14,
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    backgroundColor: "rgba(255,255,255,0.16)",
-    alignItems: "center",
-    justifyContent: "center",
+    top: 10,
+    left: 10,
   },
   cellLabel: {
     fontFamily: fonts.body,

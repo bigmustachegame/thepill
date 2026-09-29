@@ -1,6 +1,6 @@
 import type { Locale } from "../i18n/strings";
 import catalogJson from "./capsules.catalog.json";
-import { DesireId, FEAR_CODES } from "./moods";
+import type { DesireId } from "./moods";
 
 export type StateId =
   | "CALM"
@@ -10,6 +10,7 @@ export type StateId =
   | "RESET"
   | "TRANCE"
   | "DREAM"
+  | "FEAR"
   | "ENERGY"
   | "CREATIVE"
   | "GROUND"
@@ -31,22 +32,23 @@ export type Capsule = {
 
 export type Strength = "LIGHT" | "REGULAR" | "DEEP";
 
-export type BrowseId = StateId | "FEAR";
+/** Browse uses the same IDs as catalog states — one group per session. */
+export type BrowseId = StateId;
 
 export const STATES = catalogJson.states as StateId[];
 
 export const BROWSE_STATES: BrowseId[] = [
   "CALM",
   "SLEEP",
+  "DREAM",
   "FOCUS",
   "ENERGY",
   "EUPHORIA",
   "RESET",
   "TRANCE",
-  "DREAM",
+  "FEAR",
   "CREATIVE",
   "GROUND",
-  "FEAR",
   "PRO",
 ];
 
@@ -56,16 +58,16 @@ export const STATE_META: Record<
 > = {
   CALM: { purpose: "Slow the mind", defaultMinutes: 15 },
   SLEEP: { purpose: "Wind down for night", defaultMinutes: 30 },
+  DREAM: { purpose: "Dreamscape and inner travel", defaultMinutes: 30 },
   FOCUS: { purpose: "Work / study mode", defaultMinutes: 45 },
+  ENERGY: { purpose: "Drive and motivation", defaultMinutes: 15 },
   EUPHORIA: { purpose: "Uplifting immersive sound", defaultMinutes: 20 },
   RESET: { purpose: "Mental reset", defaultMinutes: 10 },
   TRANCE: { purpose: "Deep immersive audio", defaultMinutes: 25 },
-  DREAM: { purpose: "Pre-sleep dreamscape", defaultMinutes: 30 },
-  ENERGY: { purpose: "Movement / alertness", defaultMinutes: 15 },
+  FEAR: { purpose: "Lean into the dark on purpose", defaultMinutes: 25 },
   CREATIVE: { purpose: "Creative work", defaultMinutes: 30 },
   GROUND: { purpose: "Settle after overstimulation", defaultMinutes: 10 },
-  PRO: { purpose: "Body-forward immersive sessions", defaultMinutes: 20 },
-  FEAR: { purpose: "Lean into the dark on purpose", defaultMinutes: 25 },
+  PRO: { purpose: "Sensual and intimate sessions", defaultMinutes: 20 },
 };
 
 /** @deprecated Strength tiers removed — session length follows the audio file. */
@@ -85,11 +87,6 @@ export function getCapsule(code: string) {
 }
 
 export function capsulesForState(state: BrowseId) {
-  if (state === "FEAR") {
-    return FEAR_CODES.map((code) => getCapsule(code)).filter(
-      (c): c is Capsule => !!c,
-    );
-  }
   return capsules.filter((c) => c.state === state);
 }
 
@@ -98,5 +95,5 @@ export function freeCapsules() {
 }
 
 export function capsulesForDesire(desire: DesireId) {
-  return capsulesForState(desire);
+  return capsulesForState(desire as BrowseId);
 }

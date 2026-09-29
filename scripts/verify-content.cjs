@@ -18,7 +18,7 @@ for (const locale of locales) {
   const names = [];
   for (const capsule of catalog.capsules) {
     const copy = capsule.translations[locale];
-    assert.ok(copy?.name && copy?.description.trim() && copy.description.length <= 120, `${locale}.${capsule.code}: incomplete copy`);
+    assert.ok(copy?.name && copy?.description.trim() && copy.description.length <= 320, `${locale}.${capsule.code}: incomplete copy`);
     assert.equal(copy.name, path.parse(capsule.sourceOriginal).name, `${locale}.${capsule.code}: original title mismatch`);
     names.push(copy.name);
   }

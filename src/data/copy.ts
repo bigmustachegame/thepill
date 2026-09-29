@@ -18,4 +18,4 @@ export const PREP_STEPS = [
 ] as const;
 
 export const LEGAL_LINE =
-  "THE PILL is an audio wellness app. It contains no medication or substances. “Pill,” “capsule,” and “dose” are metaphors for immersive sound sessions.";
+  "THE PILL is an audio wellness app. It contains no medication or substances. “Pill” and “capsule” are metaphors for immersive sound sessions.";

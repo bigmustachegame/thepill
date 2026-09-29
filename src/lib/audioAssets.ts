@@ -2,7 +2,7 @@ import { AudioSource } from "expo-audio";
 
 /** Bundled free sessions — full library streams later. */
 export const freeAudioSources: Record<string, AudioSource> = {
-  "C-01": require("../../assets/audio/Calm ME.mp3"),
+  "C-01": require("../../assets/audio/Calm You.mp3"),
   "S-01": require("../../assets/audio/Sleeping Angel.mp3"),
   "F-01": require("../../assets/audio/Laser Focus.mp3"),
 };

@@ -47,6 +47,6 @@ CI runs `typecheck` + `verify:content` on push/PR (`.github/workflows/ci.yml`).
 
 ## Prototype / next limitations
 
-Only the three free capsules have bundled playback: Calm ME (C-01), Sleeping Angel (S-01), Laser Focus (F-01). Other capsules use a labeled timer until streaming is connected. Audio source files remain in `Binaural beats/`.
+Only the three free capsules have bundled playback: Calm You (C-01), Sleeping Angel (S-01), Laser Focus (F-01). Other capsules use a labeled timer until streaming is connected. Audio source files remain in `Binaural beats/`.
 
 Profiles, feedback and membership are stored locally. In development builds, membership can be demo-unlocked; production builds block unlock until IAP is wired.

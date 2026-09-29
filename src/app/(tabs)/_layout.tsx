@@ -2,22 +2,30 @@ import { BlurView } from "expo-blur";
 import { Tabs } from "expo-router";
 import { Platform, StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Icon } from "../../components/Icon";
+import { PackIcon, type PackIconName } from "../../components/PackIcon";
 import { useT } from "../../i18n";
 import { colors, fonts } from "../../theme/tokens";
 
 const TAB_CONTENT_HEIGHT = 52;
 
-function TabGlyph({
+const TAB_ICONS: Record<string, PackIconName> = {
+  index: "home",
+  how: "how",
+  browse: "explore",
+  favorites: "favorites",
+  profile: "profile",
+};
+
+function TabPackIcon({
   name,
-  color,
+  focused,
+  size = 28,
 }: {
-  name: "home" | "browse" | "profile";
-  color: string;
+  name: PackIconName;
+  focused: boolean;
+  size?: number;
 }) {
-  const icon =
-    name === "home" ? "home" : name === "browse" ? "grid" : "person";
-  return <Icon name={icon} size={20} color={color} />;
+  return <PackIcon name={name} size={size} opacity={focused ? 0.95 : 0.48} />;
 }
 
 export default function TabsLayout() {
@@ -94,8 +102,17 @@ export default function TabsLayout() {
         name="index"
         options={{
           title: t("tab.home"),
-          tabBarIcon: ({ color }) => (
-            <TabGlyph name="home" color={String(color)} />
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.index} focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="how"
+        options={{
+          title: t("tab.how"),
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.how} focused={focused} size={30}/>
           ),
         }}
       />
@@ -103,8 +120,8 @@ export default function TabsLayout() {
         name="browse"
         options={{
           title: t("tab.browse"),
-          tabBarIcon: ({ color }) => (
-            <TabGlyph name="browse" color={String(color)} />
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.browse} focused={focused} size={32} />
           ),
         }}
       />
@@ -112,12 +129,8 @@ export default function TabsLayout() {
         name="favorites"
         options={{
           title: t("tab.favorites"),
-          tabBarIcon: ({ color, focused }) => (
-            <Icon
-              name={focused ? "heart" : "heart-outline"}
-              size={20}
-              color={String(color)}
-            />
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.favorites} focused={focused} />
           ),
         }}
       />
@@ -125,8 +138,8 @@ export default function TabsLayout() {
         name="profile"
         options={{
           title: t("tab.profile"),
-          tabBarIcon: ({ color }) => (
-            <TabGlyph name="profile" color={String(color)} />
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.profile} focused={focused} />
           ),
         }}
       />

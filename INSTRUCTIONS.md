@@ -16,7 +16,7 @@
 
 **Store / legal one-liner (always visible in About + store listing):**
 
-> The Pill is an audio wellness and immersive sound app. It contains no medication or substances. “Pill,” “capsule,” and “dose” are metaphors for audio sessions.
+> The Pill is an audio wellness and immersive sound app. It contains no medication or substances. “Pill” and “capsule” are metaphors for audio sessions.
 
 **What we sell:** A state. Not a playlist. Not a drug effect.
 
@@ -135,10 +135,10 @@ Rules:
 | Code | State   | Public name   | File              |
 |------|---------|---------------|-------------------|
 | R-01 | RESET   | Reset         | Reset.mp3         |
-| C-01 | CALM    | Calm ME       | Calm ME.mp3       |
+| C-01 | CALM    | Calm You       | Calm You.mp3       |
 | T-01 | TRANCE  | Genesis       | Genesis.mp3       |
 | E-03 | EUPHORIA| Quick Happy   | Quick Happy.mp3   |
-| P-05 | PRO     | Wet Dream     | Wet Dream.mp3     |
+| P-05 | PRO     | Erotic Dream  | Erotic Dream.mp3  |
 | N-04 | ENERGY  | Crystal Meth  | Crystal Meth.mp3  |
 
 ### PRO state (THE PILL+ only)
@@ -148,10 +148,10 @@ Cabinet includes **PRO**. All `P-*` capsules have `pro: true` — locked behind 
 | Code | Name        | File            |
 |------|-------------|-----------------|
 | P-01 | Orgasm      | Orgasm.mp3      |
-| P-02 | MultipleO   | MultipleO.mp3   |
-| P-03 | Sex         | Sex.mp3         |
-| P-04 | Viagra      | Viagra.mp3      |
-| P-05 | Wet Dream   | Wet Dream.mp3   |
+| P-02 | Multi Climax | Multi Climax.mp3 |
+| P-03 | Aphrodisiac | Aphrodisiac.mp3 |
+| P-04 | Rise        | Rise.mp3        |
+| P-05 | Erotic Dream | Erotic Dream.mp3 |
 | P-06 | First Love  | First Love.mp3  |
 | P-07 | Masochist   | Masochist.mp3   |
 
@@ -161,13 +161,13 @@ Audio folder: `Binaural beats/` (original filenames restored).
 
 ## 5. Session prep (from original intro — rewritten)
 
-Original iDoser “tips” file is rewritten as **THE PILL Session Prep**.  
+Original session-tips file is rewritten as **THE PILL Session Prep**.  
 Tone: calm, premium, practical. No drugs. No “trip.” No hallucination.
 
 ### 5.1 Onboarding copy
 
 1. *How do you want to feel?* → pick a state  
-2. *Choose your first dose.* → LIGHT / REGULAR / DEEP  
+2. *Choose your first session length.* → LIGHT / REGULAR / DEEP  
 3. Optional: run **Prep course** (Start Again R-01 or Ease Off C-01) before first deep session
 
 ### 5.2 Pre-session checklist (UI steps)
@@ -264,7 +264,7 @@ Next suggestion: prefer same state + similar duration/texture when rating is pos
 
 - Routes under `src/app/` (Expo Router).
 - Audio: Expo AV / `expo-audio` per current SDK docs — verify against installed `expo` major before coding.
-- Assets: load from `capsules.catalog.json` (`file` field). Disk uses original titles (e.g. `Calm ME.mp3`).
+- Assets: load from `capsules.catalog.json` (`file` field). Disk uses original titles (e.g. `Calm You.mp3`).
 - `file` and `sourceOriginal` match; keep them in sync when renaming.
 - PRO state (`P-*`, `pro: true`) requires THE PILL+.
 
@@ -276,11 +276,11 @@ type Strength = 'LIGHT' | 'REGULAR' | 'DEEP';
 type Capsule = {
   code: string;           // e.g. 'C-01'
   state: StateId;         // 'CALM' | ...
-  name: string;           // 'Calm ME'
+  name: string;           // 'Calm You'
   tagline: string;        // experience language only
   durationSec: number;
   strength: Strength;
-  file: string;           // e.g. 'Calm ME.mp3'
+  file: string;           // e.g. 'Calm You.mp3'
   sourceOriginal?: string; // same as file when restored
   free: boolean;
   v1: boolean;

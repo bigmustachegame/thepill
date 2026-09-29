@@ -1,16 +1,6 @@
-# Legal pages (GitHub Pages)
+# THE PILL — Legal
 
-These static pages are published from the `/docs` folder.
+Public Privacy Policy and Terms of Use only. App source is not in this repository.
 
-## URLs
-
-- https://bigmustachegame.github.io/thepill/
-- https://bigmustachegame.github.io/thepill/privacy.html
-- https://bigmustachegame.github.io/thepill/terms.html
-
-## Enable once (repo Settings)
-
-1. Open [Pages settings](https://github.com/bigmustachegame/thepill/settings/pages)
-2. **Source:** Deploy from a branch
-3. **Branch:** `main` → `/docs`
-4. Save — pages go live in ~1 minute
+- [Privacy Policy](https://bigmustachegame.github.io/thepill/privacy.html)
+- [Terms of Use](https://bigmustachegame.github.io/thepill/terms.html)

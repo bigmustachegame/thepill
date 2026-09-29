@@ -16,14 +16,14 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Icon } from "../../../components/Icon";
 import {
   Body,
-  Caption,
   GlassCircle,
   PlayPill,
   Screen,
   TrackRow,
 } from "../../../components/ui";
-import { CAPSULE_ART_ASPECT, artForCode } from "../../../data/capsuleArt";
+import { artForCode } from "../../../data/capsuleArt";
 import { BrowseId, STATE_META, capsulesForState } from "../../../data/catalog";
+import { bgForState } from "../../../data/groupBg";
 import { useScrollToTopOnFocus } from "../../../hooks/useScrollToTopOnFocus";
 import { capsuleName, capsuleDescription, useLocale, useT } from "../../../i18n";
 import { useAppStore } from "../../../store/appStore";
@@ -44,8 +44,6 @@ export default function BrowseStateScreen() {
 
   const list = useMemo(() => capsulesForState(state), [state]);
   const meta = STATE_META[state];
-  const hero = list.find((c) => artForCode(c.code)) ?? list[0];
-  const heroArt = hero ? artForCode(hero.code) : undefined;
 
   const openCapsule = (code: string, locked: boolean) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
@@ -68,70 +66,69 @@ export default function BrowseStateScreen() {
 
   return (
     <Screen padded={false} wash={false}>
-      <LinearGradient
-        pointerEvents="none"
-        colors={[
-          state === "FEAR" ? "rgba(180,60,90,0.45)" : "rgba(160,110,210,0.5)",
-          "rgba(40,20,70,0.35)",
-          colors.bg,
-        ]}
-        locations={[0, 0.4, 0.85]}
-        style={StyleSheet.absoluteFill}
-      />
       <ScrollView
         key={state}
         ref={scrollRef}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{
-          paddingTop: insets.top + 8,
-          paddingBottom: 120,
-        }}
+        contentContainerStyle={{ paddingBottom: 120 }}
       >
-        <View style={styles.topBar}>
-          <GlassCircle
-            accessibilityLabel={t("browse.back")}
-            onPress={() => router.back()}
-            size={40}
-          >
-            <Icon name="chevron-back" size={20} color={colors.label} />
-          </GlassCircle>
-          <View style={styles.topRight}>
-            <GlassCircle
-              size={40}
-              accessibilityLabel={t("share")}
-              onPress={() => {
-                Haptics.selectionAsync().catch(() => {});
-                const title = t(`state.${state}`);
-                Share.share({
-                  message: t("share.message", { state: title }),
-                  title,
-                }).catch(() => {});
-              }}
-            >
-              <Icon name="share" size={18} color={colors.label} />
-            </GlassCircle>
-          </View>
-        </View>
-
-        <View style={styles.heroArtWrap}>
-          {heroArt ? (
-            <Image
-              source={heroArt}
-              style={styles.heroArt}
-              resizeMode="cover"
-            />
+        {/* Same art + bottom-fade stack as session play screen */}
+        <View style={styles.artHero}>
+          {Platform.OS === "web" ? (
+            <View style={styles.artScale} pointerEvents="none">
+              <Image
+                source={bgForState(state)}
+                style={styles.artFill}
+                resizeMode="cover"
+                accessibilityIgnoresInvertColors
+              />
+            </View>
           ) : (
-            <LinearGradient
-              colors={["rgba(200,160,240,0.55)", "rgba(60,30,100,0.95)"]}
-              style={styles.heroArt}
+            <Image
+              source={bgForState(state)}
+              style={styles.art}
+              resizeMode="cover"
+              accessibilityIgnoresInvertColors
             />
           )}
+          <LinearGradient
+            pointerEvents="none"
+            colors={["transparent", "rgba(10,10,15,0.55)", colors.bg]}
+            locations={[0, 0.5, 1]}
+            style={styles.fadeBottom}
+          />
+          <View style={styles.fadeBottomCap} />
+
+          <View style={[styles.topBar, { paddingTop: insets.top + 8 }]}>
+            <GlassCircle
+              accessibilityLabel={t("browse.back")}
+              onPress={() => router.back()}
+              size={40}
+            >
+              <Icon name="chevron-back" size={20} color={colors.label} />
+            </GlassCircle>
+            <View style={styles.topRight}>
+              <GlassCircle
+                size={40}
+                accessibilityLabel={t("share")}
+                onPress={() => {
+                  Haptics.selectionAsync().catch(() => {});
+                  const title = t(`state.${state}`);
+                  Share.share({
+                    message: t("share.message", { state: title }),
+                    title,
+                  }).catch(() => {});
+                }}
+              >
+                <Icon name="share" size={18} color={colors.label} />
+              </GlassCircle>
+            </View>
+          </View>
         </View>
 
         <View style={styles.headerCopy}>
           <Text style={styles.playlistTitle}>{t(`state.${state}`)}</Text>
           <Text style={styles.playlistCurator}>THE PILL</Text>
-          <Caption style={styles.playlistMeta}>{list.length}</Caption>
         </View>
 
         <View style={styles.controls}>
@@ -184,45 +181,66 @@ export default function BrowseStateScreen() {
 }
 
 const styles = StyleSheet.create({
+  artHero: {
+    width: "100%",
+    aspectRatio: 1,
+    overflow: "hidden",
+    backgroundColor: colors.bg,
+  },
+  art: {
+    ...StyleSheet.absoluteFill,
+    width: "100%",
+    height: "100%",
+  },
+  artScale: {
+    ...StyleSheet.absoluteFill,
+    transform: [{ scale: 1.08 }],
+  },
+  artFill: {
+    width: "100%",
+    height: "100%",
+  },
+  fadeBottom: {
+    position: "absolute",
+    bottom: -2,
+    left: 0,
+    right: 0,
+    height: "52%",
+  },
+  fadeBottomCap: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 3,
+    backgroundColor: colors.bg,
+  },
   topBar: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 2,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: space.lg,
-    marginBottom: space.md,
   },
   topRight: {
     flexDirection: "row",
     gap: 10,
   },
-  heroArtWrap: {
-    alignSelf: "center",
-    width: "86%",
-    maxWidth: 420,
-    aspectRatio: CAPSULE_ART_ASPECT,
-    borderRadius: radii.lg,
-    overflow: "hidden",
-    shadowColor: "#000",
-    shadowOpacity: 0.45,
-    shadowRadius: 28,
-    shadowOffset: { width: 0, height: 14 },
-    elevation: 12,
-  },
-  heroArt: {
-    width: "100%",
-    height: "100%",
-  },
   headerCopy: {
     alignItems: "center",
-    marginTop: space.lg,
+    marginTop: -space.xl,
     paddingHorizontal: space.lg,
   },
   playlistTitle: {
     fontFamily: fonts.body,
     fontWeight: "700",
     color: colors.label,
-    fontSize: 28,
-    letterSpacing: -0.5,
+    fontSize: 34,
+    letterSpacing: -0.6,
     textAlign: "center",
   },
   playlistCurator: {
@@ -231,11 +249,6 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: colors.labelSoft,
     fontSize: 15,
-  },
-  playlistMeta: {
-    marginTop: 4,
-    textTransform: "none",
-    color: colors.labelMuted,
   },
   controls: {
     flexDirection: "row",

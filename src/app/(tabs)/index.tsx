@@ -82,7 +82,7 @@ export default function HomeScreen() {
                   key={c.code}
                   name={capsuleName(c, locale)}
                   description={capsuleDescription(c, locale)}
-                  state={t(`state.${desire === "FEAR" ? "FEAR" : c.state}`)}
+                  state={t(`state.${c.state}`)}
                   free={c.free}
                   locked={!canPlay(c)}
                   image={artForCode(c.code)}

@@ -1,12 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Modal, Pressable, StyleSheet, Text, View } from "react-native";
 import { Redirect, useLocalSearchParams, useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import {
   Body,
   Caption,
-  GhostButton,
   GlassCircle,
   PrimaryButton,
   SecondaryButton,
@@ -14,12 +13,13 @@ import {
   Title,
 } from "../../components/ui";
 import { Icon } from "../../components/Icon";
+import { PrepIllustration } from "../../components/PrepIllustration";
 import { getCapsule } from "../../data/catalog";
 import { CAPSULE_ART_ASPECT, artForCode } from "../../data/capsuleArt";
 import { useSessionPlayer } from "../../hooks/useSessionPlayer";
 import { capsuleName, capsuleDescription, useLocale, useT } from "../../i18n";
 import { useAppStore } from "../../store/appStore";
-import { colors, fonts, space } from "../../theme/tokens";
+import { colors, fonts, radii, space } from "../../theme/tokens";
 
 function formatTime(sec: number) {
   const s = Math.max(0, Math.floor(sec));
@@ -40,6 +40,8 @@ export default function SessionScreen() {
   const PREP_STEPS = 4;
   const [phase, setPhase] = useState<"describe" | "prep" | "play">("describe");
   const [prepStep, setPrepStep] = useState(1);
+  const [endConfirmOpen, setEndConfirmOpen] = useState(false);
+  const resumeAfterConfirm = useRef(false);
   const done = useRef(false);
   const logged = useRef(false);
   const art = capsule ? artForCode(capsule.code) : undefined;
@@ -123,7 +125,7 @@ export default function SessionScreen() {
               { paddingBottom: Math.max(insets.bottom, space.xl) },
             ]}
           >
-            <View>
+            <View style={styles.describeCopy}>
               <Text style={styles.trackName}>
                 {capsuleName(capsule, locale)}
               </Text>
@@ -131,7 +133,6 @@ export default function SessionScreen() {
               <Body style={styles.status}>
                 {capsuleDescription(capsule, locale)}
               </Body>
-              <Body style={styles.describeExpect}>{t("describe.expect")}</Body>
             </View>
 
             <View style={styles.describeActions}>
@@ -154,36 +155,51 @@ export default function SessionScreen() {
     const isLast = prepStep === PREP_STEPS;
     return (
       <Screen>
-        <GhostButton
-          label={t("back")}
-          onPress={() => {
-            if (prepStep > 1) setPrepStep(prepStep - 1);
-            else setPhase("describe");
-          }}
-        />
-        <Caption style={{ marginTop: space.xl, marginBottom: space.sm }}>
-          {t("prep.step", {
-            current: String(prepStep),
-            total: String(PREP_STEPS),
-          })}
-        </Caption>
-        <View style={styles.prepDots}>
-          {Array.from({ length: PREP_STEPS }).map((_, i) => (
-            <View
-              key={i}
-              style={[
-                styles.dot,
-                i < prepStep ? styles.dotActive : styles.dotInactive,
-              ]}
-            />
-          ))}
+        <View style={styles.prepTopBar}>
+          <GlassCircle
+            accessibilityLabel={t("back")}
+            onPress={() => {
+              if (prepStep > 1) setPrepStep(prepStep - 1);
+              else setPhase("describe");
+            }}
+          >
+            <Icon name="chevron-back" size={20} color={colors.label} />
+          </GlassCircle>
         </View>
-        <Title style={{ marginTop: space.xl }}>
-          {t(`prep.${prepStep}.title` as any)}
-        </Title>
-        <Body style={{ marginTop: space.md }}>
-          {t(`prep.${prepStep}.body` as any)}
-        </Body>
+
+        <View style={styles.prepContent}>
+          <Caption style={styles.prepStepLabel}>
+            {t("prep.step", {
+              current: String(prepStep),
+              total: String(PREP_STEPS),
+            })}
+          </Caption>
+          <View style={styles.prepDots}>
+            {Array.from({ length: PREP_STEPS }).map((_, i) => (
+              <View
+                key={i}
+                style={[
+                  styles.dot,
+                  i < prepStep ? styles.dotActive : styles.dotInactive,
+                ]}
+              />
+            ))}
+          </View>
+
+          <View style={styles.prepTextSlot}>
+            <Title style={styles.prepTitle} numberOfLines={2}>
+              {t(`prep.${prepStep}.title` as any)}
+            </Title>
+            <Body style={styles.prepBody} numberOfLines={4}>
+              {t(`prep.${prepStep}.body` as any)}
+            </Body>
+          </View>
+
+          <View style={styles.prepArtSlot}>
+            <PrepIllustration step={prepStep} />
+          </View>
+        </View>
+
         <View style={{ flex: 1 }} />
         <PrimaryButton
           label={isLast ? t("prep.begin") : t("prep.next")}
@@ -288,20 +304,115 @@ export default function SessionScreen() {
             </GlassCircle>
           </View>
 
-          <GhostButton
-            label={t("session.end")}
-            onPress={() => {
-              player.stop();
-              finish();
-            }}
-          />
+          <View style={styles.endButton}>
+            <SecondaryButton
+              label={t("session.end")}
+              onPress={() => {
+                resumeAfterConfirm.current = player.playing;
+                player.stop();
+                setEndConfirmOpen(true);
+              }}
+            />
+          </View>
         </View>
       </View>
+
+      <Modal
+        visible={endConfirmOpen}
+        transparent
+        animationType="fade"
+        onRequestClose={() => {
+          setEndConfirmOpen(false);
+          if (resumeAfterConfirm.current) player.toggle();
+        }}
+      >
+        <View
+          style={[
+            styles.endOverlay,
+            {
+              paddingTop: insets.top + space.lg,
+              paddingBottom: insets.bottom + space.lg,
+            },
+          ]}
+        >
+          <Pressable
+            style={StyleSheet.absoluteFill}
+            onPress={() => {
+              setEndConfirmOpen(false);
+              if (resumeAfterConfirm.current) player.toggle();
+            }}
+            accessibilityLabel={t("session.endCancel")}
+            accessibilityRole="button"
+          />
+          <View
+            style={styles.endSheet}
+            accessibilityViewIsModal
+            onAccessibilityEscape={() => {
+              setEndConfirmOpen(false);
+              if (resumeAfterConfirm.current) player.toggle();
+            }}
+          >
+            <Text accessibilityRole="header" style={styles.endTitle}>
+              {t("session.endConfirm")}
+            </Text>
+            <View style={styles.endActions}>
+              <PrimaryButton
+                label={t("session.endConfirmYes")}
+                onPress={() => {
+                  setEndConfirmOpen(false);
+                  resumeAfterConfirm.current = false;
+                  player.stop();
+                  finish();
+                }}
+              />
+              <SecondaryButton
+                label={t("session.endCancel")}
+                onPress={() => {
+                  setEndConfirmOpen(false);
+                  if (resumeAfterConfirm.current) player.toggle();
+                }}
+              />
+            </View>
+          </View>
+        </View>
+      </Modal>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
+  endOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(4,5,12,0.72)",
+    justifyContent: "center",
+    paddingHorizontal: space.lg,
+  },
+  endSheet: {
+    width: "100%",
+    maxWidth: 440,
+    alignSelf: "center",
+    padding: 20,
+    backgroundColor: "#1A1528",
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.line,
+    borderRadius: radii.xl,
+  },
+  endTitle: {
+    fontFamily: fonts.body,
+    fontWeight: "700",
+    fontSize: 22,
+    lineHeight: 28,
+    color: colors.label,
+    letterSpacing: -0.3,
+    textAlign: "center",
+  },
+  endActions: {
+    marginTop: space.xl,
+    gap: space.sm,
+  },
+  endButton: {
+    width: "100%",
+  },
   describeControls: {
     alignItems: "stretch",
     // Same footprint as play controls so artStage centers at the same Y.
@@ -319,9 +430,49 @@ const styles = StyleSheet.create({
     gap: space.sm,
     marginTop: space.lg,
   },
+  prepTopBar: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+  },
+  prepContent: {
+    alignItems: "center",
+    marginTop: space.xl,
+    width: "100%",
+    height: 460,
+  },
+  prepStepLabel: {
+    textAlign: "center",
+    marginBottom: space.sm,
+  },
   prepDots: {
     flexDirection: "row",
+    justifyContent: "center",
     gap: 6,
+  },
+  prepTitle: {
+    textAlign: "center",
+  },
+  prepBody: {
+    marginTop: space.md,
+    textAlign: "center",
+    paddingHorizontal: space.sm,
+  },
+  prepTextSlot: {
+    marginTop: space.xl,
+    height: 140,
+    width: "100%",
+    overflow: "hidden",
+    justifyContent: "flex-start",
+  },
+  prepArtSlot: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 210,
+    height: 220,
+    alignItems: "center",
+    justifyContent: "flex-start",
   },
   dot: {
     width: 6,
@@ -394,11 +545,16 @@ const styles = StyleSheet.create({
     letterSpacing: -0.4,
     textAlign: "center",
   },
+  describeCopy: {
+    width: "100%",
+    alignItems: "center",
+  },
   artist: {
     marginTop: 6,
     fontFamily: fonts.body,
     fontWeight: "500",
     color: colors.labelSoft,
+    lineHeight: 21,
     fontSize: 16,
   },
   status: {

@@ -7,6 +7,8 @@ const paths: Record<string, string> = {
   close: "m6 6 12 12M6 18 18 6",
   "globe-outline": "M2 12h20M12 2c6 5 6 15 0 20-6-5-6-15 0-20",
   "checkmark-circle": "m7 12 3 3 7-7",
+  "help-circle":
+    "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01",
   "moon-outline": "M20 15A9 9 0 0 1 9 4a9 9 0 1 0 11 11Z",
   "flash-outline": "m13 2-9 12h7l-1 8 10-13h-7l1-7Z",
   "scan-outline": "M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8",
@@ -51,6 +53,7 @@ export function Icon({
   const strokeNames = [
     "globe-outline",
     "checkmark-circle",
+    "help-circle",
     "ellipse-outline",
   ];
   return (

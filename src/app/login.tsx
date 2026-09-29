@@ -1,10 +1,10 @@
 import { useState } from "react";
 import {
+  Image,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
   StyleSheet,
-  Text,
   TextInput,
   View,
 } from "react-native";
@@ -25,6 +25,8 @@ import { openLegal } from "../lib/legal";
 import { useT } from "../i18n";
 import { useAppStore } from "../store/appStore";
 import { fonts, colors, radii, space } from "../theme/tokens";
+
+const pillLogo = require("../../withoutbgicon.png");
 
 export default function LoginScreen() {
   const [name, setName] = useState("");
@@ -65,12 +67,19 @@ export default function LoginScreen() {
               ]}
               style={styles.heroGlow}
             />
-            <Text style={styles.heroMark}>●</Text>
+            <Image
+              source={pillLogo}
+              style={styles.heroLogo}
+              resizeMode="contain"
+              accessibilityIgnoresInvertColors
+            />
           </View>
 
-          <Caption style={styles.eyebrow}>{t("login.eyebrow")}</Caption>
-          <Title style={styles.title}>{t("login.title")}</Title>
-          <Body style={{ marginTop: space.md }}>{t("login.sub")}</Body>
+          <View style={styles.heroCopy}>
+            <Caption style={styles.eyebrow}>{t("login.eyebrow")}</Caption>
+            <Title style={styles.title}>{t("login.title")}</Title>
+            <Body style={styles.sub}>{t("login.sub")}</Body>
+          </View>
 
           <View style={styles.form}>
             <Caption style={styles.fieldLabel}>{t("login.name")}</Caption>
@@ -140,24 +149,38 @@ const styles = StyleSheet.create({
     marginTop: space.xl,
     alignItems: "center",
     justifyContent: "center",
+    overflow: "hidden",
+    borderRadius: radii.xl,
   },
   heroGlow: {
     ...StyleSheet.absoluteFill,
-    borderRadius: radii.xl,
   },
-  heroMark: {
-    fontSize: 48,
-    color: colors.label,
-    opacity: 0.9,
+  heroLogo: {
+    width: 168,
+    height: 84,
+  },
+  heroCopy: {
+    marginTop: space.lg,
+    alignItems: "center",
+    width: "100%",
   },
   eyebrow: {
     color: colors.accent,
-    marginTop: space.md,
     textTransform: "uppercase",
     letterSpacing: 1.2,
     fontSize: 11,
+    textAlign: "center",
   },
-  title: { marginTop: 10, fontSize: 36, lineHeight: 42 },
+  title: {
+    marginTop: 10,
+    fontSize: 34,
+    lineHeight: 40,
+    textAlign: "center",
+  },
+  sub: {
+    marginTop: space.md,
+    textAlign: "center",
+  },
   form: {
     marginTop: space.xl,
     padding: 20,

@@ -20,7 +20,7 @@ export const colors = {
   free: "#95DCC2",
   lock: "rgba(255, 255, 255, 0.38)",
   play: "#FFFFFF",
-  tabActive: "#FF2D55",
+  tabActive: "#C9B4E8",
 };
 
 export const space = { xs: 6, sm: 10, md: 16, lg: 24, xl: 36, xxl: 48 };

@@ -11,8 +11,7 @@ export const LEGAL_ROUTES = {
 
 /**
  * Public GitHub Pages URLs (App Store / Play Console + in-app browser links).
- * Repo: https://github.com/bigmustachegame/thepill
- * Enable Pages: Settings → Pages → Deploy from branch `main` / folder `/docs`
+ * Repo is legal-pages only: https://github.com/bigmustachegame/thepill
  */
 export const LEGAL_URLS = {
   privacy: "https://bigmustachegame.github.io/thepill/privacy.html",

@@ -6,7 +6,7 @@ export const CAPSULE_ART_ASPECT = 1672 / 941;
 /** Cover art keyed by capsule code. Filenames are ASCII-safe JPGs in /img. */
 export const capsuleArt: Partial<Record<string, ImageSourcePropType>> = {
   // CALM
-  "C-01": require("../../img/calmme.jpg"),
+  "C-01": require("../../img/calmyou.jpg"),
   "C-02": require("../../img/Serene.jpg"),
   "C-03": require("../../img/tranquil.jpg"),
   "C-04": require("../../img/content.jpg"),
@@ -116,10 +116,10 @@ export const capsuleArt: Partial<Record<string, ImageSourcePropType>> = {
 
   // PRO
   "P-01": require("../../img/Climax.jpg"),
-  "P-02": require("../../img/Encore.jpg"),
-  "P-03": require("../../img/Heat.jpg"),
-  "P-04": require("../../img/BluePill.jpg"),
-  "P-05": require("../../img/NightTide.jpg"),
+  "P-02": require("../../img/MultiClimax.jpg"),
+  "P-03": require("../../img/Aphrodisiac.jpg"),
+  "P-04": require("../../img/Rise.jpg"),
+  "P-05": require("../../img/EroticDream.jpg"),
   "P-06": require("../../img/FirstLove.jpg"),
   "P-07": require("../../img/Succubus.jpg"),
 };
