@@ -19,11 +19,20 @@ const TAB_ICONS: Record<string, PackIconName> = {
 function TabPackIcon({
   name,
   size = 28,
+  focused,
 }: {
   name: PackIconName;
   size?: number;
+  focused: boolean;
 }) {
-  return <PackIcon name={name} size={size} opacity={0.5} />;
+  return (
+    <PackIcon
+      name={name}
+      size={size}
+      opacity={focused ? 0.95 : 0.5}
+      variant={focused ? "purple" : "grey"}
+    />
+  );
 }
 
 export default function TabsLayout() {
@@ -54,11 +63,22 @@ export default function TabsLayout() {
           </View>
         ),
         // Default uikit item uses justifyContent: 'flex-start' — override to center.
-        tabBarButton: ({ href: _href, style, children, ...rest }) => (
+        tabBarButton: ({
+          children,
+          style,
+          onPress,
+          onLongPress,
+          accessibilityLabel,
+          accessibilityState,
+          testID,
+        }) => (
           <Pressable
-            {...rest}
+            onPress={onPress}
+            onLongPress={onLongPress}
+            accessibilityLabel={accessibilityLabel}
+            accessibilityState={accessibilityState}
+            testID={testID}
             style={[style, styles.tabButton]}
-            accessibilityRole="button"
           >
             {children}
           </Pressable>
@@ -110,35 +130,45 @@ export default function TabsLayout() {
         name="index"
         options={{
           title: t("tab.home"),
-          tabBarIcon: () => <TabPackIcon name={TAB_ICONS.index} />,
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.index} focused={focused} />
+          ),
         }}
       />
       <Tabs.Screen
         name="how"
         options={{
           title: t("tab.how"),
-          tabBarIcon: () => <TabPackIcon name={TAB_ICONS.how} size={30} />,
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.how} focused={focused} size={30} />
+          ),
         }}
       />
       <Tabs.Screen
         name="browse"
         options={{
           title: t("tab.browse"),
-          tabBarIcon: () => <TabPackIcon name={TAB_ICONS.browse} size={32} />,
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.browse} focused={focused} size={32} />
+          ),
         }}
       />
       <Tabs.Screen
         name="favorites"
         options={{
           title: t("tab.favorites"),
-          tabBarIcon: () => <TabPackIcon name={TAB_ICONS.favorites} />,
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.favorites} focused={focused} />
+          ),
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: t("tab.profile"),
-          tabBarIcon: () => <TabPackIcon name={TAB_ICONS.profile} />,
+          tabBarIcon: ({ focused }) => (
+            <TabPackIcon name={TAB_ICONS.profile} focused={focused} />
+          ),
         }}
       />
       <Tabs.Screen name="state/[state]" options={{ href: null }} />
