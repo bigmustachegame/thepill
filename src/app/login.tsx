@@ -30,16 +30,14 @@ const pillLogo = require("../../withoutbgicon.png");
 
 export default function LoginScreen() {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const login = useAppStore((s) => s.login);
   const router = useRouter();
   const t = useT();
-  const valid =
-    !!name.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  const valid = name.trim().length > 0;
   const submit = () => {
     if (!valid) return;
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
-    login(name, email);
+    login(name);
     router.replace("/contract");
   };
   return (
@@ -91,21 +89,6 @@ export default function LoginScreen() {
               placeholderTextColor={colors.lock}
               autoCapitalize="words"
               autoComplete="name"
-              style={styles.input}
-            />
-            <Caption style={[styles.fieldLabel, { marginTop: 14 }]}>
-              {t("login.email")}
-            </Caption>
-            <TextInput
-              accessibilityLabel={t("login.email")}
-              value={email}
-              onChangeText={setEmail}
-              placeholder={t("login.emailPlaceholder")}
-              placeholderTextColor={colors.lock}
-              keyboardType="email-address"
-              autoCapitalize="none"
-              autoCorrect={false}
-              autoComplete="email"
               style={styles.input}
               returnKeyType="go"
               onSubmitEditing={submit}

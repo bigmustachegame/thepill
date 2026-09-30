@@ -6,7 +6,6 @@ import {
   Body,
   BrandMark,
   Caption,
-  GhostButton,
   PrimaryButton,
   Screen,
   Title,
@@ -30,21 +29,28 @@ export default function ContractScreen() {
 
       <ScrollView
         style={styles.box}
-        contentContainerStyle={{ padding: space.md }}
+        contentContainerStyle={styles.boxContent}
         showsVerticalScrollIndicator
       >
         <Text style={styles.contract}>{t("contract.body")}</Text>
       </ScrollView>
 
-      <View style={styles.legalLinks}>
-        <GhostButton
-          label={t("legal.privacyLink")}
+      <View style={styles.legalRow}>
+        <Pressable
+          accessibilityRole="link"
           onPress={() => openLegal("privacy", router)}
-        />
-        <GhostButton
-          label={t("legal.termsLink")}
+          hitSlop={8}
+        >
+          <Text style={styles.legalLink}>{t("legal.privacyLink")}</Text>
+        </Pressable>
+        <Text style={styles.legalDot}>·</Text>
+        <Pressable
+          accessibilityRole="link"
           onPress={() => openLegal("terms", router)}
-        />
+          hitSlop={8}
+        >
+          <Text style={styles.legalLink}>{t("legal.termsLink")}</Text>
+        </Pressable>
       </View>
 
       <Pressable
@@ -70,21 +76,24 @@ export default function ContractScreen() {
           router.replace("/mood");
         }}
       />
-      <Caption style={{ marginTop: space.sm, textTransform: "none" }}>
-        {t("contract.decline")}
-      </Caption>
+      <Caption style={styles.decline}>{t("contract.decline")}</Caption>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
   box: {
-    marginTop: space.lg,
+    marginTop: space.md,
     flex: 1,
+    minHeight: 280,
     backgroundColor: colors.surface,
     borderRadius: radii.xl,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: colors.line,
+  },
+  boxContent: {
+    padding: space.md,
+    paddingBottom: space.lg,
   },
   contract: {
     fontFamily: fonts.body,
@@ -93,15 +102,30 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 22,
   },
-  legalLinks: {
+  legalRow: {
     marginTop: space.sm,
-    gap: 2,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    minHeight: 28,
+  },
+  legalLink: {
+    fontFamily: fonts.body,
+    fontWeight: "500",
+    color: colors.labelSoft,
+    fontSize: 14,
+  },
+  legalDot: {
+    color: colors.labelMuted,
+    fontSize: 14,
   },
   checkRow: {
     flexDirection: "row",
     gap: space.md,
     alignItems: "flex-start",
-    marginVertical: space.md,
+    marginTop: space.md,
+    marginBottom: space.sm,
   },
   boxCheck: {
     width: 24,
@@ -114,5 +138,9 @@ const styles = StyleSheet.create({
   boxCheckOn: {
     backgroundColor: colors.label,
     borderColor: colors.label,
+  },
+  decline: {
+    marginTop: space.sm,
+    textTransform: "none",
   },
 });

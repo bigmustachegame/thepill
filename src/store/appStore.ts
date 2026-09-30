@@ -19,7 +19,6 @@ export type ListenEvent = {
 export type UserProfile = {
   id: string;
   displayName: string;
-  email: string;
   createdAt: string;
 };
 
@@ -38,7 +37,7 @@ type AppState = {
   ratings: { code: string; rating: Rating; at: string }[];
   setHydrated: (v: boolean) => void;
   setLocale: (locale: Locale) => void;
-  login: (displayName: string, email: string) => void;
+  login: (displayName: string) => void;
   logout: () => void;
   deleteAccount: () => Promise<void>;
   acceptContract: () => void;
@@ -77,12 +76,11 @@ export const useAppStore = create<AppState>()(
       setLocale: (locale) => {
         if (isLocale(locale)) set({ locale });
       },
-      login: (displayName, email) =>
+      login: (displayName) =>
         set({
           profile: {
             id: newId(),
             displayName: displayName.trim() || "Anonymous",
-            email: email.trim().toLowerCase(),
             createdAt: new Date().toISOString(),
           },
         }),
@@ -161,7 +159,7 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: "the-pill-store-v2",
-      version: 3,
+      version: 4,
       storage: createJSONStorage(() => AsyncStorage),
       migrate: (persisted: unknown) => {
         const p = (persisted ?? {}) as Record<string, unknown>;
@@ -176,6 +174,12 @@ export const useAppStore = create<AppState>()(
           if (!merged.includes(code)) merged.push(code);
         }
         const { favoriteCodes: _drop, ...rest } = p;
+        // Drop legacy email from local profile (name-only onboarding).
+        const profile = rest.profile as Record<string, unknown> | null | undefined;
+        if (profile && typeof profile === "object") {
+          const { email: _email, ...profileRest } = profile;
+          rest.profile = profileRest;
+        }
         return { ...rest, libraryCodes: merged };
       },
       partialize: (s) => ({

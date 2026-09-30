@@ -67,7 +67,7 @@ export const STATE_META: Record<
   FEAR: { purpose: "Lean into the dark on purpose", defaultMinutes: 25 },
   CREATIVE: { purpose: "Creative work", defaultMinutes: 30 },
   GROUND: { purpose: "Settle after overstimulation", defaultMinutes: 10 },
-  PRO: { purpose: "Sensual and intimate sessions", defaultMinutes: 20 },
+  PRO: { purpose: "Feel erotic", defaultMinutes: 20 },
 };
 
 /** @deprecated Strength tiers removed — session length follows the audio file. */

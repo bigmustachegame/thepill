@@ -1,4 +1,4 @@
-import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import {
   Body,
@@ -7,6 +7,7 @@ import {
   GhostButton,
   PrimaryButton,
   Screen,
+  SecondaryButton,
   Title,
   TrackRow,
 } from "../../components/ui";
@@ -71,18 +72,14 @@ export default function ProfileScreen() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 110 }}
       >
-        <BrandMark />
-        <Title style={{ marginTop: space.lg }}>
-          {profile?.displayName ?? t("you")}
-        </Title>
-        <Body style={{ marginTop: space.sm }}>{profile?.email}</Body>
-
-        <View style={styles.block}>
-          <Caption style={styles.blockTitle}>{t("profile.language")}</Caption>
-          <View style={{ marginTop: 12 }}>
-            <LanguageSelect />
-          </View>
+        <View style={styles.header}>
+          <BrandMark />
+          <LanguageSelect compact />
         </View>
+
+        <Title style={{ marginTop: space.lg }}>
+          {profile?.displayName ?? t("you")}, {t("profile.greeting")}
+        </Title>
 
         <View style={styles.block}>
           <Caption style={styles.blockTitle}>{t("profile.status")}</Caption>
@@ -99,18 +96,31 @@ export default function ProfileScreen() {
             {t("profile.feeling")}: {feelingLabel ?? "—"} → {t("profile.want")}:{" "}
             {desireLabel ?? "—"}
           </Body>
-        </View>
 
-        <Body style={{ marginTop: space.lg, fontSize: 13 }}>{t("legal")}</Body>
-        <View style={{ marginTop: space.sm, gap: 4 }}>
-          <GhostButton
-            label={t("legal.privacyLink")}
-            onPress={() => openLegal("privacy", router)}
-          />
-          <GhostButton
-            label={t("legal.termsLink")}
-            onPress={() => openLegal("terms", router)}
-          />
+          <View style={styles.blockActions}>
+            {!hasPlus ? (
+              <PrimaryButton
+                label={t("profile.unlock")}
+                onPress={() => router.push("/paywall")}
+              />
+            ) : !isDemoBilling() ? (
+              <GhostButton
+                label={t("profile.manageSub")}
+                onPress={() => {
+                  void openManageSubscriptions();
+                }}
+              />
+            ) : (
+              <GhostButton label={t("profile.clearPlus")} onPress={clearPlus} />
+            )}
+            <SecondaryButton
+              label={t("profile.retake")}
+              onPress={() => {
+                useAppStore.setState({ onboardingDone: false });
+                router.replace("/mood");
+              }}
+            />
+          </View>
         </View>
 
         <Text style={styles.section}>{t("profile.history")}</Text>
@@ -123,9 +133,7 @@ export default function ProfileScreen() {
               return (
                 <TrackRow
                   key={`${e.code}-${e.at}-${i}`}
-                  name={
-                    capsule ? capsuleName(capsule, locale) : e.code
-                  }
+                  name={capsule ? capsuleName(capsule, locale) : e.code}
                   artist={`${t(`state.${e.state}`)} · ${new Date(e.at).toLocaleString(locale)}`}
                   image={artForCode(e.code)}
                   onPress={() => {
@@ -143,42 +151,26 @@ export default function ProfileScreen() {
           </View>
         )}
 
-        <View
-          style={{
-            marginTop: space.xl,
-            gap: space.sm,
-            marginBottom: space.xxl,
-          }}
-        >
-          {!hasPlus ? (
-            <PrimaryButton
-              label={t("profile.unlock")}
-              onPress={() => router.push("/paywall")}
-            />
-          ) : (
-            <>
-              {!isDemoBilling() ? (
-                <GhostButton
-                  label={t("profile.manageSub")}
-                  onPress={() => {
-                    void openManageSubscriptions();
-                  }}
-                />
-              ) : (
-                <GhostButton
-                  label={t("profile.clearPlus")}
-                  onPress={clearPlus}
-                />
-              )}
-            </>
-          )}
-          <GhostButton
-            label={t("profile.retake")}
-            onPress={() => {
-              useAppStore.setState({ onboardingDone: false });
-              router.replace("/mood");
-            }}
-          />
+        <Body style={styles.legalBlurb}>{t("legal")}</Body>
+        <View style={styles.legalRow}>
+          <Pressable
+            accessibilityRole="link"
+            onPress={() => openLegal("privacy", router)}
+            hitSlop={8}
+          >
+            <Text style={styles.legalLink}>{t("legal.privacyLink")}</Text>
+          </Pressable>
+          <Text style={styles.legalDot}>·</Text>
+          <Pressable
+            accessibilityRole="link"
+            onPress={() => openLegal("terms", router)}
+            hitSlop={8}
+          >
+            <Text style={styles.legalLink}>{t("legal.termsLink")}</Text>
+          </Pressable>
+        </View>
+
+        <View style={styles.footerActions}>
           <GhostButton
             label={t("profile.signOut")}
             onPress={() => {
@@ -200,6 +192,13 @@ export default function ProfileScreen() {
 }
 
 const styles = StyleSheet.create({
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: 12,
+    flexWrap: "wrap",
+  },
   block: {
     marginTop: space.xl,
     padding: space.lg,
@@ -220,6 +219,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     letterSpacing: -0.3,
   },
+  blockActions: {
+    marginTop: space.lg,
+    gap: space.sm,
+  },
   section: {
     marginTop: space.xl,
     fontFamily: fonts.body,
@@ -227,5 +230,32 @@ const styles = StyleSheet.create({
     color: colors.label,
     fontSize: 22,
     letterSpacing: -0.3,
+  },
+  legalBlurb: {
+    marginTop: space.xl,
+    fontSize: 13,
+  },
+  legalRow: {
+    marginTop: space.sm,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    minHeight: 28,
+  },
+  legalLink: {
+    fontFamily: fonts.body,
+    fontWeight: "500",
+    color: colors.labelSoft,
+    fontSize: 14,
+  },
+  legalDot: {
+    color: colors.labelMuted,
+    fontSize: 14,
+  },
+  footerActions: {
+    marginTop: space.xl,
+    gap: space.sm,
+    marginBottom: space.xxl,
   },
 });
