@@ -219,7 +219,7 @@
     {
       "code": "C-06",
       "state": "CALM",
-      "name": "AntiMigraine",
+      "name": "No Migraine",
       "file": "AntiMigraine.mp3",
       "sourceOriginal": "AntiMigraine.mp3",
       "free": false,
@@ -229,27 +229,27 @@
       "descriptionTr": "Gergin kafa ve göz arkası baskı için düşük uyaranlı sakinlik.\n\nBeklenti: duyumun sesi düşer — çene ve kaş yumuşar.",
       "translations": {
         "en": {
-          "name": "AntiMigraine",
+          "name": "No Migraine",
           "description": "A low-stimulus calm for tense heads and pressure behind the eyes.\n\nExpect sensation volume to drop — jaw and brow soften."
         },
         "tr": {
-          "name": "AntiMigraine",
+          "name": "No Migraine",
           "description": "Gergin kafa ve göz arkası baskı için düşük uyaranlı sakinlik.\n\nBeklenti: duyumun sesi düşer — çene ve kaş yumuşar."
         },
         "fr": {
-          "name": "AntiMigraine",
+          "name": "No Migraine",
           "description": "Un calme bas stimuli pour tête tendue et pression derrière les yeux.\n\nAttends-toi à un volume sensoriel plus bas — mâchoire et front se relâchent."
         },
         "es": {
-          "name": "AntiMigraine",
+          "name": "No Migraine",
           "description": "Una calma de bajo estímulo para cabeza tensa y presión detrás de los ojos.\n\nEspera que baje el volumen de la sensación — se relajan mandíbula y ceño."
         },
         "ru": {
-          "name": "AntiMigraine",
+          "name": "No Migraine",
           "description": "Спокойствие с низкой стимуляцией для напряжённой головы.\n\nОжидай падение «громкости» ощущений — челюсть и лоб смягчаются."
         },
         "de": {
-          "name": "AntiMigraine",
+          "name": "No Migraine",
           "description": "Low-Stimulus-Ruhe für angespannte Köpfe und Druck hinter den Augen.\n\nErwarte leiseres Empfinden — Kiefer und Stirn weichen."
         }
       }
@@ -485,7 +485,7 @@
     {
       "code": "S-05",
       "state": "SLEEP",
-      "name": "Anesthesia",
+      "name": "Anesthe",
       "file": "Anesthesia.mp3",
       "sourceOriginal": "Anesthesia.mp3",
       "free": false,
@@ -495,27 +495,27 @@
       "descriptionTr": "Günü yavaşça söndüren geceye geçiş.\n\nBeklenti: duyusal ayrıntı kararır; yumuşak duruluk kalır.",
       "translations": {
         "en": {
-          "name": "Anesthesia",
+          "name": "Anesthe",
           "description": "A fade-to-night session that extinguishes the day gradually.\n\nExpect sensory detail to dim until soft stillness remains."
         },
         "tr": {
-          "name": "Anesthesia",
+          "name": "Anesthe",
           "description": "Günü yavaşça söndüren geceye geçiş.\n\nBeklenti: duyusal ayrıntı kararır; yumuşak duruluk kalır."
         },
         "fr": {
-          "name": "Anesthesia",
+          "name": "Anesthe",
           "description": "Une extinction progressive du jour vers la nuit.\n\nAttends-toi à des détails sensoriels qui s’atténuent jusqu’au silence doux."
         },
         "es": {
-          "name": "Anesthesia",
+          "name": "Anesthe",
           "description": "Una extinción gradual del día hacia la noche.\n\nEspera que el detalle sensorial se atenúe hasta una quietud suave."
         },
         "ru": {
-          "name": "Anesthesia",
+          "name": "Anesthe",
           "description": "Постепенное угасание дня в ночь.\n\nОжидай, что сенсорные детали потускнеют до мягкой неподвижности."
         },
         "de": {
-          "name": "Anesthesia",
+          "name": "Anesthe",
           "description": "Allmähliches Auslöschen des Tages in die Nacht.\n\nErwarte, dass sensorische Details dimmen bis weiche Stille bleibt."
         }
       }
@@ -523,7 +523,7 @@
     {
       "code": "S-06",
       "state": "SLEEP",
-      "name": "Poppy",
+      "name": "Pappy",
       "file": "Poppy.mp3",
       "sourceOriginal": "Poppy.mp3",
       "free": false,
@@ -533,27 +533,27 @@
       "descriptionTr": "Karanlık, rüya gibi, hipnotik çekimli gece.\n\nBeklenti: farkındalık kenarında yarı-rüya imgeleri.",
       "translations": {
         "en": {
-          "name": "Poppy",
+          "name": "Pappy",
           "description": "A dark, dreamlike night atmosphere with a hypnotic pull.\n\nExpect half-dream imagery at the edge of awareness."
         },
         "tr": {
-          "name": "Poppy",
+          "name": "Pappy",
           "description": "Karanlık, rüya gibi, hipnotik çekimli gece.\n\nBeklenti: farkındalık kenarında yarı-rüya imgeleri."
         },
         "fr": {
-          "name": "Poppy",
+          "name": "Pappy",
           "description": "Une nuit sombre et onirique à tirant hypnotique.\n\nAttends-toi à des images demi-rêve au bord de la conscience."
         },
         "es": {
-          "name": "Poppy",
+          "name": "Pappy",
           "description": "Una noche oscura y onírica con tirón hipnótico.\n\nEspera imágenes a medio sueño en el borde de la conciencia."
         },
         "ru": {
-          "name": "Poppy",
+          "name": "Pappy",
           "description": "Тёмная сновидческая ночь с гипнотической тягой.\n\nОжидай образы полусна на краю сознания."
         },
         "de": {
-          "name": "Poppy",
+          "name": "Pappy",
           "description": "Dunkle traumhafte Nacht mit hypnotischem Zug.\n\nErwarte Halbtraum-Bilder am Rand des Bewusstseins."
         }
       }
@@ -979,7 +979,7 @@
     {
       "code": "E-04",
       "state": "EUPHORIA",
-      "name": "AntiSad",
+      "name": "No Sadness",
       "file": "AntiSad.mp3",
       "sourceOriginal": "AntiSad.mp3",
       "free": false,
@@ -989,27 +989,27 @@
       "descriptionTr": "Ağır günler için daha hafif alan — destek, çare değil.\n\nBeklenti: baskı bir kademe iner, duygunun etrafında daha çok hava.",
       "translations": {
         "en": {
-          "name": "AntiSad",
+          "name": "No Sadness",
           "description": "A lighter listening space for heavy days — support, not a cure.\n\nExpect pressure to ease a notch with more air around the feeling."
         },
         "tr": {
-          "name": "AntiSad",
+          "name": "No Sadness",
           "description": "Ağır günler için daha hafif alan — destek, çare değil.\n\nBeklenti: baskı bir kademe iner, duygunun etrafında daha çok hava."
         },
         "fr": {
-          "name": "AntiSad",
+          "name": "No Sadness",
           "description": "Un espace d’écoute plus léger pour jours lourds — soutien, pas remède.\n\nAttends-toi à une pression qui baisse d’un cran, avec plus d’air autour."
         },
         "es": {
-          "name": "AntiSad",
+          "name": "No Sadness",
           "description": "Un espacio de escucha más ligero para días pesados — apoyo, no cura.\n\nEspera que la presión baje un punto, con más aire alrededor."
         },
         "ru": {
-          "name": "AntiSad",
+          "name": "No Sadness",
           "description": "Более лёгкое пространство слушания для тяжёлых дней — поддержка, не лечение.\n\nОжидай, что давление спадает на ступень, с большим воздухом вокруг чувства."
         },
         "de": {
-          "name": "AntiSad",
+          "name": "No Sadness",
           "description": "Leichterer Hörraum für schwere Tage — Support, keine Heilung.\n\nErwarte Druck, der eine Stufe sinkt, mit mehr Luft darum."
         }
       }
@@ -1093,7 +1093,7 @@
     {
       "code": "E-07",
       "state": "EUPHORIA",
-      "name": "5HTP",
+      "name": "Happiness",
       "file": "5HTP.mp3",
       "sourceOriginal": "5HTP.mp3",
       "free": false,
@@ -1103,27 +1103,27 @@
       "descriptionTr": "Sert rush’suz yumuşak sevinç yükselişi.\n\nBeklenti: istikrarlı aydınlanma — sabah ışığı gibi.",
       "translations": {
         "en": {
-          "name": "5HTP",
+          "name": "Happiness",
           "description": "A gentle quietly joyful lift without a hard rush.\n\nExpect steady brightening — mood clears like morning light."
         },
         "tr": {
-          "name": "5HTP",
+          "name": "Happiness",
           "description": "Sert rush’suz yumuşak sevinç yükselişi.\n\nBeklenti: istikrarlı aydınlanma — sabah ışığı gibi."
         },
         "fr": {
-          "name": "5HTP",
+          "name": "Happiness",
           "description": "Une élévation joyeuse douce, sans rush dur.\n\nAttends-toi à un éclaircissement stable — comme la lumière du matin."
         },
         "es": {
-          "name": "5HTP",
+          "name": "Happiness",
           "description": "Una elevación alegre suave, sin rush duro.\n\nEspera un aclarado estable — como luz de mañana."
         },
         "ru": {
-          "name": "5HTP",
+          "name": "Happiness",
           "description": "Мягкий радостный подъём без жёсткого рывка.\n\nОжидай устойчивое просветление — как утренний свет."
         },
         "de": {
-          "name": "5HTP",
+          "name": "Happiness",
           "description": "Sanfter freudiger Lift ohne harten Rush.\n\nErwarte stabile Aufhellung — wie Morgenlicht."
         }
       }
@@ -1131,7 +1131,7 @@
     {
       "code": "E-08",
       "state": "EUPHORIA",
-      "name": "!RAVE!",
+      "name": "Neon",
       "file": "!RAVE!.mp3",
       "sourceOriginal": "!RAVE!.mp3",
       "free": false,
@@ -1141,27 +1141,27 @@
       "descriptionTr": "Ortak ritme kurulu gece nabzı.\n\nBeklenti: beden sallanır, dikkat bite kilitlenir.",
       "translations": {
         "en": {
-          "name": "!RAVE!",
+          "name": "Neon",
           "description": "A nightlife pulse built on shared rhythm.\n\nExpect body sway and beat-locked attention — social electricity even alone."
         },
         "tr": {
-          "name": "!RAVE!",
+          "name": "Neon",
           "description": "Ortak ritme kurulu gece nabzı.\n\nBeklenti: beden sallanır, dikkat bite kilitlenir."
         },
         "fr": {
-          "name": "!RAVE!",
+          "name": "Neon",
           "description": "Un pouls de nuit sur rythme partagé.\n\nAttends-toi à du mouvement corporel et une attention calée sur le beat."
         },
         "es": {
-          "name": "!RAVE!",
+          "name": "Neon",
           "description": "Un pulso nocturno sobre ritmo compartido.\n\nEspera balanceo del cuerpo y atención enganchada al beat."
         },
         "ru": {
-          "name": "!RAVE!",
+          "name": "Neon",
           "description": "Ночной пульс на общем ритме.\n\nОжидай покачивание тела и внимание, привязанное к биту."
         },
         "de": {
-          "name": "!RAVE!",
+          "name": "Neon",
           "description": "Nachtleben-Puls auf geteiltem Rhythmus.\n\nErwarte Körpersway und Beat-Attention."
         }
       }
@@ -1207,7 +1207,7 @@
     {
       "code": "R-02",
       "state": "RESET",
-      "name": "Hangover Cure",
+      "name": "Hangover",
       "file": "Hangover Cure.mp3",
       "sourceOriginal": "Hangover Cure.mp3",
       "free": false,
@@ -1217,27 +1217,27 @@
       "descriptionTr": "Sert gece veya aşırı yük sonrası yumuşak sabah toparlanması.\n\nBeklenti: daha nazik duyular — yumuşak kenarlar, yavaş ramp.",
       "translations": {
         "en": {
-          "name": "Hangover Cure",
+          "name": "Hangover",
           "description": "A gentle morning recovery after rough nights or overdoing it.\n\nExpect kinder senses — softer edges and a slower ramp."
         },
         "tr": {
-          "name": "Hangover Cure",
+          "name": "Hangover",
           "description": "Sert gece veya aşırı yük sonrası yumuşak sabah toparlanması.\n\nBeklenti: daha nazik duyular — yumuşak kenarlar, yavaş ramp."
         },
         "fr": {
-          "name": "Hangover Cure",
+          "name": "Hangover",
           "description": "Une récupération matinale douce après une nuit difficile.\n\nAttends-toi à des sens plus doux — bords soft et montée plus lente."
         },
         "es": {
-          "name": "Hangover Cure",
+          "name": "Hangover",
           "description": "Una recuperación matutina suave tras noches difíciles.\n\nEspera sentidos más amables — bordes soft y rampa más lenta."
         },
         "ru": {
-          "name": "Hangover Cure",
+          "name": "Hangover",
           "description": "Мягкое утреннее восстановление после тяжёлой ночи.\n\nОжидай более добрые ощущения — мягкие края и медленный разгон."
         },
         "de": {
-          "name": "Hangover Cure",
+          "name": "Hangover",
           "description": "Sanfte Morgen-Recovery nach rauen Nächten.\n\nErwarte sanftere Sinne — weichere Kanten, langsamere Rampe."
         }
       }
@@ -2271,7 +2271,7 @@
     {
       "code": "N-04",
       "state": "TRANCE",
-      "name": "Sevoflurane",
+      "name": "Sevo",
       "file": "Sevoflurane.mp3",
       "sourceOriginal": "Sevoflurane.mp3",
       "free": false,
@@ -2281,27 +2281,27 @@
       "descriptionTr": "Aciliyetin sesini kısan yumuşak anestezik pus.\n\nBeklenti: kenarlar bulanır, beden uykuya zorlamadan yerleşir.",
       "translations": {
         "en": {
-          "name": "Sevoflurane",
+          "name": "Sevo",
           "description": "A soft anesthetic haze that lowers the volume on urgency.\n\nExpect edges to blur and the body to settle without forcing sleep."
         },
         "tr": {
-          "name": "Sevoflurane",
+          "name": "Sevo",
           "description": "Aciliyetin sesini kısan yumuşak anestezik pus.\n\nBeklenti: kenarlar bulanır, beden uykuya zorlamadan yerleşir."
         },
         "fr": {
-          "name": "Sevoflurane",
+          "name": "Sevo",
           "description": "Une brume anesthésique douce qui baisse le volume de l’urgence.\n\nAttends-toi à des contours flous et un corps qui se pose sans forcer le sommeil."
         },
         "es": {
-          "name": "Sevoflurane",
+          "name": "Sevo",
           "description": "Una bruma anestésica suave que baja el volumen de la urgencia.\n\nEspera bordes borrosos y un cuerpo que se asienta sin forzar el sueño."
         },
         "ru": {
-          "name": "Sevoflurane",
+          "name": "Sevo",
           "description": "Мягкая анестетическая дымка, которая приглушает срочность.\n\nОжидай размытые края и тело, которое оседает без принуждения ко сну."
         },
         "de": {
-          "name": "Sevoflurane",
+          "name": "Sevo",
           "description": "Weicher anästhetischer Dunst, der die Lautstärke der Dringlichkeit senkt.\n\nErwarte weichere Kanten und einen Körper, der sich setzt ohne Schlaf zu erzwingen."
         }
       }
@@ -2309,7 +2309,7 @@
     {
       "code": "N-05",
       "state": "TRANCE",
-      "name": "Isoflurane",
+      "name": "Iso",
       "file": "Isoflurane.mp3",
       "sourceOriginal": "Isoflurane.mp3",
       "free": false,
@@ -2319,27 +2319,27 @@
       "descriptionTr": "Farkındalığı içe çeken daha yoğun anestezik atmosfer.\n\nBeklenti: yavaşlayan düşünceler, daha ağır ve sessiz varlık.",
       "translations": {
         "en": {
-          "name": "Isoflurane",
+          "name": "Iso",
           "description": "A thicker anesthetic atmosphere that pulls awareness inward.\n\nExpect slower thoughts and a heavier, quieter presence."
         },
         "tr": {
-          "name": "Isoflurane",
+          "name": "Iso",
           "description": "Farkındalığı içe çeken daha yoğun anestezik atmosfer.\n\nBeklenti: yavaşlayan düşünceler, daha ağır ve sessiz varlık."
         },
         "fr": {
-          "name": "Isoflurane",
+          "name": "Iso",
           "description": "Une atmosphère anesthésique plus dense qui tire l’attention vers l’intérieur.\n\nAttends-toi à des pensées plus lentes et une présence plus lourde et calme."
         },
         "es": {
-          "name": "Isoflurane",
+          "name": "Iso",
           "description": "Una atmósfera anestésica más densa que tira la atención hacia adentro.\n\nEspera pensamientos más lentos y una presencia más pesada y quieta."
         },
         "ru": {
-          "name": "Isoflurane",
+          "name": "Iso",
           "description": "Более плотная анестетическая атмосфера, тянущая внимание внутрь.\n\nОжидай более медленные мысли и более тяжёлое, тихое присутствие."
         },
         "de": {
-          "name": "Isoflurane",
+          "name": "Iso",
           "description": "Dichtere anästhetische Atmosphäre, die die Aufmerksamkeit nach innen zieht.\n\nErwarte langsamere Gedanken und eine schwerere, stillere Präsenz."
         }
       }
@@ -2347,7 +2347,7 @@
     {
       "code": "N-06",
       "state": "TRANCE",
-      "name": "Desflurane",
+      "name": "Desf",
       "file": "Desflurane.mp3",
       "sourceOriginal": "Desflurane.mp3",
       "free": false,
@@ -2357,27 +2357,27 @@
       "descriptionTr": "Yoğunluklar arası hızlı topraklama için hızlı anestezik soluk.\n\nBeklenti: uyanık gerilimde keskin düşüş — sonra boş sakinlik.",
       "translations": {
         "en": {
-          "name": "Desflurane",
+          "name": "Desf",
           "description": "A fast anesthetic fade for quick grounding between spikes.\n\nExpect a sharp drop in alert tension — then hollow calm."
         },
         "tr": {
-          "name": "Desflurane",
+          "name": "Desf",
           "description": "Yoğunluklar arası hızlı topraklama için hızlı anestezik soluk.\n\nBeklenti: uyanık gerilimde keskin düşüş — sonra boş sakinlik."
         },
         "fr": {
-          "name": "Desflurane",
+          "name": "Desf",
           "description": "Une descente anesthésique rapide pour ancrer entre deux pics.\n\nAttends-toi à une chute nette de tension — puis un calme creux."
         },
         "es": {
-          "name": "Desflurane",
+          "name": "Desf",
           "description": "Una bajada anestésica rápida para anclar entre picos.\n\nEspera una caída nítida de tensión alerta — luego calma hueca."
         },
         "ru": {
-          "name": "Desflurane",
+          "name": "Desf",
           "description": "Быстрое анестетическое угасание для быстрого заземления между всплесками.\n\nОжидай резкий спад настороженности — затем пустое спокойствие."
         },
         "de": {
-          "name": "Desflurane",
+          "name": "Desf",
           "description": "Schnelles anästhetisches Absinken zum schnellen Grounden zwischen Spikes.\n\nErwarte einen scharfen Abfall der Alert-Spannung — dann hohle Ruhe."
         }
       }
@@ -3031,7 +3031,7 @@
     {
       "code": "G-04",
       "state": "TRANCE",
-      "name": "Mary Jane",
+      "name": "Mother Mary",
       "file": "Mary Jane.mp3",
       "sourceOriginal": "Mary Jane.mp3",
       "free": false,
@@ -3041,27 +3041,27 @@
       "descriptionTr": "Puslu, kolay giden zemin.\n\nBeklenti: gevşek odak ve sıcak bulanıklık.",
       "translations": {
         "en": {
-          "name": "Mary Jane",
+          "name": "Mother Mary",
           "description": "A hazy easygoing ground atmosphere.\n\nExpect loose focus and warm blur — priorities stop shouting."
         },
         "tr": {
-          "name": "Mary Jane",
+          "name": "Mother Mary",
           "description": "Puslu, kolay giden zemin.\n\nBeklenti: gevşek odak ve sıcak bulanıklık."
         },
         "fr": {
-          "name": "Mary Jane",
+          "name": "Mother Mary",
           "description": "Atmosphère brumeuse et easy.\n\nAttends-toi à un focus lâche et un flou chaud."
         },
         "es": {
-          "name": "Mary Jane",
+          "name": "Mother Mary",
           "description": "Atmósfera brumosa y fácil.\n\nEspera foco suelto y blur cálido."
         },
         "ru": {
-          "name": "Mary Jane",
+          "name": "Mother Mary",
           "description": "Дымчатая лёгкая атмосфера.\n\nОжидай свободный фокус и тёплый блюр."
         },
         "de": {
-          "name": "Mary Jane",
+          "name": "Mother Mary",
           "description": "Dunstige easy Atmosphäre.\n\nErwarte losen Fokus und warmen Blur."
         }
       }
@@ -3183,7 +3183,7 @@
     {
       "code": "G-08",
       "state": "TRANCE",
-      "name": "Halothane",
+      "name": "Halot",
       "file": "Halothane.mp3",
       "sourceOriginal": "Halothane.mp3",
       "free": false,
@@ -3193,27 +3193,27 @@
       "descriptionTr": "Dinlenmiş varlığa yavaş batan ağır zemin.\n\nBeklenti: beden ağırlaşır — hareketsizlik kolaylaşır.",
       "translations": {
         "en": {
-          "name": "Halothane",
+          "name": "Halot",
           "description": "A heavy slowly sinking ground into restful presence.\n\nExpect denser body weight — stillness easier than motion."
         },
         "tr": {
-          "name": "Halothane",
+          "name": "Halot",
           "description": "Dinlenmiş varlığa yavaş batan ağır zemin.\n\nBeklenti: beden ağırlaşır — hareketsizlik kolaylaşır."
         },
         "fr": {
-          "name": "Halothane",
+          "name": "Halot",
           "description": "Thème lourd qui s’enfonce vers une présence reposante.\n\nAttends-toi à plus de poids corporel — l’immobilité devient facile."
         },
         "es": {
-          "name": "Halothane",
+          "name": "Halot",
           "description": "Tema pesado que se hunde hacia presencia reposada.\n\nEspera más peso corporal — la quietud se vuelve fácil."
         },
         "ru": {
-          "name": "Halothane",
+          "name": "Halot",
           "description": "Тяжёлая медленно тонущая тема к отдыхной присутствию.\n\nОжидай более плотный вес тела — неподвижность становится легче."
         },
         "de": {
-          "name": "Halothane",
+          "name": "Halot",
           "description": "Schweres langsames Sinken in ruhevolle Präsenz.\n\nErwarte dichteres Körpergewicht — Stillsein wird leichter."
         }
       }
@@ -3335,7 +3335,7 @@
     {
       "code": "G-12",
       "state": "FEAR",
-      "name": "ECT",
+      "name": "Hard Cut",
       "file": "ECT.mp3",
       "sourceOriginal": "ECT.mp3",
       "free": false,
@@ -3345,27 +3345,27 @@
       "descriptionTr": "Takılı döngüyü kesen ani sahne değişimi.\n\nBeklenti: yenilik sarsıntısı — durum sıfırlanır.",
       "translations": {
         "en": {
-          "name": "ECT",
+          "name": "Hard Cut",
           "description": "An abrupt change-of-scene interrupt for stuck loops.\n\nExpect a novelty jolt that resets state before the old groove returns."
         },
         "tr": {
-          "name": "ECT",
+          "name": "Hard Cut",
           "description": "Takılı döngüyü kesen ani sahne değişimi.\n\nBeklenti: yenilik sarsıntısı — durum sıfırlanır."
         },
         "fr": {
-          "name": "ECT",
+          "name": "Hard Cut",
           "description": "Interruption abrupte de scène pour boucles bloquées.\n\nAttends-toi à un jolt de nouveauté qui reset l’état."
         },
         "es": {
-          "name": "ECT",
+          "name": "Hard Cut",
           "description": "Interrupción abrupta de escena para bucles atascados.\n\nEspera un jolt de novedad que resetea el estado."
         },
         "ru": {
-          "name": "ECT",
+          "name": "Hard Cut",
           "description": "Резкая смена сцены для застрявших циклов.\n\nОжидай толчок новизны, сбрасывающий состояние."
         },
         "de": {
-          "name": "ECT",
+          "name": "Hard Cut",
           "description": "Abrupter Szenenbruch für stuck Loops.\n\nErwarte Novelty-Jolt, der den State resett."
         }
       }
@@ -3373,7 +3373,7 @@
     {
       "code": "G-13",
       "state": "GROUND",
-      "name": "Diet+",
+      "name": "Form+",
       "file": "Diet+.mp3",
       "sourceOriginal": "Diet+.mp3",
       "free": false,
@@ -3383,27 +3383,27 @@
       "descriptionTr": "Cezasız niyet ve denge zemini.\n\nBeklenti: nezaketli net seçim — sağlam hizalanma.",
       "translations": {
         "en": {
-          "name": "Diet+",
+          "name": "Form+",
           "description": "An intention-and-balance ground without punishment.\n\nExpect kinder clearer choice — steady alignment, not strictness."
         },
         "tr": {
-          "name": "Diet+",
+          "name": "Form+",
           "description": "Cezasız niyet ve denge zemini.\n\nBeklenti: nezaketli net seçim — sağlam hizalanma."
         },
         "fr": {
-          "name": "Diet+",
+          "name": "Form+",
           "description": "Intention et équilibre sans punition.\n\nAttends-toi à des choix plus clairs avec douceur."
         },
         "es": {
-          "name": "Diet+",
+          "name": "Form+",
           "description": "Intención y equilibrio sin castigo.\n\nEspera elección más clara con amabilidad."
         },
         "ru": {
-          "name": "Diet+",
+          "name": "Form+",
           "description": "Намерение и баланс без наказания.\n\nОжидай более ясный выбор с мягкостью."
         },
         "de": {
-          "name": "Diet+",
+          "name": "Form+",
           "description": "Absicht und Balance ohne Strafe.\n\nErwarte klarere Wahl mit Freundlichkeit."
         }
       }

@@ -329,30 +329,32 @@ export function TrackRow({
   onMore?: () => void;
 }) {
   return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={`${name}, ${artist}${locked ? ", PILL+" : ""}`}
-      onPress={onPress}
-      style={({ pressed }) => [styles.trackRow, pressed && { opacity: 0.7 }]}
-    >
-      <View style={styles.trackArt}>
-        {image ? (
-          <Image source={image} style={styles.trackArtImg} resizeMode="cover" />
-        ) : (
-          <LinearGradient
-            colors={["rgba(180,140,230,0.4)", "rgba(30,20,50,0.95)"]}
-            style={styles.trackArtImg}
-          />
-        )}
-      </View>
-      <View style={styles.trackMeta}>
-        <Text style={styles.trackTitle} numberOfLines={1}>
-          {name}
-        </Text>
-        <Text style={styles.trackArtist} numberOfLines={1}>
-          {free ? `${freeLabel} · ${artist}` : locked ? `PILL+ · ${artist}` : artist}
-        </Text>
-      </View>
+    <View style={styles.trackRow}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={`${name}, ${artist}${locked ? ", PILL+" : ""}`}
+        onPress={onPress}
+        style={({ pressed }) => [styles.trackMain, pressed && { opacity: 0.7 }]}
+      >
+        <View style={styles.trackArt}>
+          {image ? (
+            <Image source={image} style={styles.trackArtImg} resizeMode="cover" />
+          ) : (
+            <LinearGradient
+              colors={["rgba(180,140,230,0.4)", "rgba(30,20,50,0.95)"]}
+              style={styles.trackArtImg}
+            />
+          )}
+        </View>
+        <View style={styles.trackMeta}>
+          <Text style={styles.trackTitle} numberOfLines={1}>
+            {name}
+          </Text>
+          <Text style={styles.trackArtist} numberOfLines={1}>
+            {free ? `${freeLabel} · ${artist}` : locked ? `PILL+ · ${artist}` : artist}
+          </Text>
+        </View>
+      </Pressable>
       {onDownload && downloadState ? (
         <DownloadButton
           state={downloadState}
@@ -370,6 +372,7 @@ export function TrackRow({
         <Pressable
           hitSlop={12}
           onPress={onMore}
+          accessibilityRole="button"
           accessibilityLabel="More"
           style={styles.trackMore}
         >
@@ -379,17 +382,15 @@ export function TrackRow({
       {onDelete ? (
         <Pressable
           hitSlop={12}
-          onPress={(e) => {
-            e.stopPropagation?.();
-            onDelete();
-          }}
+          onPress={onDelete}
+          accessibilityRole="button"
           accessibilityLabel="Delete"
           style={styles.trackMore}
         >
           <PackIcon name="trash" size={20} opacity={0.72} />
         </Pressable>
       ) : null}
-    </Pressable>
+    </View>
   );
 }
 
@@ -564,6 +565,13 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: colors.line,
+  },
+  trackMain: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    minWidth: 0,
   },
   trackArt: {
     width: 72,

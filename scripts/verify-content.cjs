@@ -19,7 +19,7 @@ for (const locale of locales) {
   for (const capsule of catalog.capsules) {
     const copy = capsule.translations[locale];
     assert.ok(copy?.name && copy?.description.trim() && copy.description.length <= 320, `${locale}.${capsule.code}: incomplete copy`);
-    assert.equal(copy.name, path.parse(capsule.sourceOriginal).name, `${locale}.${capsule.code}: original title mismatch`);
+    assert.equal(copy.name, capsule.name, `${locale}.${capsule.code}: display name mismatch`);
     names.push(copy.name);
   }
   assert.equal(new Set(names).size, 96, `${locale}: duplicate capsule names`);

@@ -16,7 +16,7 @@ npm start
 - The custom language selector is available on login and profile. The choice persists on the device and updates all screens immediately.
 - UI copy: `src/i18n/locales/{locale}.json`.
 - Capsule names and descriptions: `translations` in `capsules.catalog.json` and its runtime copy `src/data/capsules.catalog.json`. Keep both files synchronized.
-- Codes and audio filenames are stable. Visible names preserve the original title from `sourceOriginal` (without `.mp3`) in every language; descriptions remain localized and short.
+- Codes and audio filenames (`file` / `sourceOriginal`) are stable for CDN playback. Visible display names may differ from the audio filename (App Store–safe renames); keep the same display name in every language; descriptions remain localized and short.
 - Listening history resolves the current translated title by capsule code, including existing saved sessions.
 
 ## Validation
