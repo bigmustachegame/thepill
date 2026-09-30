@@ -12,7 +12,7 @@ const TAB_ICONS: Record<string, PackIconName> = {
   index: "home",
   how: "how",
   browse: "explore",
-  favorites: "favorites",
+  library: "library",
   profile: "profile",
 };
 
@@ -26,12 +26,7 @@ function TabPackIcon({
   focused: boolean;
 }) {
   return (
-    <PackIcon
-      name={name}
-      size={size}
-      opacity={focused ? 0.95 : 0.5}
-      variant={focused ? "purple" : "grey"}
-    />
+    <PackIcon name={name} size={size} opacity={focused ? 1 : 0.72} />
   );
 }
 
@@ -51,7 +46,9 @@ export default function TabsLayout() {
         // Prevent React Navigation from adding extra bottom inset (was misaligning icons).
         ...({ tabBarSafeAreaInsets: { top: 0, bottom: 0 } } as object),
         tabBarBackground: () => (
-          <View style={StyleSheet.absoluteFill} pointerEvents="none">
+          <View
+            style={[StyleSheet.absoluteFill, { pointerEvents: "none" }]}
+          >
             {Platform.OS !== "web" ? (
               <BlurView
                 intensity={55}
@@ -97,10 +94,14 @@ export default function TabsLayout() {
           backgroundColor: Platform.OS === "web" ? colors.glass : "transparent",
           overflow: "hidden",
           elevation: 0,
-          shadowColor: "#000",
-          shadowOpacity: 0.35,
-          shadowRadius: 24,
-          shadowOffset: { width: 0, height: 8 },
+          ...(Platform.OS === "web"
+            ? { boxShadow: "0 8px 24px rgba(0,0,0,0.35)" }
+            : {
+                shadowColor: "#000",
+                shadowOpacity: 0.35,
+                shadowRadius: 24,
+                shadowOffset: { width: 0, height: 8 },
+              }),
         },
         tabBarItemStyle: {
           flex: 1,
@@ -154,11 +155,11 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="favorites"
+        name="library"
         options={{
-          title: t("tab.favorites"),
+          title: t("tab.library"),
           tabBarIcon: ({ focused }) => (
-            <TabPackIcon name={TAB_ICONS.favorites} focused={focused} />
+            <TabPackIcon name={TAB_ICONS.library} focused={focused} />
           ),
         }}
       />

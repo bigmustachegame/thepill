@@ -4,7 +4,9 @@ import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { ErrorBoundary } from "../components/ErrorBoundary";
+import { configureBilling, syncPlusEntitlement } from "../lib/billing";
 import { gateRoute, useAppStore } from "../store/appStore";
+import { useDownloadStore } from "../store/downloadStore";
 import { useT } from "../i18n";
 import { colors } from "../theme/tokens";
 
@@ -16,6 +18,7 @@ export default function RootLayout() {
   const profile = useAppStore((s) => s.profile);
   const contractAcceptedAt = useAppStore((s) => s.contractAcceptedAt);
   const onboardingDone = useAppStore((s) => s.onboardingDone);
+  const hydrateDownloads = useDownloadStore((s) => s.hydrateFromDisk);
   const segments = useSegments();
   const router = useRouter();
   const t = useT();
@@ -27,6 +30,19 @@ export default function RootLayout() {
     }, 50);
     return () => clearTimeout(t);
   }, [setHydrated]);
+
+  useEffect(() => {
+    if (!ready) return;
+    void hydrateDownloads();
+  }, [ready, hydrateDownloads]);
+
+  useEffect(() => {
+    if (!ready) return;
+    void (async () => {
+      await configureBilling();
+      await syncPlusEntitlement();
+    })();
+  }, [ready]);
 
   useEffect(() => {
     if (!ready) return;

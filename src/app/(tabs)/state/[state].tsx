@@ -27,6 +27,7 @@ import { bgForState } from "../../../data/groupBg";
 import { useScrollToTopOnFocus } from "../../../hooks/useScrollToTopOnFocus";
 import { capsuleName, capsuleDescription, useLocale, useT } from "../../../i18n";
 import { useAppStore } from "../../../store/appStore";
+import { useDownloadStore } from "../../../store/downloadStore";
 import { colors, fonts, radii, space } from "../../../theme/tokens";
 
 export default function BrowseStateScreen() {
@@ -38,8 +39,9 @@ export default function BrowseStateScreen() {
   const insets = useSafeAreaInsets();
   const canPlay = useAppStore((s) => s.canPlay);
   const hasPlus = useAppStore((s) => s.hasPlus);
-  const favoriteCodes = useAppStore((s) => s.favoriteCodes);
-  const toggleFavorite = useAppStore((s) => s.toggleFavorite);
+  const libraryCodes = useAppStore((s) => s.libraryCodes);
+  const startDownload = useDownloadStore((s) => s.startDownload);
+  const byCode = useDownloadStore((s) => s.byCode);
   const scrollRef = useScrollToTopOnFocus([state]);
 
   const list = useMemo(() => capsulesForState(state), [state]);
@@ -75,7 +77,7 @@ export default function BrowseStateScreen() {
         {/* Same art + bottom-fade stack as session play screen */}
         <View style={styles.artHero}>
           {Platform.OS === "web" ? (
-            <View style={styles.artScale} pointerEvents="none">
+            <View style={[styles.artScale, { pointerEvents: "none" }]}>
               <Image
                 source={bgForState(state)}
                 style={styles.artFill}
@@ -92,10 +94,9 @@ export default function BrowseStateScreen() {
             />
           )}
           <LinearGradient
-            pointerEvents="none"
             colors={["transparent", "rgba(10,10,15,0.55)", colors.bg]}
             locations={[0, 0.5, 1]}
-            style={styles.fadeBottom}
+            style={[styles.fadeBottom, { pointerEvents: "none" }]}
           />
           <View style={styles.fadeBottomCap} />
 
@@ -149,7 +150,13 @@ export default function BrowseStateScreen() {
           <View style={styles.list}>
             {list.map((c) => {
               const locked = !canPlay(c);
-              const favorited = favoriteCodes.includes(c.code);
+              const dl = byCode[c.code];
+              const downloadState =
+                dl?.status === "downloading"
+                  ? "downloading"
+                  : dl?.status === "complete"
+                    ? "done"
+                    : "idle";
               return (
                 <TrackRow
                   key={c.code}
@@ -159,19 +166,24 @@ export default function BrowseStateScreen() {
                   free={c.free}
                   locked={locked}
                   freeLabel={t("card.free")}
-                  favorited={favorited}
+                  downloadState={downloadState}
+                  downloadProgress={dl?.progress ?? 0}
                   onPress={() => openCapsule(c.code, locked)}
-                  onFavorite={() => {
+                  onDownload={() => {
+                    if (locked) {
+                      router.push("/paywall");
+                      return;
+                    }
                     Haptics.impactAsync(
                       Haptics.ImpactFeedbackStyle.Light,
                     ).catch(() => {});
-                    toggleFavorite(c.code);
+                    void startDownload(c.code);
                   }}
                 />
               );
             })}
           </View>
-          {!hasPlus ? (
+          {!hasPlus && list.some((c) => !c.free) ? (
             <Body style={styles.lockedHint}>{t("locked.hint")}</Body>
           ) : null}
         </View>

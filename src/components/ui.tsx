@@ -14,6 +14,8 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Icon } from "./Icon";
+import { PackIcon } from "./PackIcon";
+import { DownloadButton } from "./DownloadButton";
 import { CAPSULE_ART_ASPECT } from "../data/capsuleArt";
 import { colors, fonts, radii, space } from "../theme/tokens";
 
@@ -43,10 +45,9 @@ export function Screen({
     >
       {wash ? (
         <LinearGradient
-          pointerEvents="none"
           colors={[colors.wash, "rgba(80,40,120,0.12)", "transparent"]}
           locations={[0, 0.35, 0.75]}
-          style={StyleSheet.absoluteFill}
+          style={[StyleSheet.absoluteFill, { pointerEvents: "none" }]}
         />
       ) : null}
       <View style={styles.screenInner}>{children}</View>
@@ -307,9 +308,11 @@ export function TrackRow({
   locked,
   free,
   freeLabel = "FREE",
-  favorited,
+  downloadState,
+  downloadProgress = 0,
   onPress,
-  onFavorite,
+  onDownload,
+  onDelete,
   onMore,
 }: {
   name: string;
@@ -318,9 +321,11 @@ export function TrackRow({
   locked?: boolean;
   free?: boolean;
   freeLabel?: string;
-  favorited?: boolean;
+  downloadState?: "idle" | "downloading" | "done";
+  downloadProgress?: number;
   onPress: () => void;
-  onFavorite?: () => void;
+  onDownload?: () => void;
+  onDelete?: () => void;
   onMore?: () => void;
 }) {
   return (
@@ -348,22 +353,19 @@ export function TrackRow({
           {free ? `${freeLabel} · ${artist}` : locked ? `PILL+ · ${artist}` : artist}
         </Text>
       </View>
-      {onFavorite ? (
-        <Pressable
-          hitSlop={12}
-          onPress={(e) => {
-            e.stopPropagation?.();
-            onFavorite();
-          }}
-          accessibilityLabel="Favorite"
-          style={styles.trackMore}
-        >
-          <Icon
-            name={favorited ? "heart" : "heart-outline"}
-            size={18}
-            color={favorited ? colors.accent : colors.labelMuted}
-          />
-        </Pressable>
+      {onDownload && downloadState ? (
+        <DownloadButton
+          state={downloadState}
+          progress={downloadProgress}
+          onPress={downloadState === "idle" ? onDownload : undefined}
+          accessibilityLabel={
+            downloadState === "done"
+              ? "Downloaded"
+              : downloadState === "downloading"
+                ? "Downloading"
+                : "Download"
+          }
+        />
       ) : onMore ? (
         <Pressable
           hitSlop={12}
@@ -372,6 +374,19 @@ export function TrackRow({
           style={styles.trackMore}
         >
           <Icon name="more" size={18} color={colors.labelMuted} />
+        </Pressable>
+      ) : null}
+      {onDelete ? (
+        <Pressable
+          hitSlop={12}
+          onPress={(e) => {
+            e.stopPropagation?.();
+            onDelete();
+          }}
+          accessibilityLabel="Delete"
+          style={styles.trackMore}
+        >
+          <PackIcon name="trash" size={20} opacity={0.72} />
         </Pressable>
       ) : null}
     </Pressable>

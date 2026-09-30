@@ -1,0 +1,8 @@
+name = "thepill-audio"
+main = "audio-worker.js"
+compatibility_date = "2025-09-01"
+account_id = "f8fef9c97d7f42fcc43f18c2182d2e61"
+
+[[r2_buckets]]
+binding = "AUDIO"
+bucket_name = "thepill-audio"

@@ -26,6 +26,8 @@ const paths: Record<string, string> = {
     "M16 3h5v5M4 20l7.5-7.5M21 3l-7.5 7.5M16 21h5v-5M4 4l5 5M21 16l-3 3",
   more: "M5 12h.01M12 12h.01M19 12h.01",
   plus: "M12 5v14M5 12h14",
+  trash:
+    "M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m-9 0 1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M10 11v6M14 11v6",
   heart:
     "M19.5 12.6 12 20l-7.5-7.4A4.8 4.8 0 0 1 12 5.4a4.8 4.8 0 0 1 7.5 7.2Z",
   "heart-outline":

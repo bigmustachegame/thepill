@@ -17,7 +17,6 @@ import { BROWSE_STATES } from "../../data/catalog";
 import { bgForState } from "../../data/groupBg";
 import { useScrollToTopOnFocus } from "../../hooks/useScrollToTopOnFocus";
 import { useT } from "../../i18n";
-import { useAppStore } from "../../store/appStore";
 import { fonts, colors, radii, space } from "../../theme/tokens";
 
 function CellBackground({ state }: { state: (typeof BROWSE_STATES)[number] }) {
@@ -37,7 +36,7 @@ function CellBackground({ state }: { state: (typeof BROWSE_STATES)[number] }) {
   // Native: ImageBackground fills correctly. Web needs Image + wrapper scale.
   if (Platform.OS === "web") {
     return (
-      <View style={styles.cellMedia} pointerEvents="none">
+      <View style={[styles.cellMedia, { pointerEvents: "none" }]}>
         <View style={styles.cellBgScaleWeb}>
           <Image
             source={source}
@@ -65,7 +64,6 @@ function CellBackground({ state }: { state: (typeof BROWSE_STATES)[number] }) {
 export default function BrowseScreen() {
   const router = useRouter();
   const t = useT();
-  const hasPlus = useAppStore((s) => s.hasPlus);
   const scrollRef = useScrollToTopOnFocus();
 
   return (
@@ -81,17 +79,12 @@ export default function BrowseScreen() {
 
         <View style={styles.grid}>
           {BROWSE_STATES.map((state) => {
-            const locked = state === "PRO" && !hasPlus;
             const pack = STATE_PACK_ICON[state] ?? "calm";
             return (
               <Pressable
                 key={state}
                 onPress={() => {
                   Haptics.selectionAsync().catch(() => {});
-                  if (locked) {
-                    router.push("/paywall");
-                    return;
-                  }
                   router.push(`/(tabs)/state/${state}`);
                 }}
                 style={({ pressed }) => [
@@ -107,9 +100,6 @@ export default function BrowseScreen() {
                 <Text style={styles.cellSub} numberOfLines={2}>
                   {t(`purpose.${state}`)}
                 </Text>
-                {locked ? (
-                  <Text style={styles.plus}>PILL+</Text>
-                ) : null}
               </Pressable>
             );
           })}
@@ -169,13 +159,5 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,0.7)",
     fontSize: 12,
     lineHeight: 16,
-  },
-  plus: {
-    marginTop: 8,
-    fontFamily: fonts.body,
-    fontWeight: "700",
-    color: colors.label,
-    fontSize: 11,
-    letterSpacing: 0.5,
   },
 });

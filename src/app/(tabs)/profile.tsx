@@ -16,7 +16,11 @@ import { capsuleName, useLocale, useT } from "../../i18n";
 import { LanguageSelect } from "../../components/LanguageSelect";
 import { artForCode } from "../../data/capsuleArt";
 import { getCapsule } from "../../data/catalog";
-import { BILLING_IS_DEMO } from "../../lib/billing";
+import {
+  isDemoBilling,
+  openManageSubscriptions,
+  resetBillingUser,
+} from "../../lib/billing";
 import { openLegal } from "../../lib/legal";
 import { useAppStore } from "../../store/appStore";
 import { colors, fonts, radii, space } from "../../theme/tokens";
@@ -51,6 +55,7 @@ export default function ProfileScreen() {
         style: "destructive",
         onPress: () => {
           void (async () => {
+            await resetBillingUser();
             await deleteAccount();
             router.replace("/login");
           })();
@@ -125,6 +130,10 @@ export default function ProfileScreen() {
                   image={artForCode(e.code)}
                   onPress={() => {
                     if (capsule) {
+                      if (!useAppStore.getState().canPlay(capsule)) {
+                        router.push("/paywall");
+                        return;
+                      }
                       router.push(`/session/${e.code}`);
                     }
                   }}
@@ -146,9 +155,23 @@ export default function ProfileScreen() {
               label={t("profile.unlock")}
               onPress={() => router.push("/paywall")}
             />
-          ) : BILLING_IS_DEMO ? (
-            <GhostButton label={t("profile.clearPlus")} onPress={clearPlus} />
-          ) : null}
+          ) : (
+            <>
+              {!isDemoBilling() ? (
+                <GhostButton
+                  label={t("profile.manageSub")}
+                  onPress={() => {
+                    void openManageSubscriptions();
+                  }}
+                />
+              ) : (
+                <GhostButton
+                  label={t("profile.clearPlus")}
+                  onPress={clearPlus}
+                />
+              )}
+            </>
+          )}
           <GhostButton
             label={t("profile.retake")}
             onPress={() => {
@@ -159,8 +182,11 @@ export default function ProfileScreen() {
           <GhostButton
             label={t("profile.signOut")}
             onPress={() => {
-              logout();
-              router.replace("/login");
+              void (async () => {
+                await resetBillingUser();
+                logout();
+                router.replace("/login");
+              })();
             }}
           />
           <GhostButton

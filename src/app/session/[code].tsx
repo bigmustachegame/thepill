@@ -1,5 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Image, Modal, Pressable, StyleSheet, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  Image,
+  Modal,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { Redirect, useLocalSearchParams, useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -17,8 +25,10 @@ import { PrepIllustration } from "../../components/PrepIllustration";
 import { getCapsule } from "../../data/catalog";
 import { CAPSULE_ART_ASPECT, artForCode } from "../../data/capsuleArt";
 import { useSessionPlayer } from "../../hooks/useSessionPlayer";
+import { hasCachedAudio } from "../../lib/audioAssets";
 import { capsuleName, capsuleDescription, useLocale, useT } from "../../i18n";
 import { useAppStore } from "../../store/appStore";
+import { useDownloadStore } from "../../store/downloadStore";
 import { colors, fonts, radii, space } from "../../theme/tokens";
 
 function formatTime(sec: number) {
@@ -35,6 +45,12 @@ export default function SessionScreen() {
   const insets = useSafeAreaInsets();
   const canPlay = useAppStore((s) => s.canPlay);
   const addListen = useAppStore((s) => s.addListen);
+  const libraryCodes = useAppStore((s) => s.libraryCodes);
+  const removeFromLibrary = useAppStore((s) => s.removeFromLibrary);
+  const startDownload = useDownloadStore((s) => s.startDownload);
+  const dl = useDownloadStore((s) =>
+    capsule ? s.byCode[capsule.code] : undefined,
+  );
   const t = useT();
   const locale = useLocale();
   const PREP_STEPS = 4;
@@ -45,11 +61,51 @@ export default function SessionScreen() {
   const done = useRef(false);
   const logged = useRef(false);
   const art = capsule ? artForCode(capsule.code) : undefined;
+  const downloading = dl?.status === "downloading";
+  // Single source of truth — no cacheOk flicker.
+  const readyToContinue = dl?.status === "complete";
+  const downloaded = readyToContinue;
 
-  const player = useSessionPlayer(capsule?.code ?? "", phase === "play", {
-    title: capsule ? capsuleName(capsule, locale) : "THE PILL",
-    artist: capsule ? t(`state.${capsule.state}`) : "THE PILL",
-  });
+  // Drop stale library rows that aren't actually on disk.
+  useEffect(() => {
+    if (!capsule) return;
+    let cancelled = false;
+    void (async () => {
+      if (dl?.status === "complete") return;
+      if (!libraryCodes.includes(capsule.code)) return;
+      const ok = await hasCachedAudio(capsule.code);
+      if (cancelled) return;
+      if (!ok) removeFromLibrary(capsule.code);
+      else {
+        // Rehydrate complete state if marker exists but store forgot.
+        useDownloadStore.setState((s) => ({
+          byCode: {
+            ...s.byCode,
+            [capsule.code]: { status: "complete", progress: 1 },
+          },
+        }));
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [capsule, libraryCodes, removeFromLibrary, dl?.status]);
+
+  const player = useSessionPlayer(
+    capsule?.code ?? "",
+    phase === "play",
+    {
+      title: capsule ? capsuleName(capsule, locale) : "THE PILL",
+      artist: capsule ? t(`state.${capsule.state}`) : "THE PILL",
+    },
+    downloaded,
+  );
+
+  useEffect(() => {
+    if ((phase === "prep" || phase === "play") && !downloaded) {
+      setPhase("describe");
+    }
+  }, [phase, downloaded]);
 
   const finish = useCallback(() => {
     if (done.current || !capsule) return;
@@ -103,18 +159,16 @@ export default function SessionScreen() {
                 />
               )}
               <LinearGradient
-                pointerEvents="none"
                 colors={[colors.bg, "rgba(10,10,15,0.55)", "transparent"]}
                 locations={[0, 0.5, 1]}
-                style={styles.fadeTop}
+                style={[styles.fadeTop, { pointerEvents: "none" }]}
               />
               <LinearGradient
-                pointerEvents="none"
                 colors={["transparent", "rgba(10,10,15,0.55)", colors.bg]}
                 locations={[0, 0.5, 1]}
-                style={styles.fadeBottom}
+                style={[styles.fadeBottom, { pointerEvents: "none" }]}
               />
-              <View style={styles.fadeBottomCap} />
+              <View style={[styles.fadeBottomCap, { pointerEvents: "none" }]} />
             </View>
           </View>
 
@@ -122,7 +176,7 @@ export default function SessionScreen() {
             style={[
               styles.controls,
               styles.describeControls,
-              { paddingBottom: Math.max(insets.bottom, space.xl) },
+              { paddingBottom: Math.max(insets.bottom, space.xl), zIndex: 5 },
             ]}
           >
             <View style={styles.describeCopy}>
@@ -133,17 +187,43 @@ export default function SessionScreen() {
               <Body style={styles.status}>
                 {capsuleDescription(capsule, locale)}
               </Body>
+              {dl?.status === "error" ? (
+                <Body style={styles.status}>
+                  {dl.error ?? t("session.loadError")}
+                </Body>
+              ) : null}
             </View>
 
             <View style={styles.describeActions}>
-              <PrimaryButton
-                label={t("describe.next")}
-                onPress={() => {
-                  setPrepStep(1);
-                  setPhase("prep");
-                }}
+              {downloaded ? (
+                <PrimaryButton
+                  label={t("describe.next")}
+                  onPress={() => {
+                    setPrepStep(1);
+                    setPhase("prep");
+                  }}
+                />
+              ) : (
+                <PrimaryButton
+                  label={
+                    downloading
+                      ? t("describe.downloading", {
+                          pct: String(
+                            Math.round((dl?.progress ?? 0) * 100),
+                          ),
+                        })
+                      : t("describe.download")
+                  }
+                  disabled={downloading}
+                  onPress={() => {
+                    void startDownload(capsule.code);
+                  }}
+                />
+              )}
+              <SecondaryButton
+                label={t("back")}
+                onPress={() => router.back()}
               />
-              <SecondaryButton label={t("back")} onPress={() => router.back()} />
             </View>
           </View>
         </View>
@@ -195,24 +275,26 @@ export default function SessionScreen() {
             </Body>
           </View>
 
-          <View style={styles.prepArtSlot}>
+          <View style={styles.prepArtSlot} pointerEvents="none">
             <PrepIllustration step={prepStep} />
           </View>
         </View>
 
-        <View style={{ flex: 1 }} />
-        <PrimaryButton
-          label={isLast ? t("prep.begin") : t("prep.next")}
-          onPress={() => {
-            if (!isLast) {
-              setPrepStep(prepStep + 1);
-            } else {
-              done.current = false;
-              logged.current = false;
-              setPhase("play");
-            }
-          }}
-        />
+        <View style={{ flex: 1 }} pointerEvents="none" />
+        <View style={{ zIndex: 5 }}>
+          <PrimaryButton
+            label={isLast ? t("prep.begin") : t("prep.next")}
+            onPress={() => {
+              if (!isLast) {
+                setPrepStep(prepStep + 1);
+              } else {
+                done.current = false;
+                logged.current = false;
+                setPhase("play");
+              }
+            }}
+          />
+        </View>
       </Screen>
     );
   }
@@ -241,16 +323,14 @@ export default function SessionScreen() {
               />
             )}
             <LinearGradient
-              pointerEvents="none"
               colors={[colors.bg, "rgba(10,10,15,0.55)", "transparent"]}
               locations={[0, 0.5, 1]}
-              style={styles.fadeTop}
+              style={[styles.fadeTop, { pointerEvents: "none" }]}
             />
             <LinearGradient
-              pointerEvents="none"
               colors={["transparent", "rgba(10,10,15,0.55)", colors.bg]}
               locations={[0, 0.5, 1]}
-              style={styles.fadeBottom}
+              style={[styles.fadeBottom, { pointerEvents: "none" }]}
             />
             <View style={styles.fadeBottomCap} />
           </View>
@@ -265,8 +345,19 @@ export default function SessionScreen() {
           <Text style={styles.trackName}>{capsuleName(capsule, locale)}</Text>
           <Text style={styles.artist}>THE PILL</Text>
           <Body style={styles.status}>
-            {player.hasAudio ? t("session.playing") : t("session.timed")}
+            {!player.hasAudio
+              ? t("session.timed")
+              : player.loadError
+                ? t("session.loadError")
+                : player.buffering
+                  ? t("session.loadingPct", {
+                      pct: String(Math.round((player.loadProgress || 0) * 100)),
+                    })
+                  : t("session.playing")}
           </Body>
+          {player.loadError ? (
+            <Body style={styles.status}>{player.loadError}</Body>
+          ) : null}
 
           <View style={styles.timerBlock}>
             <Text style={styles.timerElapsed}>
@@ -296,11 +387,15 @@ export default function SessionScreen() {
                 player.playing ? t("session.pause") : t("session.resume")
               }
             >
-              <Icon
-                name={player.playing ? "pause" : "play"}
-                size={28}
-                color={colors.label}
-              />
+              {player.buffering ? (
+                <ActivityIndicator color={colors.label} />
+              ) : (
+                <Icon
+                  name={player.playing ? "pause" : "play"}
+                  size={28}
+                  color={colors.label}
+                />
+              )}
             </GlassCircle>
           </View>
 

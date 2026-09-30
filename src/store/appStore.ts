@@ -32,7 +32,8 @@ type AppState = {
   desire: DesireId | null;
   onboardingDone: boolean;
   hasPlus: boolean;
-  favoriteCodes: string[];
+  /** Downloaded capsule codes (Netflix-style offline library). */
+  libraryCodes: string[];
   listenHistory: ListenEvent[];
   ratings: { code: string; rating: Rating; at: string }[];
   setHydrated: (v: boolean) => void;
@@ -46,9 +47,9 @@ type AppState = {
   completeOnboarding: () => void;
   unlockPlus: () => void;
   clearPlus: () => void;
-  toggleFavorite: (code: string) => void;
-  toggleFavorites: (codes: string[]) => void;
-  isFavorite: (code: string) => boolean;
+  addToLibrary: (code: string) => void;
+  removeFromLibrary: (code: string) => void;
+  isInLibrary: (code: string) => boolean;
   addListen: (event: Omit<ListenEvent, "at"> & { at?: string }) => void;
   addRating: (code: string, rating: Rating) => void;
   canPlay: (capsule: Capsule) => boolean;
@@ -69,11 +70,13 @@ export const useAppStore = create<AppState>()(
       desire: null,
       onboardingDone: false,
       hasPlus: false,
-      favoriteCodes: [],
+      libraryCodes: [],
       listenHistory: [],
       ratings: [],
       setHydrated: (v) => set({ hydrated: v }),
-      setLocale: (locale) => { if (isLocale(locale)) set({ locale }); },
+      setLocale: (locale) => {
+        if (isLocale(locale)) set({ locale });
+      },
       login: (displayName, email) =>
         set({
           profile: {
@@ -92,7 +95,7 @@ export const useAppStore = create<AppState>()(
           onboardingDone: false,
           listenHistory: [],
           ratings: [],
-          favoriteCodes: [],
+          libraryCodes: [],
           hasPlus: false,
         }),
       deleteAccount: async () => {
@@ -112,7 +115,7 @@ export const useAppStore = create<AppState>()(
           desire: null,
           onboardingDone: false,
           hasPlus: false,
-          favoriteCodes: [],
+          libraryCodes: [],
           listenHistory: [],
           ratings: [],
         });
@@ -124,30 +127,16 @@ export const useAppStore = create<AppState>()(
       completeOnboarding: () => set({ onboardingDone: true }),
       unlockPlus: () => set({ hasPlus: true }),
       clearPlus: () => set({ hasPlus: false }),
-      isFavorite: (code) => get().favoriteCodes.includes(code),
-      toggleFavorite: (code) =>
-        set((s) => ({
-          favoriteCodes: s.favoriteCodes.includes(code)
-            ? s.favoriteCodes.filter((c) => c !== code)
-            : [code, ...s.favoriteCodes],
-        })),
-      toggleFavorites: (codes) =>
+      addToLibrary: (code) =>
         set((s) => {
-          const unique = [...new Set(codes.filter(Boolean))];
-          if (unique.length === 0) return {};
-          const allIn = unique.every((c) => s.favoriteCodes.includes(c));
-          if (allIn) {
-            const drop = new Set(unique);
-            return {
-              favoriteCodes: s.favoriteCodes.filter((c) => !drop.has(c)),
-            };
-          }
-          const next = [...s.favoriteCodes];
-          for (const c of unique) {
-            if (!next.includes(c)) next.unshift(c);
-          }
-          return { favoriteCodes: next };
+          if (!code || s.libraryCodes.includes(code)) return {};
+          return { libraryCodes: [code, ...s.libraryCodes] };
         }),
+      removeFromLibrary: (code) =>
+        set((s) => ({
+          libraryCodes: s.libraryCodes.filter((c) => c !== code),
+        })),
+      isInLibrary: (code) => get().libraryCodes.includes(code),
       addListen: (event) =>
         set((s) => ({
           listenHistory: [
@@ -172,7 +161,23 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: "the-pill-store-v2",
+      version: 3,
       storage: createJSONStorage(() => AsyncStorage),
+      migrate: (persisted: unknown) => {
+        const p = (persisted ?? {}) as Record<string, unknown>;
+        const favorites = Array.isArray(p.favoriteCodes)
+          ? (p.favoriteCodes as string[])
+          : [];
+        const library = Array.isArray(p.libraryCodes)
+          ? (p.libraryCodes as string[])
+          : [];
+        const merged = [...library];
+        for (const code of favorites) {
+          if (!merged.includes(code)) merged.push(code);
+        }
+        const { favoriteCodes: _drop, ...rest } = p;
+        return { ...rest, libraryCodes: merged };
+      },
       partialize: (s) => ({
         locale: s.locale,
         profile: s.profile,
@@ -181,7 +186,7 @@ export const useAppStore = create<AppState>()(
         desire: s.desire,
         onboardingDone: s.onboardingDone,
         hasPlus: s.hasPlus,
-        favoriteCodes: s.favoriteCodes,
+        libraryCodes: s.libraryCodes,
         listenHistory: s.listenHistory,
         ratings: s.ratings,
       }),
