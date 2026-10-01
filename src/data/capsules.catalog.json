@@ -3411,45 +3411,45 @@
     {
       "code": "P-01",
       "state": "PRO",
-      "name": "Crescendo",
+      "name": "Peak",
       "file": "Climax.mp3",
       "sourceOriginal": "Climax.mp3",
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "A warm crescendo session of rise, peak, and release.\n\nExpect a slow build, a crest, then a soft afterglow at your own pace.",
-      "descriptionTr": "Yükseliş, doruk ve bırakmaya kurulu sıcak bir kreşendo.\n\nBeklenti: yavaş yükselen dalga, bir tepe, yumuşak bir dinginlik — kendi temposunda.",
+      "description": "A warm session of rise, peak, and release.\n\nExpect a slow build, a crest, then a soft afterglow at your own pace.",
+      "descriptionTr": "Yükseliş, doruk ve bırakmaya kurulu sıcak bir seans.\n\nBeklenti: yavaş yükselen dalga, bir tepe, yumuşak bir dinginlik — kendi temposunda.",
       "translations": {
         "en": {
-          "name": "Crescendo",
-          "description": "A warm crescendo session of rise, peak, and release.\n\nExpect a slow build, a crest, then a soft afterglow at your own pace."
+          "name": "Peak",
+          "description": "A warm session of rise, peak, and release.\n\nExpect a slow build, a crest, then a soft afterglow at your own pace."
         },
         "tr": {
-          "name": "Crescendo",
-          "description": "Yükseliş, doruk ve bırakmaya kurulu sıcak bir kreşendo.\n\nBeklenti: yavaş yükselen dalga, bir tepe, yumuşak bir dinginlik — kendi temposunda."
+          "name": "Peak",
+          "description": "Yükseliş, doruk ve bırakmaya kurulu sıcak bir seans.\n\nBeklenti: yavaş yükselen dalga, bir tepe, yumuşak bir dinginlik — kendi temposunda."
         },
         "fr": {
-          "name": "Crescendo",
-          "description": "Séance en crescendo : montée, sommet et lâcher-prise.\n\nAttends-toi à une montée lente, une crête, puis une douce accalmie."
+          "name": "Peak",
+          "description": "Séance chaleureuse : montée, sommet et lâcher-prise.\n\nAttends-toi à une montée lente, une crête, puis une douce accalmie."
         },
         "es": {
-          "name": "Crescendo",
-          "description": "Sesión en crescendo de subida, cima y liberación.\n\nEspera una subida lenta, una cresta y una calma suave a tu ritmo."
+          "name": "Peak",
+          "description": "Sesión cálida de subida, cima y liberación.\n\nEspera una subida lenta, una cresta y una calma suave a tu ritmo."
         },
         "ru": {
-          "name": "Crescendo",
-          "description": "Тёплая сессия-крещендо: подъём, вершина и отпускание.\n\nОжидай медленное нарастание, гребень и мягкое послесвечение в своём темпе."
+          "name": "Peak",
+          "description": "Тёплая сессия: подъём, вершина и отпускание.\n\nОжидай медленное нарастание, гребень и мягкое послесвечение в своём темпе."
         },
         "de": {
-          "name": "Crescendo",
-          "description": "Warme Crescendo-Session aus Anstieg, Gipfel und Loslassen.\n\nErwarte langsamen Aufbau, einen Kamm, dann sanftes Nachklingen im eigenen Tempo."
+          "name": "Peak",
+          "description": "Warme Session aus Anstieg, Gipfel und Loslassen.\n\nErwarte langsamen Aufbau, einen Kamm, dann sanftes Nachklingen im eigenen Tempo."
         }
       }
     },
     {
       "code": "P-02",
       "state": "PRO",
-      "name": "Waves",
+      "name": "Again & Again",
       "file": "Multi Climax.mp3",
       "sourceOriginal": "Multi Climax.mp3",
       "free": false,
@@ -3459,27 +3459,27 @@
       "descriptionTr": "Yumuşak vadili, tekrarlayan dalga teması.\n\nBeklenti: dalgalar — varlık, zorlama değil.",
       "translations": {
         "en": {
-          "name": "Waves",
+          "name": "Again & Again",
           "description": "A theme of repeated waves with soft valleys between.\n\nExpect waves of build and ease — presence over forcing the next one."
         },
         "tr": {
-          "name": "Waves",
+          "name": "Again & Again",
           "description": "Yumuşak vadili, tekrarlayan dalga teması.\n\nBeklenti: dalgalar — varlık, zorlama değil."
         },
         "fr": {
-          "name": "Waves",
+          "name": "Again & Again",
           "description": "Thème de vagues répétées et de vallées douces.\n\nAttends-toi à des vagues — présence plutôt que forcer la suivante."
         },
         "es": {
-          "name": "Waves",
+          "name": "Again & Again",
           "description": "Tema de olas repetidas con valles suaves.\n\nEspera olas — presencia antes que forzar la siguiente."
         },
         "ru": {
-          "name": "Waves",
+          "name": "Again & Again",
           "description": "Тема повторяющихся волн и мягких долин.\n\nОжидай волны — присутствие важнее форсирования следующей."
         },
         "de": {
-          "name": "Waves",
+          "name": "Again & Again",
           "description": "Thema aus wiederkehrenden Wellen und weichen Tälern.\n\nErwarte Wellen — Präsenz vor dem Erzwingen der nächsten."
         }
       }
@@ -3487,38 +3487,38 @@
     {
       "code": "P-03",
       "state": "PRO",
-      "name": "Velvet",
+      "name": "Slow Burn",
       "file": "Aphrodisiac.mp3",
       "sourceOriginal": "Aphrodisiac.mp3",
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "A velvet atmosphere of warmth and closeness.\n\nExpect warmth and a wish for closeness — invitation rather than urgency.",
-      "descriptionTr": "Sıcaklık ve yakınlığın kadife atmosferi.\n\nBeklenti: sıcaklık ve yakınlık isteği — davet, acele değil.",
+      "description": "A slow-burn atmosphere of warmth and closeness.\n\nExpect warmth and a wish for closeness — invitation rather than urgency.",
+      "descriptionTr": "Sıcaklık ve yakınlığın ağır ağır yanan atmosferi.\n\nBeklenti: sıcaklık ve yakınlık isteği — davet, acele değil.",
       "translations": {
         "en": {
-          "name": "Velvet",
-          "description": "A velvet atmosphere of warmth and closeness.\n\nExpect warmth and a wish for closeness — invitation rather than urgency."
+          "name": "Slow Burn",
+          "description": "A slow-burn atmosphere of warmth and closeness.\n\nExpect warmth and a wish for closeness — invitation rather than urgency."
         },
         "tr": {
-          "name": "Velvet",
-          "description": "Sıcaklık ve yakınlığın kadife atmosferi.\n\nBeklenti: sıcaklık ve yakınlık isteği — davet, acele değil."
+          "name": "Slow Burn",
+          "description": "Sıcaklık ve yakınlığın ağır ağır yanan atmosferi.\n\nBeklenti: sıcaklık ve yakınlık isteği — davet, acele değil."
         },
         "fr": {
-          "name": "Velvet",
-          "description": "Atmosphère de velours, chaleur et proximité.\n\nAttends-toi à de la chaleur et une envie de proximité — invitation, pas urgence."
+          "name": "Slow Burn",
+          "description": "Atmosphère à feu doux, chaleur et proximité.\n\nAttends-toi à de la chaleur et une envie de proximité — invitation, pas urgence."
         },
         "es": {
-          "name": "Velvet",
-          "description": "Atmósfera de terciopelo, calidez y cercanía.\n\nEspera calor y ganas de cercanía — invitación, no prisa."
+          "name": "Slow Burn",
+          "description": "Atmósfera a fuego lento, calidez y cercanía.\n\nEspera calor y ganas de cercanía — invitación, no prisa."
         },
         "ru": {
-          "name": "Velvet",
-          "description": "Бархатная атмосфера тепла и близости.\n\nОжидай тепло и желание близости — приглашение, не спешка."
+          "name": "Slow Burn",
+          "description": "Медленно разгорающаяся атмосфера тепла и близости.\n\nОжидай тепло и желание близости — приглашение, не спешка."
         },
         "de": {
-          "name": "Velvet",
-          "description": "Samtige Atmosphäre aus Wärme und Nähe.\n\nErwarte Wärme und den Wunsch nach Nähe — Einladung statt Eile."
+          "name": "Slow Burn",
+          "description": "Langsam glimmende Atmosphäre aus Wärme und Nähe.\n\nErwarte Wärme und den Wunsch nach Nähe — Einladung statt Eile."
         }
       }
     },
@@ -3563,38 +3563,38 @@
     {
       "code": "P-05",
       "state": "PRO",
-      "name": "Midnight Dream",
+      "name": "Fever Dream",
       "file": "Erotic Dream.mp3",
       "sourceOriginal": "Erotic Dream.mp3",
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "A midnight dreamscape of image, sensation, and soft blur.\n\nExpect half-dream visuals and a gentle tingle — follow what feels alive.",
-      "descriptionTr": "İmge ve yumuşak bulanıklıkla gece yarısı rüya alanı.\n\nBeklenti: yarı rüya görselleri ve hafif karıncalanma — canlı geleni izle.",
+      "description": "A fever-dream landscape of image, sensation, and soft blur.\n\nExpect half-dream visuals and a gentle tingle — follow what feels alive.",
+      "descriptionTr": "İmge ve yumuşak bulanıklıkla ateşli bir rüya alanı.\n\nBeklenti: yarı rüya görselleri ve hafif karıncalanma — canlı geleni izle.",
       "translations": {
         "en": {
-          "name": "Midnight Dream",
-          "description": "A midnight dreamscape of image, sensation, and soft blur.\n\nExpect half-dream visuals and a gentle tingle — follow what feels alive."
+          "name": "Fever Dream",
+          "description": "A fever-dream landscape of image, sensation, and soft blur.\n\nExpect half-dream visuals and a gentle tingle — follow what feels alive."
         },
         "tr": {
-          "name": "Midnight Dream",
-          "description": "İmge ve yumuşak bulanıklıkla gece yarısı rüya alanı.\n\nBeklenti: yarı rüya görselleri ve hafif karıncalanma — canlı geleni izle."
+          "name": "Fever Dream",
+          "description": "İmge ve yumuşak bulanıklıkla ateşli bir rüya alanı.\n\nBeklenti: yarı rüya görselleri ve hafif karıncalanma — canlı geleni izle."
         },
         "fr": {
-          "name": "Midnight Dream",
-          "description": "Paysage de rêve de minuit : image, sensation, flou doux.\n\nAttends-toi à des visuels de demi-rêve et de légers fourmillements — suis le vivant."
+          "name": "Fever Dream",
+          "description": "Paysage de rêve fiévreux : image, sensation, flou doux.\n\nAttends-toi à des visuels de demi-rêve et de légers fourmillements — suis le vivant."
         },
         "es": {
-          "name": "Midnight Dream",
-          "description": "Paisaje de sueño de medianoche: imagen, sensación y desenfoque suave.\n\nEspera visuales a medio sueño y un leve hormigueo — sigue lo vivo."
+          "name": "Fever Dream",
+          "description": "Paisaje de sueño febril: imagen, sensación y desenfoque suave.\n\nEspera visuales a medio sueño y un leve hormigueo — sigue lo vivo."
         },
         "ru": {
-          "name": "Midnight Dream",
-          "description": "Полуночный сновидческий пейзаж: образ, ощущение, мягкая дымка.\n\nОжидай визуалы полусна и лёгкое покалывание — следуй живому."
+          "name": "Fever Dream",
+          "description": "Лихорадочный сновидческий пейзаж: образ, ощущение, мягкая дымка.\n\nОжидай визуалы полусна и лёгкое покалывание — следуй живому."
         },
         "de": {
-          "name": "Midnight Dream",
-          "description": "Mitternächtliche Traumlandschaft aus Bild, Empfindung und weichem Schleier.\n\nErwarte Halbtraum-Bilder und leichtes Kribbeln — folge dem Lebendigen."
+          "name": "Fever Dream",
+          "description": "Fiebrige Traumlandschaft aus Bild, Empfindung und weichem Schleier.\n\nErwarte Halbtraum-Bilder und leichtes Kribbeln — folge dem Lebendigen."
         }
       }
     },
@@ -3639,38 +3639,38 @@
     {
       "code": "P-07",
       "state": "PRO",
-      "name": "Siren",
+      "name": "Temptress",
       "file": "Succubus.mp3",
       "sourceOriginal": "Succubus.mp3",
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "A siren theme mixing allure with an intentional edge.\n\nExpect charged contrast — stay at ease with yourself throughout.",
-      "descriptionTr": "Çekicilik ile bilinçli kenarı karıştıran siren teması.\n\nBeklenti: yüklü zıtlık — kendinle uyumda kal.",
+      "description": "A temptress theme mixing allure with an intentional edge.\n\nExpect charged contrast — stay at ease with yourself throughout.",
+      "descriptionTr": "Çekicilik ile bilinçli kenarı karıştıran baştan çıkarıcı tema.\n\nBeklenti: yüklü zıtlık — kendinle uyumda kal.",
       "translations": {
         "en": {
-          "name": "Siren",
-          "description": "A siren theme mixing allure with an intentional edge.\n\nExpect charged contrast — stay at ease with yourself throughout."
+          "name": "Temptress",
+          "description": "A temptress theme mixing allure with an intentional edge.\n\nExpect charged contrast — stay at ease with yourself throughout."
         },
         "tr": {
-          "name": "Siren",
-          "description": "Çekicilik ile bilinçli kenarı karıştıran siren teması.\n\nBeklenti: yüklü zıtlık — kendinle uyumda kal."
+          "name": "Temptress",
+          "description": "Çekicilik ile bilinçli kenarı karıştıran baştan çıkarıcı tema.\n\nBeklenti: yüklü zıtlık — kendinle uyumda kal."
         },
         "fr": {
-          "name": "Siren",
-          "description": "Thème sirène : attrait mêlé d’un bord choisi.\n\nAttends-toi à un contraste chargé — reste en accord avec toi-même."
+          "name": "Temptress",
+          "description": "Thème tentatrice : attrait mêlé d’un bord choisi.\n\nAttends-toi à un contraste chargé — reste en accord avec toi-même."
         },
         "es": {
-          "name": "Siren",
-          "description": "Tema sirena: atracción mezclada con un borde intencional.\n\nEspera contraste cargado — quédate en sintonía contigo."
+          "name": "Temptress",
+          "description": "Tema tentadora: atracción mezclada con un borde intencional.\n\nEspera contraste cargado — quédate en sintonía contigo."
         },
         "ru": {
-          "name": "Siren",
-          "description": "Тема сирены: притяжение, смешанное с выбранной гранью.\n\nОжидай заряженный контраст — оставайся в согласии с собой."
+          "name": "Temptress",
+          "description": "Тема искусительницы: притяжение, смешанное с выбранной гранью.\n\nОжидай заряженный контраст — оставайся в согласии с собой."
         },
         "de": {
-          "name": "Siren",
-          "description": "Sirenen-Thema: Anziehung gemischt mit bewusster Kante.\n\nErwarte geladenen Kontrast — bleib im Einklang mit dir."
+          "name": "Temptress",
+          "description": "Verführerin-Thema: Anziehung gemischt mit bewusster Kante.\n\nErwarte geladenen Kontrast — bleib im Einklang mit dir."
         }
       }
     }

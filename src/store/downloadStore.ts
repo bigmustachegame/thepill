@@ -79,8 +79,14 @@ export const useDownloadStore = create<DownloadState>((set, get) => ({
       },
     }));
 
+    let lastPct = 0;
     const setProgress = (progress: number) => {
       if (finished) return; // never overwrite complete/error with late callbacks
+      // Native fires per chunk; only whole-percent steps reach React so the
+      // JS thread stays free for touches while a download runs.
+      const pct = Math.round(Math.max(0, Math.min(1, progress)) * 100);
+      if (pct === lastPct) return;
+      lastPct = pct;
       set((s) => {
         if (s.byCode[code]?.status !== "downloading") return s;
         return {

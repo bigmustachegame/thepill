@@ -222,7 +222,10 @@ export default function SessionScreen() {
               )}
               <SecondaryButton
                 label={t("back")}
-                onPress={() => router.back()}
+                onPress={() => {
+                  if (router.canGoBack()) router.back();
+                  else router.replace("/(tabs)");
+                }}
               />
             </View>
           </View>
