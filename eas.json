@@ -24,9 +24,9 @@
   "submit": {
     "production": {
       "ios": {
-        "appleId": "REPLACE_WITH_APPLE_ID_EMAIL",
-        "ascAppId": "REPLACE_WITH_ASC_APP_ID",
-        "appleTeamId": "REPLACE_WITH_APPLE_TEAM_ID"
+        "appleId": "yasintezcanapple@gmail.com",
+        "ascAppId": "6818063413",
+        "appleTeamId": "6FYRTQMB27"
       }
     }
   }

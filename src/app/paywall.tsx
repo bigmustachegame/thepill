@@ -1,8 +1,8 @@
-import { Alert, StyleSheet, View } from "react-native";
-import { useRouter } from "expo-router";
-import * as Haptics from "expo-haptics";
-import { useEffect, useState } from "react";
-import { Icon } from "../components/Icon";
+import { Alert, StyleSheet, View } from 'react-native';
+import { useRouter } from 'expo-router';
+import * as Haptics from 'expo-haptics';
+import { useEffect, useState } from 'react';
+import { Icon } from '../components/Icon';
 import {
   Body,
   Caption,
@@ -12,7 +12,7 @@ import {
   Screen,
   SecondaryButton,
   Title,
-} from "../components/ui";
+} from '../components/ui';
 import {
   fetchPlanPricing,
   isDemoBilling,
@@ -20,28 +20,27 @@ import {
   purchasePlus,
   restorePurchases,
   type PlanPricing,
-} from "../lib/billing";
-import { openLegal } from "../lib/legal";
-import { useT } from "../i18n";
-import { useAppStore } from "../store/appStore";
-import { colors, radii, space } from "../theme/tokens";
+} from '../lib/billing';
+import { openLegal } from '../lib/legal';
+import { useT } from '../i18n';
+import { useAppStore } from '../store/appStore';
+import { colors, radii, space } from '../theme/tokens';
 
 function planLabel(
   t: ReturnType<typeof useT>,
   pricing: PlanPricing | undefined,
-  plan: "month" | "year",
+  plan: 'month' | 'year',
   demo: boolean,
 ) {
-  const price =
-    pricing?.priceString ?? (plan === "month" ? "$6.99" : "$39.99");
+  const price = pricing?.priceString ?? (plan === 'month' ? '$6.99' : '$39.99');
   if (demo) {
-    return plan === "month"
-      ? t("paywall.monthDemo", { price })
-      : t("paywall.yearDemo", { price });
+    return plan === 'month'
+      ? t('paywall.monthDemo', { price })
+      : t('paywall.yearDemo', { price });
   }
-  return plan === "month"
-    ? t("paywall.month", { price })
-    : t("paywall.year", { price });
+  return plan === 'month'
+    ? t('paywall.month', { price })
+    : t('paywall.year', { price });
 }
 
 export default function PaywallScreen() {
@@ -64,31 +63,31 @@ export default function PaywallScreen() {
     };
   }, []);
 
-  const month = pricing.find((p) => p.plan === "month");
-  const year = pricing.find((p) => p.plan === "year");
+  const month = pricing.find((p) => p.plan === 'month');
+  const year = pricing.find((p) => p.plan === 'year');
 
-  const subscribe = async (plan: "month" | "year") => {
+  const subscribe = async (plan: 'month' | 'year') => {
     if (busy) return;
     setBusy(true);
     try {
       const result = await purchasePlus(plan);
-      if (result.status === "ok") {
+      if (result.status === 'ok') {
         Haptics.notificationAsync(
           Haptics.NotificationFeedbackType.Success,
         ).catch(() => {});
-        router.replace("/(tabs)");
+        router.replace('/(tabs)');
         return;
       }
-      if (result.status === "cancelled") return;
-      if (result.status === "unavailable") {
+      if (result.status === 'cancelled') return;
+      if (result.status === 'unavailable') {
         Alert.alert(
-          t("paywall.iapTitle"),
-          storeReady ? t("paywall.productMissing") : t("paywall.iapSoon"),
+          t('paywall.iapTitle'),
+          storeReady ? t('paywall.productMissing') : t('paywall.iapSoon'),
         );
         return;
       }
-      if (result.status === "error") {
-        Alert.alert(t("paywall.iapTitle"), t("paywall.iapError"));
+      if (result.status === 'error') {
+        Alert.alert(t('paywall.iapTitle'), t('paywall.iapError'));
       }
     } finally {
       setBusy(false);
@@ -100,23 +99,23 @@ export default function PaywallScreen() {
     setBusy(true);
     try {
       const result = await restorePurchases();
-      if (result.status === "restored") {
+      if (result.status === 'restored') {
         Haptics.notificationAsync(
           Haptics.NotificationFeedbackType.Success,
         ).catch(() => {});
-        Alert.alert(t("paywall.restoreTitle"), t("paywall.restoreOk"));
-        router.replace("/(tabs)");
+        Alert.alert(t('paywall.restoreTitle'), t('paywall.restoreOk'));
+        router.replace('/(tabs)');
         return;
       }
-      if (result.status === "none") {
-        Alert.alert(t("paywall.restoreTitle"), t("paywall.restoreNone"));
+      if (result.status === 'none') {
+        Alert.alert(t('paywall.restoreTitle'), t('paywall.restoreNone'));
         return;
       }
-      if (result.status === "unavailable") {
-        Alert.alert(t("paywall.iapTitle"), t("paywall.iapSoon"));
+      if (result.status === 'unavailable') {
+        Alert.alert(t('paywall.iapTitle'), t('paywall.iapSoon'));
         return;
       }
-      Alert.alert(t("paywall.restoreTitle"), t("paywall.iapError"));
+      Alert.alert(t('paywall.restoreTitle'), t('paywall.iapError'));
     } finally {
       setBusy(false);
     }
@@ -126,26 +125,26 @@ export default function PaywallScreen() {
     <Screen>
       <View style={styles.topBar}>
         <GlassCircle
-          accessibilityLabel={t("back")}
+          accessibilityLabel={t('back')}
           onPress={() => router.back()}
           size={40}
         >
-          <Icon name="chevron-back" size={20} color={colors.label} />
+          <Icon name='chevron-back' size={20} color={colors.label} />
         </GlassCircle>
       </View>
 
       <Title style={{ marginTop: space.sm }}>THE PILL+</Title>
-      <Body style={{ marginTop: space.sm }}>{t("paywall.sub")}</Body>
+      <Body style={{ marginTop: space.sm }}>{t('paywall.sub')}</Body>
 
       <View style={styles.box}>
-        <Caption style={{ color: colors.accent, textTransform: "none" }}>
-          {t("paywall.includes")}
+        <Caption style={{ color: colors.accent, textTransform: 'none' }}>
+          {t('paywall.includes')}
         </Caption>
         {[
-          t("paywall.all"),
-          t("paywall.pro"),
-          t("paywall.offline"),
-          t("paywall.new"),
+          t('paywall.all'),
+          t('paywall.pro'),
+          t('paywall.offline'),
+          t('paywall.new'),
         ].map((line) => (
           <Body key={line} style={{ marginTop: space.sm, color: colors.label }}>
             — {line}
@@ -156,23 +155,23 @@ export default function PaywallScreen() {
       <View style={styles.actions}>
         {hasPlus ? (
           <PrimaryButton
-            label={t("paywall.active")}
+            label={t('paywall.active')}
             onPress={() => router.back()}
           />
         ) : (
           <>
             <PrimaryButton
-              label={planLabel(t, month, "month", demo)}
-              onPress={() => subscribe("month")}
+              label={planLabel(t, month, 'month', demo)}
+              onPress={() => subscribe('month')}
               disabled={busy}
             />
             <SecondaryButton
-              label={planLabel(t, year, "year", demo)}
-              onPress={() => subscribe("year")}
+              label={planLabel(t, year, 'year', demo)}
+              onPress={() => subscribe('year')}
               disabled={busy}
             />
             <GhostButton
-              label={t("paywall.restore")}
+              label={t('paywall.restore')}
               onPress={restore}
               disabled={busy}
             />
@@ -180,21 +179,22 @@ export default function PaywallScreen() {
         )}
       </View>
 
+      {!hasPlus && !demo ? (
+        <Caption style={styles.footerText}>{t('paywall.billingNote')}</Caption>
+      ) : null}
+
       <View style={styles.legalRow}>
         <GhostButton
-          label={t("legal.privacyLink")}
-          onPress={() => openLegal("privacy", router)}
+          label={t('legal.privacyLink')}
+          onPress={() => openLegal('privacy', router)}
         />
         <GhostButton
-          label={t("legal.termsLink")}
-          onPress={() => openLegal("terms", router)}
+          label={t('legal.termsLink')}
+          onPress={() => openLegal('terms', router)}
         />
       </View>
 
-      <Caption style={styles.footerText}>
-        {t("legal")}
-        {demo ? ` ${t("paywall.demo")}` : ""}
-      </Caption>
+      <Caption style={styles.footerText}>{t('legal')}</Caption>
 
       <View style={styles.bottomSpace} />
     </Screen>
@@ -203,9 +203,9 @@ export default function PaywallScreen() {
 
 const styles = StyleSheet.create({
   topBar: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "flex-start",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
     marginBottom: space.md,
   },
   box: {
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
     borderRadius: radii.xl,
   },
   actions: {
-    width: "100%",
+    width: '100%',
     gap: space.sm,
     marginTop: space.md,
   },
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
   },
   footerText: {
     marginTop: space.sm,
-    textTransform: "none",
+    textTransform: 'none',
   },
   bottomSpace: {
     height: space.lg,

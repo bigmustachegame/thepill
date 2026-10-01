@@ -123,7 +123,7 @@
   "purpose.CREATIVE": "Beklenmedik fikirlere yer aç",
   "purpose.GROUND": "Şimdiki ana geri dön",
   "purpose.FEAR": "Karanlığı ve gerilimi bilerek seç",
-  "purpose.PRO": "Erotik hisset",
+  "purpose.PRO": "Sıcaklık, yakınlık ve samimiyet",
   "feeling.anxious": "Endişeli",
   "feeling.numb": "Hissiz",
   "feeling.restless": "Huzursuz",
@@ -169,8 +169,8 @@
   "legal.termsLink": "Koşullar",
   "legal.privacyBody": "Son güncelleme: 2026-03-29\n\nTHE PILL (\"biz\", \"uygulama\") profil ve dinleme verilerinizi bu cihazda yerel depolamada tutar. Adınızı, favorilerinizi, geçmişinizi veya puanlarınızı alan bir sunucu yoktur.\n\nCihazda tutulabilecek veriler: görünen ad, ruh hali yanıtları, dinleme günlüğü, puanlar, indirilen kütüphane, üyelik durumu ve dil tercihi. E-posta adresi toplamıyoruz.\n\nProfil'deki Hesabı sil ile bu verileri istediğiniz zaman silebilirsiniz. Çıkış yapmak bu cihazdaki aktif profili temizler.\n\nSes deneyimleri tıbbi tedavi değildir. İleride bulut özellikleri (yayın, hesap, ödeme) eklenirse bu politika güncellenir ve mağaza için genel HTTPS kopyası yayınlanır.\n\nİletişim: support@thepill.app",
   "legal.termsBody": "Son güncelleme: 2026-03-29\n\nTHE PILL’i kullanarak ilk açılıştaki Deneyim sözleşmesini ve bu Koşulları kabul etmiş olursunuz.\n\nTHE PILL sürükleyici ses seansları sunar. “Hap” ve “kapsül” ses için mecazlardır. Uygulama ilaç, terapi veya profesyonel bakımın yerine geçmez.\n\n18 yaşından büyük olmalısınız. Seans sırasında veya hemen sonrasında araç kullanmayın. Rahatsız olursanız seansı durdurun.\n\nTHE PILL+ abonelikleri uygulama içi satın alma bağlandığında App Store veya Google Play üzerinden faturalanır. İptal/yönetim mağaza hesabınızdan yapılır. Geliştirme demoları ücretli hak değildir.\n\nKoşullar güncellenebilir; uygulama içi güncellemeden sonra kullanmaya devam etmek kabul sayılır. Destek: support@thepill.app",
-  "paywall.monthDemo": "{price} / ay · Denemeyi aç",
-  "paywall.yearDemo": "{price} / yıl · Denemeyi aç",
+  "paywall.monthDemo": "{price} / ay",
+  "paywall.yearDemo": "{price} / yıl",
   "paywall.restore": "Satın alımları geri yükle",
   "paywall.restoreTitle": "Geri yükle",
   "paywall.restoreOk": "THE PILL+ erişimin geri yüklendi.",
@@ -196,7 +196,7 @@
   "library.deleteYes": "Sil",
   "library.deleteCancel": "Vazgeç",
   "paywall.productMissing": "Abonelik ürünleri henüz görünmüyor. App Store Connect ve RevenueCat offering’lerini kontrol et.",
-  "paywall.billingNote": "Ödeme Apple ID / Google hesabına yansır. İstediğin zaman mağaza aboneliklerinden iptal edebilirsin.",
+  "paywall.billingNote": "Abonelik iptal edilene kadar otomatik yenilenir. Ödeme Apple ID / Google hesabına yansır. Dönem bitmeden en az 24 saat önce, mağaza aboneliklerinden istediğin zaman iptal edebilirsin.",
   "profile.manageSub": "Aboneliği yönet",
   "profile.greeting": "iyi seanslar"
 }

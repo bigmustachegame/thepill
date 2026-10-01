@@ -13,18 +13,21 @@
       "backgroundColor": "#0C0D14"
     },
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "com.thepill.app",
-      "buildNumber": "1",
       "infoPlist": {
-        "UIBackgroundModes": ["audio"],
+        "UIBackgroundModes": [
+          "audio"
+        ],
         "ITSAppUsesNonExemptEncryption": false
       },
       "privacyManifests": {
         "NSPrivacyAccessedAPITypes": [
           {
             "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
-            "NSPrivacyAccessedAPITypeReasons": ["CA92.1"]
+            "NSPrivacyAccessedAPITypeReasons": [
+              "CA92.1"
+            ]
           }
         ]
       }
@@ -38,7 +41,12 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "permissions": []
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -69,9 +77,10 @@
     },
     "extra": {
       "eas": {
-        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
-      }
+        "projectId": "e65499d8-d971-4b31-98eb-51eca31dad19"
+      },
+      "router": {}
     },
-    "owner": "REPLACE_WITH_EXPO_ACCOUNT_SLUG"
+    "owner": "ytezcan"
   }
 }

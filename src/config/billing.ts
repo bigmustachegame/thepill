@@ -2,11 +2,11 @@
  * Store product IDs + RevenueCat keys.
  *
  * App Store Connect / Play Console must create these subscription products,
- * then attach them to a RevenueCat offering (default) with entitlement `plus`.
+ * then attach them to a RevenueCat offering (default) with entitlement `the_pill`.
  */
 export const BILLING_CONFIG = {
   /** RevenueCat entitlement that unlocks THE PILL+ */
-  entitlementId: "plus",
+  entitlementId: "the_pill",
 
   /** App Store / Play product identifiers */
   products: {

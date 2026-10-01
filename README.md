@@ -33,17 +33,17 @@ CI runs `typecheck` + `verify:content` on push/PR (`.github/workflows/ci.yml`).
 
 ## Production checklist (current)
 
-| Area | Status |
-|------|--------|
-| UI / onboarding / Favorites | Ready |
-| Privacy / Terms (in-app) | Ready — host HTTPS URLs later in `src/config/app.ts` |
-| Account deletion | Ready (local wipe) |
-| Error boundary | Ready |
-| EAS config | `eas.json` + build numbers — set real `extra.eas.projectId` |
-| Billing | Facade in `src/lib/billing.ts` — demo unlock **only in `__DEV__`**; wire RevenueCat/StoreKit next |
-| Streaming audio library | **Not yet** — only 3 free capsules bundled |
-| Real auth (Apple/Google) | Not yet — local profile |
-| Crash reporting (Sentry) | Shim in `src/lib/monitoring.ts` — add DSN later |
+| Area                        | Status                                                                                |
+| --------------------------- | ------------------------------------------------------------------------------------- |
+| UI / onboarding / Favorites | Ready                                                                                 |
+| Privacy / Terms (in-app)    | Ready — host HTTPS URLs later in `src/config/app.ts`                                  |
+| Account deletion            | Ready (local wipe)                                                                    |
+| Error boundary              | Ready                                                                                 |
+| EAS config                  | `eas.json` + build numbers — set real `extra.eas.projectId`                           |
+| Billing                     | Facade in `src/lib/billing.ts` — **only in `__DEV__`**; wire RevenueCat/StoreKit next |
+| Streaming audio library     | **Not yet** — only 3 free capsules bundled                                            |
+| Real auth (Apple/Google)    | Not yet — local profile                                                               |
+| Crash reporting (Sentry)    | Shim in `src/lib/monitoring.ts` — add DSN later                                       |
 
 ## Prototype / next limitations
 

@@ -2,32 +2,32 @@
  * THE PILL+ billing — RevenueCat + App Store / Play subscriptions.
  *
  * - Production: real IAP via RevenueCat (requires API keys + store products).
- * - __DEV__ without keys: local demo unlock (no charge).
+ * - __DEV__ without keys: local  (no charge).
  */
 
-import { Linking, Platform } from "react-native";
+import { Linking, Platform } from 'react-native';
 import Purchases, {
   LOG_LEVEL,
   PACKAGE_TYPE,
   type CustomerInfo,
   type PurchasesPackage,
-} from "react-native-purchases";
-import { BILLING_CONFIG, type BillingPlan } from "../config/billing";
-import { useAppStore } from "../store/appStore";
+} from 'react-native-purchases';
+import { BILLING_CONFIG, type BillingPlan } from '../config/billing';
+import { useAppStore } from '../store/appStore';
 
 export type { BillingPlan };
 
 export type PurchaseResult =
-  | { status: "ok" }
-  | { status: "cancelled" }
-  | { status: "unavailable"; reason: string }
-  | { status: "error"; reason: string };
+  | { status: 'ok' }
+  | { status: 'cancelled' }
+  | { status: 'unavailable'; reason: string }
+  | { status: 'error'; reason: string };
 
 export type RestoreResult =
-  | { status: "restored" }
-  | { status: "none" }
-  | { status: "unavailable"; reason: string }
-  | { status: "error"; reason: string };
+  | { status: 'restored' }
+  | { status: 'none' }
+  | { status: 'unavailable'; reason: string }
+  | { status: 'error'; reason: string };
 
 export type PlanPricing = {
   plan: BillingPlan;
@@ -40,9 +40,9 @@ let configured = false;
 let configuring: Promise<boolean> | null = null;
 
 function apiKeyForPlatform(): string {
-  if (Platform.OS === "ios") return BILLING_CONFIG.iosApiKey;
-  if (Platform.OS === "android") return BILLING_CONFIG.androidApiKey;
-  return "";
+  if (Platform.OS === 'ios') return BILLING_CONFIG.iosApiKey;
+  if (Platform.OS === 'android') return BILLING_CONFIG.androidApiKey;
+  return '';
 }
 
 /** True when store SDK keys are present (real IAP path). */
@@ -51,14 +51,12 @@ export function isStoreBillingConfigured(): boolean {
 }
 
 /**
- * Demo unlock only in development builds without RevenueCat keys.
+ *  only in development builds without RevenueCat keys.
  * Production never uses this path.
  */
 export function isDemoBilling(): boolean {
   return (
-    typeof __DEV__ !== "undefined" &&
-    __DEV__ &&
-    !isStoreBillingConfigured()
+    typeof __DEV__ !== 'undefined' && __DEV__ && !isStoreBillingConfigured()
   );
 }
 function applyEntitlement(info: CustomerInfo | null | undefined) {
@@ -113,9 +111,7 @@ export async function syncPlusEntitlement(): Promise<boolean> {
   try {
     const info = await Purchases.getCustomerInfo();
     applyEntitlement(info);
-    return Boolean(
-      info.entitlements.active[BILLING_CONFIG.entitlementId],
-    );
+    return Boolean(info.entitlements.active[BILLING_CONFIG.entitlementId]);
   } catch {
     return useAppStore.getState().hasPlus;
   }
@@ -129,7 +125,7 @@ function packageForPlan(
   const byId = packages.find((p) => p.product.identifier === productId);
   if (byId) return byId;
 
-  if (plan === "month") {
+  if (plan === 'month') {
     return (
       packages.find((p) => p.packageType === PACKAGE_TYPE.MONTHLY) ??
       packages.find((p) => /month/i.test(p.identifier))
@@ -144,12 +140,12 @@ function packageForPlan(
 export async function fetchPlanPricing(): Promise<PlanPricing[]> {
   const fallback: PlanPricing[] = [
     {
-      plan: "month",
+      plan: 'month',
       productId: BILLING_CONFIG.products.month,
       priceString: BILLING_CONFIG.fallbackPrices.month,
     },
     {
-      plan: "year",
+      plan: 'year',
       productId: BILLING_CONFIG.products.year,
       priceString: BILLING_CONFIG.fallbackPrices.year,
     },
@@ -162,7 +158,7 @@ export async function fetchPlanPricing(): Promise<PlanPricing[]> {
     const pkgs = offerings.current?.availablePackages ?? [];
     if (!pkgs.length) return fallback;
 
-    return (["month", "year"] as BillingPlan[]).map((plan) => {
+    return (['month', 'year'] as BillingPlan[]).map((plan) => {
       const pkg = packageForPlan(pkgs, plan);
       return {
         plan,
@@ -180,11 +176,11 @@ export async function fetchPlanPricing(): Promise<PlanPricing[]> {
 export async function purchasePlus(plan: BillingPlan): Promise<PurchaseResult> {
   if (isDemoBilling()) {
     useAppStore.getState().unlockPlus();
-    return { status: "ok" };
+    return { status: 'ok' };
   }
 
   if (!(await configureBilling())) {
-    return { status: "unavailable", reason: "iap_not_configured" };
+    return { status: 'unavailable', reason: 'iap_not_configured' };
   }
 
   try {
@@ -192,7 +188,7 @@ export async function purchasePlus(plan: BillingPlan): Promise<PurchaseResult> {
     const pkgs = offerings.current?.availablePackages ?? [];
     const pkg = packageForPlan(pkgs, plan);
     if (!pkg) {
-      return { status: "unavailable", reason: "product_missing" };
+      return { status: 'unavailable', reason: 'product_missing' };
     }
 
     const { customerInfo } = await Purchases.purchasePackage(pkg);
@@ -200,13 +196,19 @@ export async function purchasePlus(plan: BillingPlan): Promise<PurchaseResult> {
     const ok = Boolean(
       customerInfo.entitlements.active[BILLING_CONFIG.entitlementId],
     );
-    return ok ? { status: "ok" } : { status: "error", reason: "no_entitlement" };
+    return ok
+      ? { status: 'ok' }
+      : { status: 'error', reason: 'no_entitlement' };
   } catch (e: unknown) {
-    const err = e as { userCancelled?: boolean; code?: string; message?: string };
-    if (err?.userCancelled) return { status: "cancelled" };
+    const err = e as {
+      userCancelled?: boolean;
+      code?: string;
+      message?: string;
+    };
+    if (err?.userCancelled) return { status: 'cancelled' };
     return {
-      status: "error",
-      reason: err?.message ?? "purchase_failed",
+      status: 'error',
+      reason: err?.message ?? 'purchase_failed',
     };
   }
 }
@@ -214,35 +216,33 @@ export async function purchasePlus(plan: BillingPlan): Promise<PurchaseResult> {
 export async function restorePurchases(): Promise<RestoreResult> {
   if (isDemoBilling()) {
     const hasPlus = useAppStore.getState().hasPlus;
-    return hasPlus ? { status: "restored" } : { status: "none" };
+    return hasPlus ? { status: 'restored' } : { status: 'none' };
   }
 
   if (!(await configureBilling())) {
-    return { status: "unavailable", reason: "iap_not_configured" };
+    return { status: 'unavailable', reason: 'iap_not_configured' };
   }
 
   try {
     const info = await Purchases.restorePurchases();
     applyEntitlement(info);
-    const ok = Boolean(
-      info.entitlements.active[BILLING_CONFIG.entitlementId],
-    );
-    return ok ? { status: "restored" } : { status: "none" };
+    const ok = Boolean(info.entitlements.active[BILLING_CONFIG.entitlementId]);
+    return ok ? { status: 'restored' } : { status: 'none' };
   } catch (e: unknown) {
     const err = e as { message?: string };
-    return { status: "error", reason: err?.message ?? "restore_failed" };
+    return { status: 'error', reason: err?.message ?? 'restore_failed' };
   }
 }
 
 /** Opens system subscription management (App Store / Play). */
 export async function openManageSubscriptions(): Promise<void> {
-  if (Platform.OS === "ios") {
-    await Linking.openURL("https://apps.apple.com/account/subscriptions");
+  if (Platform.OS === 'ios') {
+    await Linking.openURL('https://apps.apple.com/account/subscriptions');
     return;
   }
-  if (Platform.OS === "android") {
+  if (Platform.OS === 'android') {
     await Linking.openURL(
-      "https://play.google.com/store/account/subscriptions",
+      'https://play.google.com/store/account/subscriptions',
     );
   }
 }

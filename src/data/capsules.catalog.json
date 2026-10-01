@@ -181,7 +181,7 @@
     {
       "code": "C-05",
       "state": "CALM",
-      "name": "Kava",
+      "name": "Kavana",
       "file": "Kava.mp3",
       "sourceOriginal": "Kava.mp3",
       "free": false,
@@ -191,27 +191,27 @@
       "descriptionTr": "Topraklı, acele etmeyen, bedene yakın sakinlik.\n\nBeklenti: ağır-yumuşak uzuvlar ve daha az performans baskısı.",
       "translations": {
         "en": {
-          "name": "Kava",
+          "name": "Kavana",
           "description": "An earthy, unhurried calm with a grounded body mood.\n\nExpect heavy-soft limbs and less pressure to perform."
         },
         "tr": {
-          "name": "Kava",
+          "name": "Kavana",
           "description": "Topraklı, acele etmeyen, bedene yakın sakinlik.\n\nBeklenti: ağır-yumuşak uzuvlar ve daha az performans baskısı."
         },
         "fr": {
-          "name": "Kava",
+          "name": "Kavana",
           "description": "Un calme terreux et lent, ancré dans le corps.\n\nAttends-toi à des membres lourds-doux et moins de pression à performer."
         },
         "es": {
-          "name": "Kava",
+          "name": "Kavana",
           "description": "Una calma terrosa y sin prisa, anclada en el cuerpo.\n\nEspera miembros pesados-suaves y menos presión por rendir."
         },
         "ru": {
-          "name": "Kava",
+          "name": "Kavana",
           "description": "Земляное, неспешное спокойствие с опорой в теле.\n\nОжидай тяжёло-мягкие конечности и меньше давления «показать себя»."
         },
         "de": {
-          "name": "Kava",
+          "name": "Kavana",
           "description": "Erdige, gemächliche Ruhe mit Körper-Ground.\n\nErwarte schwer-weiche Glieder und weniger Performance-Druck."
         }
       }
@@ -219,7 +219,7 @@
     {
       "code": "C-06",
       "state": "CALM",
-      "name": "No Migraine",
+      "name": "Clear Head",
       "file": "AntiMigraine.mp3",
       "sourceOriginal": "AntiMigraine.mp3",
       "free": false,
@@ -229,27 +229,27 @@
       "descriptionTr": "Gergin kafa ve göz arkası baskı için düşük uyaranlı sakinlik.\n\nBeklenti: duyumun sesi düşer — çene ve kaş yumuşar.",
       "translations": {
         "en": {
-          "name": "No Migraine",
+          "name": "Clear Head",
           "description": "A low-stimulus calm for tense heads and pressure behind the eyes.\n\nExpect sensation volume to drop — jaw and brow soften."
         },
         "tr": {
-          "name": "No Migraine",
+          "name": "Clear Head",
           "description": "Gergin kafa ve göz arkası baskı için düşük uyaranlı sakinlik.\n\nBeklenti: duyumun sesi düşer — çene ve kaş yumuşar."
         },
         "fr": {
-          "name": "No Migraine",
+          "name": "Clear Head",
           "description": "Un calme bas stimuli pour tête tendue et pression derrière les yeux.\n\nAttends-toi à un volume sensoriel plus bas — mâchoire et front se relâchent."
         },
         "es": {
-          "name": "No Migraine",
+          "name": "Clear Head",
           "description": "Una calma de bajo estímulo para cabeza tensa y presión detrás de los ojos.\n\nEspera que baje el volumen de la sensación — se relajan mandíbula y ceño."
         },
         "ru": {
-          "name": "No Migraine",
+          "name": "Clear Head",
           "description": "Спокойствие с низкой стимуляцией для напряжённой головы.\n\nОжидай падение «громкости» ощущений — челюсть и лоб смягчаются."
         },
         "de": {
-          "name": "No Migraine",
+          "name": "Clear Head",
           "description": "Low-Stimulus-Ruhe für angespannte Köpfe und Druck hinter den Augen.\n\nErwarte leiseres Empfinden — Kiefer und Stirn weichen."
         }
       }
@@ -371,7 +371,7 @@
     {
       "code": "S-02",
       "state": "FEAR",
-      "name": "Insomniac",
+      "name": "Night Owl",
       "file": "Insomniac.mp3",
       "sourceOriginal": "Insomniac.mp3",
       "free": false,
@@ -381,27 +381,27 @@
       "descriptionTr": "Zihin kapanmayan huzursuz geceler için kapanış ritüeli.\n\nBeklenti: döngü düşünceler tutunmayı bırakır; uyku dalga dalga gelir.",
       "translations": {
         "en": {
-          "name": "Insomniac",
+          "name": "Night Owl",
           "description": "A wind-down sleep ritual for restless nights.\n\nExpect looping thoughts to lose grip; sleepiness arrives in waves."
         },
         "tr": {
-          "name": "Insomniac",
+          "name": "Night Owl",
           "description": "Zihin kapanmayan huzursuz geceler için kapanış ritüeli.\n\nBeklenti: döngü düşünceler tutunmayı bırakır; uyku dalga dalga gelir."
         },
         "fr": {
-          "name": "Insomniac",
+          "name": "Night Owl",
           "description": "Un rituel de descente pour les nuits agitées.\n\nAttends-toi à ce que les pensées en boucle perdent prise ; le sommeil arrive par vagues."
         },
         "es": {
-          "name": "Insomniac",
+          "name": "Night Owl",
           "description": "Un ritual de bajada para noches inquietas.\n\nEspera que los bucles pierdan agarre; el sueño llega en olas."
         },
         "ru": {
-          "name": "Insomniac",
+          "name": "Night Owl",
           "description": "Ритуал спуска для беспокойных ночей.\n\nОжидай, что петли мыслей ослабнут; сонливость приходит волнами."
         },
         "de": {
-          "name": "Insomniac",
+          "name": "Night Owl",
           "description": "Wind-down-Ritual für unruhige Nächte.\n\nErwarte, dass Gedankenloops greifen verlieren; Schläfrigkeit kommt in Wellen."
         }
       }
@@ -485,7 +485,7 @@
     {
       "code": "S-05",
       "state": "SLEEP",
-      "name": "Anesthe",
+      "name": "Anesta",
       "file": "Anesthesia.mp3",
       "sourceOriginal": "Anesthesia.mp3",
       "free": false,
@@ -495,27 +495,27 @@
       "descriptionTr": "Günü yavaşça söndüren geceye geçiş.\n\nBeklenti: duyusal ayrıntı kararır; yumuşak duruluk kalır.",
       "translations": {
         "en": {
-          "name": "Anesthe",
+          "name": "Anesta",
           "description": "A fade-to-night session that extinguishes the day gradually.\n\nExpect sensory detail to dim until soft stillness remains."
         },
         "tr": {
-          "name": "Anesthe",
+          "name": "Anesta",
           "description": "Günü yavaşça söndüren geceye geçiş.\n\nBeklenti: duyusal ayrıntı kararır; yumuşak duruluk kalır."
         },
         "fr": {
-          "name": "Anesthe",
+          "name": "Anesta",
           "description": "Une extinction progressive du jour vers la nuit.\n\nAttends-toi à des détails sensoriels qui s’atténuent jusqu’au silence doux."
         },
         "es": {
-          "name": "Anesthe",
+          "name": "Anesta",
           "description": "Una extinción gradual del día hacia la noche.\n\nEspera que el detalle sensorial se atenúe hasta una quietud suave."
         },
         "ru": {
-          "name": "Anesthe",
+          "name": "Anesta",
           "description": "Постепенное угасание дня в ночь.\n\nОжидай, что сенсорные детали потускнеют до мягкой неподвижности."
         },
         "de": {
-          "name": "Anesthe",
+          "name": "Anesta",
           "description": "Allmähliches Auslöschen des Tages in die Nacht.\n\nErwarte, dass sensorische Details dimmen bis weiche Stille bleibt."
         }
       }
@@ -561,7 +561,7 @@
     {
       "code": "S-07",
       "state": "SLEEP",
-      "name": "Morpheus",
+      "name": "Orpheus",
       "file": "Morpheus.mp3",
       "sourceOriginal": "Morpheus.mp3",
       "free": false,
@@ -571,27 +571,27 @@
       "descriptionTr": "Dinlenmeye çağıran sıcak, durgun uyku kapanışı.\n\nBeklenti: tetikte olma düşer, yatak kaçınılmaz gelir.",
       "translations": {
         "en": {
-          "name": "Morpheus",
+          "name": "Orpheus",
           "description": "A warm, still sleep close that invites rest.\n\nExpect vigilance to drop and bed to feel inevitable."
         },
         "tr": {
-          "name": "Morpheus",
+          "name": "Orpheus",
           "description": "Dinlenmeye çağıran sıcak, durgun uyku kapanışı.\n\nBeklenti: tetikte olma düşer, yatak kaçınılmaz gelir."
         },
         "fr": {
-          "name": "Morpheus",
+          "name": "Orpheus",
           "description": "Une fermeture chaude et immobile qui invite au repos.\n\nAttends-toi à une vigilance qui baisse et un lit qui devient évident."
         },
         "es": {
-          "name": "Morpheus",
+          "name": "Orpheus",
           "description": "Un cierre cálido e inmóvil que invita al descanso.\n\nEspera que baje la vigilancia y la cama se vuelva inevitable."
         },
         "ru": {
-          "name": "Morpheus",
+          "name": "Orpheus",
           "description": "Тёплое неподвижное завершение, зовущее к отдыху.\n\nОжидай падение бдительности — кровать становится неизбежной."
         },
         "de": {
-          "name": "Morpheus",
+          "name": "Orpheus",
           "description": "Warmer stiller Schlaf-Abschluss, der zur Ruhe einlädt.\n\nErwarte sinkende Wachsamkeit — Bett wird unvermeidlich."
         }
       }
@@ -789,7 +789,7 @@
     {
       "code": "F-06",
       "state": "FOCUS",
-      "name": "Ginko",
+      "name": "Ginka",
       "file": "Ginko.mp3",
       "sourceOriginal": "Ginko.mp3",
       "free": false,
@@ -799,27 +799,27 @@
       "descriptionTr": "Planlama veya çalışma için sabırlı tek fikir odağı.\n\nBeklenti: sıralı netlik — derinlik dağınıklığın yerini alır.",
       "translations": {
         "en": {
-          "name": "Ginko",
+          "name": "Ginka",
           "description": "A patient one-idea-at-a-time focus for planning or study.\n\nExpect sequential clarity — depth replaces scatter."
         },
         "tr": {
-          "name": "Ginko",
+          "name": "Ginka",
           "description": "Planlama veya çalışma için sabırlı tek fikir odağı.\n\nBeklenti: sıralı netlik — derinlik dağınıklığın yerini alır."
         },
         "fr": {
-          "name": "Ginko",
+          "name": "Ginka",
           "description": "Un focus patient, une idée à la fois, pour planifier ou étudier.\n\nAttends-toi à une clarté séquentielle — la profondeur remplace le scatter."
         },
         "es": {
-          "name": "Ginko",
+          "name": "Ginka",
           "description": "Un foco paciente, una idea a la vez, para planear o estudiar.\n\nEspera claridad secuencial — la profundidad reemplaza la dispersión."
         },
         "ru": {
-          "name": "Ginko",
+          "name": "Ginka",
           "description": "Терпеливый фокус «одна идея за раз» для планирования или учёбы.\n\nОжидай последовательную ясность — глубина вместо разброса."
         },
         "de": {
-          "name": "Ginko",
+          "name": "Ginka",
           "description": "Geduldiger Ein-Idee-Fokus für Planung oder Lernen.\n\nErwarte sequenzielle Klarheit — Tiefe statt Scatter."
         }
       }
@@ -979,7 +979,7 @@
     {
       "code": "E-04",
       "state": "EUPHORIA",
-      "name": "No Sadness",
+      "name": "Lighter Days",
       "file": "AntiSad.mp3",
       "sourceOriginal": "AntiSad.mp3",
       "free": false,
@@ -989,27 +989,27 @@
       "descriptionTr": "Ağır günler için daha hafif alan — destek, çare değil.\n\nBeklenti: baskı bir kademe iner, duygunun etrafında daha çok hava.",
       "translations": {
         "en": {
-          "name": "No Sadness",
+          "name": "Lighter Days",
           "description": "A lighter listening space for heavy days — support, not a cure.\n\nExpect pressure to ease a notch with more air around the feeling."
         },
         "tr": {
-          "name": "No Sadness",
+          "name": "Lighter Days",
           "description": "Ağır günler için daha hafif alan — destek, çare değil.\n\nBeklenti: baskı bir kademe iner, duygunun etrafında daha çok hava."
         },
         "fr": {
-          "name": "No Sadness",
+          "name": "Lighter Days",
           "description": "Un espace d’écoute plus léger pour jours lourds — soutien, pas remède.\n\nAttends-toi à une pression qui baisse d’un cran, avec plus d’air autour."
         },
         "es": {
-          "name": "No Sadness",
+          "name": "Lighter Days",
           "description": "Un espacio de escucha más ligero para días pesados — apoyo, no cura.\n\nEspera que la presión baje un punto, con más aire alrededor."
         },
         "ru": {
-          "name": "No Sadness",
+          "name": "Lighter Days",
           "description": "Более лёгкое пространство слушания для тяжёлых дней — поддержка, не лечение.\n\nОжидай, что давление спадает на ступень, с большим воздухом вокруг чувства."
         },
         "de": {
-          "name": "No Sadness",
+          "name": "Lighter Days",
           "description": "Leichterer Hörraum für schwere Tage — Support, keine Heilung.\n\nErwarte Druck, der eine Stufe sinkt, mit mehr Luft darum."
         }
       }
@@ -1207,7 +1207,7 @@
     {
       "code": "R-02",
       "state": "RESET",
-      "name": "Hangover",
+      "name": "Morning After",
       "file": "Hangover Cure.mp3",
       "sourceOriginal": "Hangover Cure.mp3",
       "free": false,
@@ -1217,27 +1217,27 @@
       "descriptionTr": "Sert gece veya aşırı yük sonrası yumuşak sabah toparlanması.\n\nBeklenti: daha nazik duyular — yumuşak kenarlar, yavaş ramp.",
       "translations": {
         "en": {
-          "name": "Hangover",
+          "name": "Morning After",
           "description": "A gentle morning recovery after rough nights or overdoing it.\n\nExpect kinder senses — softer edges and a slower ramp."
         },
         "tr": {
-          "name": "Hangover",
+          "name": "Morning After",
           "description": "Sert gece veya aşırı yük sonrası yumuşak sabah toparlanması.\n\nBeklenti: daha nazik duyular — yumuşak kenarlar, yavaş ramp."
         },
         "fr": {
-          "name": "Hangover",
+          "name": "Morning After",
           "description": "Une récupération matinale douce après une nuit difficile.\n\nAttends-toi à des sens plus doux — bords soft et montée plus lente."
         },
         "es": {
-          "name": "Hangover",
+          "name": "Morning After",
           "description": "Una recuperación matutina suave tras noches difíciles.\n\nEspera sentidos más amables — bordes soft y rampa más lenta."
         },
         "ru": {
-          "name": "Hangover",
+          "name": "Morning After",
           "description": "Мягкое утреннее восстановление после тяжёлой ночи.\n\nОжидай более добрые ощущения — мягкие края и медленный разгон."
         },
         "de": {
-          "name": "Hangover",
+          "name": "Morning After",
           "description": "Sanfte Morgen-Recovery nach rauen Nächten.\n\nErwarte sanftere Sinne — weichere Kanten, langsamere Rampe."
         }
       }
@@ -1245,7 +1245,7 @@
     {
       "code": "R-03",
       "state": "RESET",
-      "name": "QUIT!",
+      "name": "Break Free",
       "file": "QUIT!.mp3",
       "sourceOriginal": "QUIT!.mp3",
       "free": false,
@@ -1255,27 +1255,27 @@
       "descriptionTr": "Eski alışkanlık döngüsünü kesmeye destek reset.\n\nBeklenti: anlık seçim — istek gelebilir, otomatik evet gevşer.",
       "translations": {
         "en": {
-          "name": "QUIT!",
+          "name": "Break Free",
           "description": "A break-pattern reset for interrupting an old habit loop.\n\nExpect momentary choice — craving may knock, automatic yes loosens."
         },
         "tr": {
-          "name": "QUIT!",
+          "name": "Break Free",
           "description": "Eski alışkanlık döngüsünü kesmeye destek reset.\n\nBeklenti: anlık seçim — istek gelebilir, otomatik evet gevşer."
         },
         "fr": {
-          "name": "QUIT!",
+          "name": "Break Free",
           "description": "Un reset pour interrompre une boucle d’habitude.\n\nAttends-toi à un instant de choix — le craving peut frapper, le oui auto se desserre."
         },
         "es": {
-          "name": "QUIT!",
+          "name": "Break Free",
           "description": "Un reset para interrumpir un bucle de hábito.\n\nEspera un instante de elección — el craving puede llamar, el sí automático se afloja."
         },
         "ru": {
-          "name": "QUIT!",
+          "name": "Break Free",
           "description": "Сброс для разрыва старого цикла привычки.\n\nОжидай момент выбора — тяга может постучать, автоматическое «да» слабеет."
         },
         "de": {
-          "name": "QUIT!",
+          "name": "Break Free",
           "description": "Reset zum Unterbrechen einer Habit-Loop.\n\nErwarte Moment der Wahl — Craving klopft, automatisches Ja lockert."
         }
       }
@@ -1283,7 +1283,7 @@
     {
       "code": "R-04",
       "state": "RESET",
-      "name": "Prozium",
+      "name": "Equilibrium",
       "file": "Prozium.mp3",
       "sourceOriginal": "Prozium.mp3",
       "free": false,
@@ -1293,27 +1293,27 @@
       "descriptionTr": "Yüksek/düşük olmadan duygusal düz nötr atmosfer.\n\nBeklenti: tepki isteyen bir şey kalmayan düz sakinlik.",
       "translations": {
         "en": {
-          "name": "Prozium",
+          "name": "Equilibrium",
           "description": "An emotionally even neutral atmosphere without highs or lows.\n\nExpect flat calm where nothing demands a reaction."
         },
         "tr": {
-          "name": "Prozium",
+          "name": "Equilibrium",
           "description": "Yüksek/düşük olmadan duygusal düz nötr atmosfer.\n\nBeklenti: tepki isteyen bir şey kalmayan düz sakinlik."
         },
         "fr": {
-          "name": "Prozium",
+          "name": "Equilibrium",
           "description": "Une atmosphère émotionnellement neutre et égale.\n\nAttends-toi à un calme plat où rien n’exige de réaction."
         },
         "es": {
-          "name": "Prozium",
+          "name": "Equilibrium",
           "description": "Una atmósfera emocionalmente neutra y pareja.\n\nEspera calma plana donde nada exige reacción."
         },
         "ru": {
-          "name": "Prozium",
+          "name": "Equilibrium",
           "description": "Эмоционально ровная нейтральная атмосфера.\n\nОжидай плоское спокойствие, где ничего не требует реакции."
         },
         "de": {
-          "name": "Prozium",
+          "name": "Equilibrium",
           "description": "Emotional ebene, neutrale Atmosphäre.\n\nErwarte flache Ruhe, in der nichts Reaktion fordert."
         }
       }
@@ -1473,7 +1473,7 @@
     {
       "code": "T-04",
       "state": "GROUND",
-      "name": "Trip",
+      "name": "Voyage",
       "file": "Trip.mp3",
       "sourceOriginal": "Trip.mp3",
       "free": false,
@@ -1483,27 +1483,27 @@
       "descriptionTr": "Sabit hikâyesiz açık uçlu hayal yolculuğu.\n\nBeklenti: kayan sahneler — izle, sonra bırak.",
       "translations": {
         "en": {
-          "name": "Trip",
+          "name": "Voyage",
           "description": "An open-ended imaginative journey with no fixed story.\n\nExpect shifting scenes — follow what arises, then let it dissolve."
         },
         "tr": {
-          "name": "Trip",
+          "name": "Voyage",
           "description": "Sabit hikâyesiz açık uçlu hayal yolculuğu.\n\nBeklenti: kayan sahneler — izle, sonra bırak."
         },
         "fr": {
-          "name": "Trip",
+          "name": "Voyage",
           "description": "Un voyage imaginatif ouvert, sans histoire fixe.\n\nAttends-toi à des scènes qui changent — suis, puis laisse se dissoudre."
         },
         "es": {
-          "name": "Trip",
+          "name": "Voyage",
           "description": "Un viaje imaginativo abierto, sin historia fija.\n\nEspera escenas que cambian — síguelas y luego déjalas disolverse."
         },
         "ru": {
-          "name": "Trip",
+          "name": "Voyage",
           "description": "Открытое воображаемое путешествие без фиксированного сюжета.\n\nОжидай сменяющиеся сцены — следуй и отпускай."
         },
         "de": {
-          "name": "Trip",
+          "name": "Voyage",
           "description": "Offene imaginative Reise ohne feste Story.\n\nErwarte wechselnde Szenen — folgen, dann auflösen lassen."
         }
       }
@@ -1625,7 +1625,7 @@
     {
       "code": "T-08",
       "state": "TRANCE",
-      "name": "Lucy",
+      "name": "Diamond Sky",
       "file": "Lucy.mp3",
       "sourceOriginal": "Lucy.mp3",
       "free": false,
@@ -1635,27 +1635,27 @@
       "descriptionTr": "Kayan soyut desen ve renk transı.\n\nBeklenti: kaleidoskop imgeler — oyunbaz ve tuhaf.",
       "translations": {
         "en": {
-          "name": "Lucy",
+          "name": "Diamond Sky",
           "description": "A pattern-and-color trance of shifting abstract visuals.\n\nExpect kaleidoscopic mental imagery — playful and strange."
         },
         "tr": {
-          "name": "Lucy",
+          "name": "Diamond Sky",
           "description": "Kayan soyut desen ve renk transı.\n\nBeklenti: kaleidoskop imgeler — oyunbaz ve tuhaf."
         },
         "fr": {
-          "name": "Lucy",
+          "name": "Diamond Sky",
           "description": "Une trance de motifs et couleurs changeants.\n\nAttends-toi à une imagerie kaléidoscopique — ludique et étrange."
         },
         "es": {
-          "name": "Lucy",
+          "name": "Diamond Sky",
           "description": "Un trance de patrones y color cambiantes.\n\nEspera imaginería caleidoscópica — juguetona y extraña."
         },
         "ru": {
-          "name": "Lucy",
+          "name": "Diamond Sky",
           "description": "Транс узоров и меняющегося цвета.\n\nОжидай калейдоскопические образы — игривые и странные."
         },
         "de": {
-          "name": "Lucy",
+          "name": "Diamond Sky",
           "description": "Muster-und-Farbe-Trance wechselnder Abstraktion.\n\nErwarte kaleidoskopische Imagery — verspielt und seltsam."
         }
       }
@@ -1777,7 +1777,7 @@
     {
       "code": "T-12",
       "state": "FEAR",
-      "name": "Sonoran",
+      "name": "Sonora",
       "file": "Sonoran.mp3",
       "sourceOriginal": "Sonoran.mp3",
       "free": false,
@@ -1787,27 +1787,27 @@
       "descriptionTr": "Yoğun, alışılmadık derin yolculuk.\n\nBeklenti: teslimiyet isteyen dalış — hafif eğlence değil.",
       "translations": {
         "en": {
-          "name": "Sonoran",
+          "name": "Sonora",
           "description": "An intense unfamiliar deep-journey atmosphere.\n\nExpect immersion that asks for surrender — rich, not light entertainment."
         },
         "tr": {
-          "name": "Sonoran",
+          "name": "Sonora",
           "description": "Yoğun, alışılmadık derin yolculuk.\n\nBeklenti: teslimiyet isteyen dalış — hafif eğlence değil."
         },
         "fr": {
-          "name": "Sonoran",
+          "name": "Sonora",
           "description": "Un voyage dense et insolite.\n\nAttends-toi à une immersion qui demande du lâcher-prise."
         },
         "es": {
-          "name": "Sonoran",
+          "name": "Sonora",
           "description": "Un viaje denso e inusual.\n\nEspera una inmersión que pide rendición."
         },
         "ru": {
-          "name": "Sonoran",
+          "name": "Sonora",
           "description": "Плотное необычное глубокое путешествие.\n\nОжидай погружение, требующее сдачи — не лёгкое развлечение."
         },
         "de": {
-          "name": "Sonoran",
+          "name": "Sonora",
           "description": "Intensive unvertraute Deep-Journey.\n\nErwarte Immersion, die Hingabe will — nicht leichte Unterhaltung."
         }
       }
@@ -2271,37 +2271,37 @@
     {
       "code": "N-04",
       "state": "TRANCE",
-      "name": "Sevo",
+      "name": "Sevra",
       "file": "Sevoflurane.mp3",
       "sourceOriginal": "Sevoflurane.mp3",
       "free": false,
       "v1": true,
       "pro": false,
-      "description": "A soft anesthetic haze that lowers the volume on urgency.\n\nExpect edges to blur and the body to settle without forcing sleep.",
-      "descriptionTr": "Aciliyetin sesini kısan yumuşak anestezik pus.\n\nBeklenti: kenarlar bulanır, beden uykuya zorlamadan yerleşir.",
+      "description": "A soft hushed haze that lowers the volume on urgency.\n\nExpect edges to blur and the body to settle without forcing sleep.",
+      "descriptionTr": "Aciliyetin sesini kısan yumuşak dingin pus.\n\nBeklenti: kenarlar bulanır, beden uykuya zorlamadan yerleşir.",
       "translations": {
         "en": {
-          "name": "Sevo",
-          "description": "A soft anesthetic haze that lowers the volume on urgency.\n\nExpect edges to blur and the body to settle without forcing sleep."
+          "name": "Sevra",
+          "description": "A soft hushed haze that lowers the volume on urgency.\n\nExpect edges to blur and the body to settle without forcing sleep."
         },
         "tr": {
-          "name": "Sevo",
-          "description": "Aciliyetin sesini kısan yumuşak anestezik pus.\n\nBeklenti: kenarlar bulanır, beden uykuya zorlamadan yerleşir."
+          "name": "Sevra",
+          "description": "Aciliyetin sesini kısan yumuşak dingin pus.\n\nBeklenti: kenarlar bulanır, beden uykuya zorlamadan yerleşir."
         },
         "fr": {
-          "name": "Sevo",
-          "description": "Une brume anesthésique douce qui baisse le volume de l’urgence.\n\nAttends-toi à des contours flous et un corps qui se pose sans forcer le sommeil."
+          "name": "Sevra",
+          "description": "Une brume feutrée douce qui baisse le volume de l’urgence.\n\nAttends-toi à des contours flous et un corps qui se pose sans forcer le sommeil."
         },
         "es": {
-          "name": "Sevo",
-          "description": "Una bruma anestésica suave que baja el volumen de la urgencia.\n\nEspera bordes borrosos y un cuerpo que se asienta sin forzar el sueño."
+          "name": "Sevra",
+          "description": "Una bruma amortiguada suave que baja el volumen de la urgencia.\n\nEspera bordes borrosos y un cuerpo que se asienta sin forzar el sueño."
         },
         "ru": {
-          "name": "Sevo",
-          "description": "Мягкая анестетическая дымка, которая приглушает срочность.\n\nОжидай размытые края и тело, которое оседает без принуждения ко сну."
+          "name": "Sevra",
+          "description": "Мягкая приглушённая дымка, которая приглушает срочность.\n\nОжидай размытые края и тело, которое оседает без принуждения ко сну."
         },
         "de": {
-          "name": "Sevo",
+          "name": "Sevra",
           "description": "Weicher anästhetischer Dunst, der die Lautstärke der Dringlichkeit senkt.\n\nErwarte weichere Kanten und einen Körper, der sich setzt ohne Schlaf zu erzwingen."
         }
       }
@@ -2309,37 +2309,37 @@
     {
       "code": "N-05",
       "state": "TRANCE",
-      "name": "Iso",
+      "name": "Isora",
       "file": "Isoflurane.mp3",
       "sourceOriginal": "Isoflurane.mp3",
       "free": false,
       "v1": true,
       "pro": false,
-      "description": "A thicker anesthetic atmosphere that pulls awareness inward.\n\nExpect slower thoughts and a heavier, quieter presence.",
-      "descriptionTr": "Farkındalığı içe çeken daha yoğun anestezik atmosfer.\n\nBeklenti: yavaşlayan düşünceler, daha ağır ve sessiz varlık.",
+      "description": "A thicker hushed atmosphere that pulls awareness inward.\n\nExpect slower thoughts and a heavier, quieter presence.",
+      "descriptionTr": "Farkındalığı içe çeken daha yoğun dingin atmosfer.\n\nBeklenti: yavaşlayan düşünceler, daha ağır ve sessiz varlık.",
       "translations": {
         "en": {
-          "name": "Iso",
-          "description": "A thicker anesthetic atmosphere that pulls awareness inward.\n\nExpect slower thoughts and a heavier, quieter presence."
+          "name": "Isora",
+          "description": "A thicker hushed atmosphere that pulls awareness inward.\n\nExpect slower thoughts and a heavier, quieter presence."
         },
         "tr": {
-          "name": "Iso",
-          "description": "Farkındalığı içe çeken daha yoğun anestezik atmosfer.\n\nBeklenti: yavaşlayan düşünceler, daha ağır ve sessiz varlık."
+          "name": "Isora",
+          "description": "Farkındalığı içe çeken daha yoğun dingin atmosfer.\n\nBeklenti: yavaşlayan düşünceler, daha ağır ve sessiz varlık."
         },
         "fr": {
-          "name": "Iso",
-          "description": "Une atmosphère anesthésique plus dense qui tire l’attention vers l’intérieur.\n\nAttends-toi à des pensées plus lentes et une présence plus lourde et calme."
+          "name": "Isora",
+          "description": "Une atmosphère feutrée plus dense qui tire l’attention vers l’intérieur.\n\nAttends-toi à des pensées plus lentes et une présence plus lourde et calme."
         },
         "es": {
-          "name": "Iso",
-          "description": "Una atmósfera anestésica más densa que tira la atención hacia adentro.\n\nEspera pensamientos más lentos y una presencia más pesada y quieta."
+          "name": "Isora",
+          "description": "Una atmósfera amortiguada más densa que tira la atención hacia adentro.\n\nEspera pensamientos más lentos y una presencia más pesada y quieta."
         },
         "ru": {
-          "name": "Iso",
-          "description": "Более плотная анестетическая атмосфера, тянущая внимание внутрь.\n\nОжидай более медленные мысли и более тяжёлое, тихое присутствие."
+          "name": "Isora",
+          "description": "Более плотная приглушённая атмосфера, тянущая внимание внутрь.\n\nОжидай более медленные мысли и более тяжёлое, тихое присутствие."
         },
         "de": {
-          "name": "Iso",
+          "name": "Isora",
           "description": "Dichtere anästhetische Atmosphäre, die die Aufmerksamkeit nach innen zieht.\n\nErwarte langsamere Gedanken und eine schwerere, stillere Präsenz."
         }
       }
@@ -2347,37 +2347,37 @@
     {
       "code": "N-06",
       "state": "TRANCE",
-      "name": "Desf",
+      "name": "Desra",
       "file": "Desflurane.mp3",
       "sourceOriginal": "Desflurane.mp3",
       "free": false,
       "v1": true,
       "pro": false,
-      "description": "A fast anesthetic fade for quick grounding between spikes.\n\nExpect a sharp drop in alert tension — then hollow calm.",
-      "descriptionTr": "Yoğunluklar arası hızlı topraklama için hızlı anestezik soluk.\n\nBeklenti: uyanık gerilimde keskin düşüş — sonra boş sakinlik.",
+      "description": "A fast hushed fade for quick grounding between spikes.\n\nExpect a sharp drop in alert tension — then hollow calm.",
+      "descriptionTr": "Yoğunluklar arası hızlı topraklama için hızlı dingin soluk.\n\nBeklenti: uyanık gerilimde keskin düşüş — sonra boş sakinlik.",
       "translations": {
         "en": {
-          "name": "Desf",
-          "description": "A fast anesthetic fade for quick grounding between spikes.\n\nExpect a sharp drop in alert tension — then hollow calm."
+          "name": "Desra",
+          "description": "A fast hushed fade for quick grounding between spikes.\n\nExpect a sharp drop in alert tension — then hollow calm."
         },
         "tr": {
-          "name": "Desf",
-          "description": "Yoğunluklar arası hızlı topraklama için hızlı anestezik soluk.\n\nBeklenti: uyanık gerilimde keskin düşüş — sonra boş sakinlik."
+          "name": "Desra",
+          "description": "Yoğunluklar arası hızlı topraklama için hızlı dingin soluk.\n\nBeklenti: uyanık gerilimde keskin düşüş — sonra boş sakinlik."
         },
         "fr": {
-          "name": "Desf",
-          "description": "Une descente anesthésique rapide pour ancrer entre deux pics.\n\nAttends-toi à une chute nette de tension — puis un calme creux."
+          "name": "Desra",
+          "description": "Une descente feutrée rapide pour ancrer entre deux pics.\n\nAttends-toi à une chute nette de tension — puis un calme creux."
         },
         "es": {
-          "name": "Desf",
-          "description": "Una bajada anestésica rápida para anclar entre picos.\n\nEspera una caída nítida de tensión alerta — luego calma hueca."
+          "name": "Desra",
+          "description": "Una bajada amortiguada rápida para anclar entre picos.\n\nEspera una caída nítida de tensión alerta — luego calma hueca."
         },
         "ru": {
-          "name": "Desf",
-          "description": "Быстрое анестетическое угасание для быстрого заземления между всплесками.\n\nОжидай резкий спад настороженности — затем пустое спокойствие."
+          "name": "Desra",
+          "description": "Быстрое приглушённое угасание для быстрого заземления между всплесками.\n\nОжидай резкий спад настороженности — затем пустое спокойствие."
         },
         "de": {
-          "name": "Desf",
+          "name": "Desra",
           "description": "Schnelles anästhetisches Absinken zum schnellen Grounden zwischen Spikes.\n\nErwarte einen scharfen Abfall der Alert-Spannung — dann hohle Ruhe."
         }
       }
@@ -2803,7 +2803,7 @@
     {
       "code": "A-03",
       "state": "CREATIVE",
-      "name": "Morning Glory",
+      "name": "Morning Bloom",
       "file": "Morning Glory.mp3",
       "sourceOriginal": "Morning Glory.mp3",
       "free": false,
@@ -2813,27 +2813,27 @@
       "descriptionTr": "Taslak ve deneme için şafak yaratıcı ruhu.\n\nBeklenti: erken ışık iyimserliği — düşük risk, canlı.",
       "translations": {
         "en": {
-          "name": "Morning Glory",
+          "name": "Morning Bloom",
           "description": "A dawn-inspired creative mood for drafts and experiments.\n\nExpect early-light optimism — low-stakes and alive."
         },
         "tr": {
-          "name": "Morning Glory",
+          "name": "Morning Bloom",
           "description": "Taslak ve deneme için şafak yaratıcı ruhu.\n\nBeklenti: erken ışık iyimserliği — düşük risk, canlı."
         },
         "fr": {
-          "name": "Morning Glory",
+          "name": "Morning Bloom",
           "description": "Humeur créative d’aube pour brouillons et essais.\n\nAttends-toi à un optimisme de première lumière — low stakes, vivant."
         },
         "es": {
-          "name": "Morning Glory",
+          "name": "Morning Bloom",
           "description": "Ánimo creativo de amanecer para borradores y ensayos.\n\nEspera optimismo de primera luz — bajo riesgo, vivo."
         },
         "ru": {
-          "name": "Morning Glory",
+          "name": "Morning Bloom",
           "description": "Творческое настроение рассвета для черновиков и опытов.\n\nОжидай оптимизм раннего света — низкие ставки, живо."
         },
         "de": {
-          "name": "Morning Glory",
+          "name": "Morning Bloom",
           "description": "Dämmerungs-Kreativmood für Drafts und Experiments.\n\nErwarte Early-Light-Optimismus — low stakes, lebendig."
         }
       }
@@ -2841,7 +2841,7 @@
     {
       "code": "A-04",
       "state": "CREATIVE",
-      "name": "Black Sunshine",
+      "name": "Dark Sun",
       "file": "Black Sunshine.mp3",
       "sourceOriginal": "Black Sunshine.mp3",
       "free": false,
@@ -2851,27 +2851,27 @@
       "descriptionTr": "Parlak iyimserlik sahteyken karanlık imgelerle yaratıcılık.\n\nBeklenti: derinlik ve dürüst gölge dokusu.",
       "translations": {
         "en": {
-          "name": "Black Sunshine",
+          "name": "Dark Sun",
           "description": "A darker-imagery creative session when bright optimism feels thin.\n\nExpect depth and honest shadow texture."
         },
         "tr": {
-          "name": "Black Sunshine",
+          "name": "Dark Sun",
           "description": "Parlak iyimserlik sahteyken karanlık imgelerle yaratıcılık.\n\nBeklenti: derinlik ve dürüst gölge dokusu."
         },
         "fr": {
-          "name": "Black Sunshine",
+          "name": "Dark Sun",
           "description": "Créativité par l’imagerie sombre quand le bright sonne faux.\n\nAttends-toi à de la profondeur et une texture d’ombre honnête."
         },
         "es": {
-          "name": "Black Sunshine",
+          "name": "Dark Sun",
           "description": "Creatividad con imaginería oscura cuando el brillo suena falso.\n\nEspera profundidad y textura de sombra honesta."
         },
         "ru": {
-          "name": "Black Sunshine",
+          "name": "Dark Sun",
           "description": "Творчество через более тёмные образы, когда яркий оптимизм фальшив.\n\nОжидай глубину и честную теневую текстуру."
         },
         "de": {
-          "name": "Black Sunshine",
+          "name": "Dark Sun",
           "description": "Dunklere Imagery-Kreativität, wenn Bright falsch klingt.\n\nErwarte Tiefe und ehrliche Schatten-Textur."
         }
       }
@@ -2955,7 +2955,7 @@
     {
       "code": "G-02",
       "state": "TRANCE",
-      "name": "Green Fairy",
+      "name": "Emerald Fairy",
       "file": "Green Fairy.mp3",
       "sourceOriginal": "Green Fairy.mp3",
       "free": false,
@@ -2965,27 +2965,27 @@
       "descriptionTr": "Oyunbaz dokunuşlu gizemli rüya pusu.\n\nBeklenti: yumuşak garip sürüklenme; ince yönelim ipliği.",
       "translations": {
         "en": {
-          "name": "Green Fairy",
+          "name": "Emerald Fairy",
           "description": "An enigmatic dreamlike haze with a playful ground twist.\n\nExpect soft weird drift with a thin thread of orientation."
         },
         "tr": {
-          "name": "Green Fairy",
+          "name": "Emerald Fairy",
           "description": "Oyunbaz dokunuşlu gizemli rüya pusu.\n\nBeklenti: yumuşak garip sürüklenme; ince yönelim ipliği."
         },
         "fr": {
-          "name": "Green Fairy",
+          "name": "Emerald Fairy",
           "description": "Brume onirique énigmatique avec twist ludique.\n\nAttends-toi à une dérive douce avec un fil d’orientation."
         },
         "es": {
-          "name": "Green Fairy",
+          "name": "Emerald Fairy",
           "description": "Neblina onírica enigmática con giro juguetón.\n\nEspera deriva suave con un hilo fino de orientación."
         },
         "ru": {
-          "name": "Green Fairy",
+          "name": "Emerald Fairy",
           "description": "Загадочная сновидческая дымка с игривым твистом.\n\nОжидай мягкий странный дрейф с тонкой нитью ориентира."
         },
         "de": {
-          "name": "Green Fairy",
+          "name": "Emerald Fairy",
           "description": "Rätselhafte traumhafte Trübung mit spielerischem Twist.\n\nErwarte weichen Weird-Drift mit dünnem Orientierungsfaden."
         }
       }
@@ -3031,7 +3031,7 @@
     {
       "code": "G-04",
       "state": "TRANCE",
-      "name": "Mother Mary",
+      "name": "Mary's Garden",
       "file": "Mary Jane.mp3",
       "sourceOriginal": "Mary Jane.mp3",
       "free": false,
@@ -3041,27 +3041,27 @@
       "descriptionTr": "Puslu, kolay giden zemin.\n\nBeklenti: gevşek odak ve sıcak bulanıklık.",
       "translations": {
         "en": {
-          "name": "Mother Mary",
+          "name": "Mary's Garden",
           "description": "A hazy easygoing ground atmosphere.\n\nExpect loose focus and warm blur — priorities stop shouting."
         },
         "tr": {
-          "name": "Mother Mary",
+          "name": "Mary's Garden",
           "description": "Puslu, kolay giden zemin.\n\nBeklenti: gevşek odak ve sıcak bulanıklık."
         },
         "fr": {
-          "name": "Mother Mary",
+          "name": "Mary's Garden",
           "description": "Atmosphère brumeuse et easy.\n\nAttends-toi à un focus lâche et un flou chaud."
         },
         "es": {
-          "name": "Mother Mary",
+          "name": "Mary's Garden",
           "description": "Atmósfera brumosa y fácil.\n\nEspera foco suelto y blur cálido."
         },
         "ru": {
-          "name": "Mother Mary",
+          "name": "Mary's Garden",
           "description": "Дымчатая лёгкая атмосфера.\n\nОжидай свободный фокус и тёплый блюр."
         },
         "de": {
-          "name": "Mother Mary",
+          "name": "Mary's Garden",
           "description": "Dunstige easy Atmosphäre.\n\nErwarte losen Fokus und warmen Blur."
         }
       }
@@ -3069,7 +3069,7 @@
     {
       "code": "G-05",
       "state": "RESET",
-      "name": "Relief",
+      "name": "Ease",
       "file": "Relief.mp3",
       "sourceOriginal": "Relief.mp3",
       "free": false,
@@ -3079,27 +3079,27 @@
       "descriptionTr": "Stres sonrası sığınak sessizliği.\n\nBeklenti: güvenlik yumuşaması — omuzlar düşer.",
       "translations": {
         "en": {
-          "name": "Relief",
+          "name": "Ease",
           "description": "A sheltered quiet nest after stress or noise.\n\nExpect safety softening — shoulders drop, vigilance thins."
         },
         "tr": {
-          "name": "Relief",
+          "name": "Ease",
           "description": "Stres sonrası sığınak sessizliği.\n\nBeklenti: güvenlik yumuşaması — omuzlar düşer."
         },
         "fr": {
-          "name": "Relief",
+          "name": "Ease",
           "description": "Nid de silence abrité après stress ou bruit.\n\nAttends-toi à un adoucissement sécurisant — épaules qui descendent."
         },
         "es": {
-          "name": "Relief",
+          "name": "Ease",
           "description": "Nido de silencio cobijado tras estrés o ruido.\n\nEspera ablandamiento seguro — bajan los hombros."
         },
         "ru": {
-          "name": "Relief",
+          "name": "Ease",
           "description": "Укрытое тихое гнездо после стресса или шума.\n\nОжидай смягчение безопасности — плечи опускаются."
         },
         "de": {
-          "name": "Relief",
+          "name": "Ease",
           "description": "Geborgenes Stille-Nest nach Stress oder Lärm.\n\nErwarte Safety-Softening — Schultern sinken."
         }
       }
@@ -3183,7 +3183,7 @@
     {
       "code": "G-08",
       "state": "TRANCE",
-      "name": "Halot",
+      "name": "Halo",
       "file": "Halothane.mp3",
       "sourceOriginal": "Halothane.mp3",
       "free": false,
@@ -3193,27 +3193,27 @@
       "descriptionTr": "Dinlenmiş varlığa yavaş batan ağır zemin.\n\nBeklenti: beden ağırlaşır — hareketsizlik kolaylaşır.",
       "translations": {
         "en": {
-          "name": "Halot",
+          "name": "Halo",
           "description": "A heavy slowly sinking ground into restful presence.\n\nExpect denser body weight — stillness easier than motion."
         },
         "tr": {
-          "name": "Halot",
+          "name": "Halo",
           "description": "Dinlenmiş varlığa yavaş batan ağır zemin.\n\nBeklenti: beden ağırlaşır — hareketsizlik kolaylaşır."
         },
         "fr": {
-          "name": "Halot",
+          "name": "Halo",
           "description": "Thème lourd qui s’enfonce vers une présence reposante.\n\nAttends-toi à plus de poids corporel — l’immobilité devient facile."
         },
         "es": {
-          "name": "Halot",
+          "name": "Halo",
           "description": "Tema pesado que se hunde hacia presencia reposada.\n\nEspera más peso corporal — la quietud se vuelve fácil."
         },
         "ru": {
-          "name": "Halot",
+          "name": "Halo",
           "description": "Тяжёлая медленно тонущая тема к отдыхной присутствию.\n\nОжидай более плотный вес тела — неподвижность становится легче."
         },
         "de": {
-          "name": "Halot",
+          "name": "Halo",
           "description": "Schweres langsames Sinken in ruhevolle Präsenz.\n\nErwarte dichteres Körpergewicht — Stillsein wird leichter."
         }
       }
@@ -3259,7 +3259,7 @@
     {
       "code": "G-10",
       "state": "GROUND",
-      "name": "Sweet Air",
+      "name": "Sweet Breeze",
       "file": "Sweet Air.mp3",
       "sourceOriginal": "Sweet Air.mp3",
       "free": false,
@@ -3269,27 +3269,27 @@
       "descriptionTr": "Hafif oyunbaz dönen zemin enerjisi.\n\nBeklenti: nazik baş dönmeli neşe.",
       "translations": {
         "en": {
-          "name": "Sweet Air",
+          "name": "Sweet Breeze",
           "description": "A light playful spinning ground energy.\n\nExpect gentle giddy joy in head and chest."
         },
         "tr": {
-          "name": "Sweet Air",
+          "name": "Sweet Breeze",
           "description": "Hafif oyunbaz dönen zemin enerjisi.\n\nBeklenti: nazik baş dönmeli neşe."
         },
         "fr": {
-          "name": "Sweet Air",
+          "name": "Sweet Breeze",
           "description": "Énergie légère et tournoyante.\n\nAttends-toi à une joie doucement vertigineuse."
         },
         "es": {
-          "name": "Sweet Air",
+          "name": "Sweet Breeze",
           "description": "Energía ligera y giratoria.\n\nEspera alegría suavemente vertiginosa."
         },
         "ru": {
-          "name": "Sweet Air",
+          "name": "Sweet Breeze",
           "description": "Лёгкая игривая кружащая энергия.\n\nОжидай мягкую головокружительную радость."
         },
         "de": {
-          "name": "Sweet Air",
+          "name": "Sweet Breeze",
           "description": "Leichte verspielte Drehenergie.\n\nErwarte sanft schwindlige Freude."
         }
       }
@@ -3411,114 +3411,114 @@
     {
       "code": "P-01",
       "state": "PRO",
-      "name": "Climax",
+      "name": "Crescendo",
       "file": "Climax.mp3",
       "sourceOriginal": "Climax.mp3",
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "A sensual climax session of rise, peak, and release.\n\nExpect mounting charge, a crest, then soft aftershock at your own pace.",
-      "descriptionTr": "Yükseliş, doruk ve bırakmaya kurulu duyusal climax.\n\nBeklenti: artan yük, bir tepe, yumuşak artçı — kendi temposunda.",
+      "description": "A warm crescendo session of rise, peak, and release.\n\nExpect a slow build, a crest, then a soft afterglow at your own pace.",
+      "descriptionTr": "Yükseliş, doruk ve bırakmaya kurulu sıcak bir kreşendo.\n\nBeklenti: yavaş yükselen dalga, bir tepe, yumuşak bir dinginlik — kendi temposunda.",
       "translations": {
         "en": {
-          "name": "Climax",
-          "description": "A sensual climax session of rise, peak, and release.\n\nExpect mounting charge, a crest, then soft aftershock at your own pace."
+          "name": "Crescendo",
+          "description": "A warm crescendo session of rise, peak, and release.\n\nExpect a slow build, a crest, then a soft afterglow at your own pace."
         },
         "tr": {
-          "name": "Climax",
-          "description": "Yükseliş, doruk ve bırakmaya kurulu duyusal climax.\n\nBeklenti: artan yük, bir tepe, yumuşak artçı — kendi temposunda."
+          "name": "Crescendo",
+          "description": "Yükseliş, doruk ve bırakmaya kurulu sıcak bir kreşendo.\n\nBeklenti: yavaş yükselen dalga, bir tepe, yumuşak bir dinginlik — kendi temposunda."
         },
         "fr": {
-          "name": "Climax",
-          "description": "Séance sensuelle de montée, pic et lâcher.\n\nAttends-toi à une charge qui monte, une crête, puis un aftershock doux."
+          "name": "Crescendo",
+          "description": "Séance en crescendo : montée, sommet et lâcher-prise.\n\nAttends-toi à une montée lente, une crête, puis une douce accalmie."
         },
         "es": {
-          "name": "Climax",
-          "description": "Sesión sensual de subida, pico y liberación.\n\nEspera carga que monta, una cresta y un aftershock suave a tu ritmo."
+          "name": "Crescendo",
+          "description": "Sesión en crescendo de subida, cima y liberación.\n\nEspera una subida lenta, una cresta y una calma suave a tu ritmo."
         },
         "ru": {
-          "name": "Climax",
-          "description": "Чувственная сессия подъёма, пика и отпускания.\n\nОжидай нарастающий заряд, гребень и мягкий aftershock в своём темпе."
+          "name": "Crescendo",
+          "description": "Тёплая сессия-крещендо: подъём, вершина и отпускание.\n\nОжидай медленное нарастание, гребень и мягкое послесвечение в своём темпе."
         },
         "de": {
-          "name": "Climax",
-          "description": "Sinnliche Climax-Session aus Rise, Peak und Release.\n\nErwarte steigende Ladung, einen Kamm, dann weichen Aftershock im eigenen Tempo."
+          "name": "Crescendo",
+          "description": "Warme Crescendo-Session aus Anstieg, Gipfel und Loslassen.\n\nErwarte langsamen Aufbau, einen Kamm, dann sanftes Nachklingen im eigenen Tempo."
         }
       }
     },
     {
       "code": "P-02",
       "state": "PRO",
-      "name": "Multi Climax",
+      "name": "Waves",
       "file": "Multi Climax.mp3",
       "sourceOriginal": "Multi Climax.mp3",
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "A multi-climax theme of repeated peaks with soft valleys.\n\nExpect waves of build and ease — presence over forcing another peak.",
-      "descriptionTr": "Yumuşak vadili tekrarlayan doruk teması.\n\nBeklenti: dalgalar — varlık, zorlama değil.",
+      "description": "A theme of repeated waves with soft valleys between.\n\nExpect waves of build and ease — presence over forcing the next one.",
+      "descriptionTr": "Yumuşak vadili, tekrarlayan dalga teması.\n\nBeklenti: dalgalar — varlık, zorlama değil.",
       "translations": {
         "en": {
-          "name": "Multi Climax",
-          "description": "A multi-climax theme of repeated peaks with soft valleys.\n\nExpect waves of build and ease — presence over forcing another peak."
+          "name": "Waves",
+          "description": "A theme of repeated waves with soft valleys between.\n\nExpect waves of build and ease — presence over forcing the next one."
         },
         "tr": {
-          "name": "Multi Climax",
-          "description": "Yumuşak vadili tekrarlayan doruk teması.\n\nBeklenti: dalgalar — varlık, zorlama değil."
+          "name": "Waves",
+          "description": "Yumuşak vadili, tekrarlayan dalga teması.\n\nBeklenti: dalgalar — varlık, zorlama değil."
         },
         "fr": {
-          "name": "Multi Climax",
-          "description": "Thème multi-climax : pics répétés et vallées soft.\n\nAttends-toi à des vagues — présence plutôt que forcer un autre pic."
+          "name": "Waves",
+          "description": "Thème de vagues répétées et de vallées douces.\n\nAttends-toi à des vagues — présence plutôt que forcer la suivante."
         },
         "es": {
-          "name": "Multi Climax",
-          "description": "Tema multi-climax: picos repetidos y valles soft.\n\nEspera olas — presencia antes que forzar otro pico."
+          "name": "Waves",
+          "description": "Tema de olas repetidas con valles suaves.\n\nEspera olas — presencia antes que forzar la siguiente."
         },
         "ru": {
-          "name": "Multi Climax",
-          "description": "Тема multi-climax: повторяющиеся пики и мягкие долины.\n\nОжидай волны — присутствие важнее форсирования нового пика."
+          "name": "Waves",
+          "description": "Тема повторяющихся волн и мягких долин.\n\nОжидай волны — присутствие важнее форсирования следующей."
         },
         "de": {
-          "name": "Multi Climax",
-          "description": "Multi-Climax-Thema mit wiederholten Peaks und weichen Tälern.\n\nErwarte Wellen — Presence vor dem Erzwingen eines weiteren Peaks."
+          "name": "Waves",
+          "description": "Thema aus wiederkehrenden Wellen und weichen Tälern.\n\nErwarte Wellen — Präsenz vor dem Erzwingen der nächsten."
         }
       }
     },
     {
       "code": "P-03",
       "state": "PRO",
-      "name": "Aphrodisiac",
+      "name": "Velvet",
       "file": "Aphrodisiac.mp3",
       "sourceOriginal": "Aphrodisiac.mp3",
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "An aphrodisiac atmosphere of desire and intimacy.\n\nExpect warmth and skin-hunger — invitation rather than urgency.",
-      "descriptionTr": "Arzu ve yakınlık afrodizyak atmosferi.\n\nBeklenti: sıcaklık ve ten açlığı — davet, acele değil.",
+      "description": "A velvet atmosphere of warmth and closeness.\n\nExpect warmth and a wish for closeness — invitation rather than urgency.",
+      "descriptionTr": "Sıcaklık ve yakınlığın kadife atmosferi.\n\nBeklenti: sıcaklık ve yakınlık isteği — davet, acele değil.",
       "translations": {
         "en": {
-          "name": "Aphrodisiac",
-          "description": "An aphrodisiac atmosphere of desire and intimacy.\n\nExpect warmth and skin-hunger — invitation rather than urgency."
+          "name": "Velvet",
+          "description": "A velvet atmosphere of warmth and closeness.\n\nExpect warmth and a wish for closeness — invitation rather than urgency."
         },
         "tr": {
-          "name": "Aphrodisiac",
-          "description": "Arzu ve yakınlık afrodizyak atmosferi.\n\nBeklenti: sıcaklık ve ten açlığı — davet, acele değil."
+          "name": "Velvet",
+          "description": "Sıcaklık ve yakınlığın kadife atmosferi.\n\nBeklenti: sıcaklık ve yakınlık isteği — davet, acele değil."
         },
         "fr": {
-          "name": "Aphrodisiac",
-          "description": "Atmosphère aphrodisiaque de désir et d’intimité.\n\nAttends-toi à de la chaleur et de la faim de peau — invitation, pas rush."
+          "name": "Velvet",
+          "description": "Atmosphère de velours, chaleur et proximité.\n\nAttends-toi à de la chaleur et une envie de proximité — invitation, pas urgence."
         },
         "es": {
-          "name": "Aphrodisiac",
-          "description": "Atmósfera afrodisíaca de deseo e intimidad.\n\nEspera calor y hambre de piel — invitación, no prisa."
+          "name": "Velvet",
+          "description": "Atmósfera de terciopelo, calidez y cercanía.\n\nEspera calor y ganas de cercanía — invitación, no prisa."
         },
         "ru": {
-          "name": "Aphrodisiac",
-          "description": "Афродизиаковая атмосфера желания и близости.\n\nОжидай тепло и голод кожи — приглашение, не спешка."
+          "name": "Velvet",
+          "description": "Бархатная атмосфера тепла и близости.\n\nОжидай тепло и желание близости — приглашение, не спешка."
         },
         "de": {
-          "name": "Aphrodisiac",
-          "description": "Aphrodisiakische Atmosphäre aus Verlangen und Intimität.\n\nErwarte Wärme und Haut-Hunger — Einladung statt Rush."
+          "name": "Velvet",
+          "description": "Samtige Atmosphäre aus Wärme und Nähe.\n\nErwarte Wärme und den Wunsch nach Nähe — Einladung statt Eile."
         }
       }
     },
@@ -3531,70 +3531,70 @@
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "A rise session of sexual drive and readiness without performance script.\n\nExpect energy gathering low in the body as sensation, not demand.",
-      "descriptionTr": "Performanssız cinsel istek ve hazır oluş.\n\nBeklenti: bedenin altında toplanan enerji — duyum, talep değil.",
+      "description": "A rise session of inner drive and readiness without a performance script.\n\nExpect energy gathering in the body as sensation, not demand.",
+      "descriptionTr": "Performans baskısı olmadan içsel istek ve hazır oluş.\n\nBeklenti: bedende toplanan enerji — duyum, talep değil.",
       "translations": {
         "en": {
           "name": "Rise",
-          "description": "A rise session of sexual drive and readiness without performance script.\n\nExpect energy gathering low in the body as sensation, not demand."
+          "description": "A rise session of inner drive and readiness without a performance script.\n\nExpect energy gathering in the body as sensation, not demand."
         },
         "tr": {
           "name": "Rise",
-          "description": "Performanssız cinsel istek ve hazır oluş.\n\nBeklenti: bedenin altında toplanan enerji — duyum, talep değil."
+          "description": "Performans baskısı olmadan içsel istek ve hazır oluş.\n\nBeklenti: bedende toplanan enerji — duyum, talep değil."
         },
         "fr": {
           "name": "Rise",
-          "description": "Rise : élan sexuel et disponibilité sans script de performance.\n\nAttends-toi à une énergie qui se rassemble — sensation, pas preuve."
+          "description": "Rise : élan intérieur et disponibilité sans script de performance.\n\nAttends-toi à une énergie qui se rassemble — sensation, pas preuve."
         },
         "es": {
           "name": "Rise",
-          "description": "Rise: impulso sexual y disposición sin guion de rendimiento.\n\nEspera energía juntándose abajo — sensación, no exigencia."
+          "description": "Rise: impulso interior y disposición sin guion de rendimiento.\n\nEspera energía que se reúne en el cuerpo — sensación, no exigencia."
         },
         "ru": {
           "name": "Rise",
-          "description": "Rise: сексуальный драйв и готовность без сценария перформанса.\n\nОжидай сбор энергии внизу тела — ощущение, не требование."
+          "description": "Rise: внутренний драйв и готовность без сценария перформанса.\n\nОжидай сбор энергии в теле — ощущение, не требование."
         },
         "de": {
           "name": "Rise",
-          "description": "Rise: sexueller Drive und Bereitschaft ohne Performance-Skript.\n\nErwarte sich sammelnde Energie unten im Körper — Sensation, keine Forderung."
+          "description": "Rise: innerer Antrieb und Bereitschaft ohne Performance-Skript.\n\nErwarte sich sammelnde Energie im Körper — Empfindung, keine Forderung."
         }
       }
     },
     {
       "code": "P-05",
       "state": "PRO",
-      "name": "Erotic Dream",
+      "name": "Midnight Dream",
       "file": "Erotic Dream.mp3",
       "sourceOriginal": "Erotic Dream.mp3",
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "An erotic dreamscape of image, sensation, and soft blur.\n\nExpect half-dream visuals and body-tingle — follow what feels alive.",
-      "descriptionTr": "İmge ve yumuşak bulanıklıklı erotik rüya alanı.\n\nBeklenti: yarı rüya görselleri ve karıncalanma — canlı geleni izle.",
+      "description": "A midnight dreamscape of image, sensation, and soft blur.\n\nExpect half-dream visuals and a gentle tingle — follow what feels alive.",
+      "descriptionTr": "İmge ve yumuşak bulanıklıkla gece yarısı rüya alanı.\n\nBeklenti: yarı rüya görselleri ve hafif karıncalanma — canlı geleni izle.",
       "translations": {
         "en": {
-          "name": "Erotic Dream",
-          "description": "An erotic dreamscape of image, sensation, and soft blur.\n\nExpect half-dream visuals and body-tingle — follow what feels alive."
+          "name": "Midnight Dream",
+          "description": "A midnight dreamscape of image, sensation, and soft blur.\n\nExpect half-dream visuals and a gentle tingle — follow what feels alive."
         },
         "tr": {
-          "name": "Erotic Dream",
-          "description": "İmge ve yumuşak bulanıklıklı erotik rüya alanı.\n\nBeklenti: yarı rüya görselleri ve karıncalanma — canlı geleni izle."
+          "name": "Midnight Dream",
+          "description": "İmge ve yumuşak bulanıklıkla gece yarısı rüya alanı.\n\nBeklenti: yarı rüya görselleri ve hafif karıncalanma — canlı geleni izle."
         },
         "fr": {
-          "name": "Erotic Dream",
-          "description": "Paysage de rêve érotique : image, sensation, flou soft.\n\nAttends-toi à des visuals demi-rêve et des fourmillements — suis le vivant."
+          "name": "Midnight Dream",
+          "description": "Paysage de rêve de minuit : image, sensation, flou doux.\n\nAttends-toi à des visuels de demi-rêve et de légers fourmillements — suis le vivant."
         },
         "es": {
-          "name": "Erotic Dream",
-          "description": "Paisaje de sueño erótico: imagen, sensación y blur suave.\n\nEspera visuales a medio sueño y hormigueo — sigue lo vivo."
+          "name": "Midnight Dream",
+          "description": "Paisaje de sueño de medianoche: imagen, sensación y desenfoque suave.\n\nEspera visuales a medio sueño y un leve hormigueo — sigue lo vivo."
         },
         "ru": {
-          "name": "Erotic Dream",
-          "description": "Эротический сновидческий пейзаж: образ, ощущение, мягкий блюр.\n\nОжидай визуалы полусна и покалывание — следуй живому."
+          "name": "Midnight Dream",
+          "description": "Полуночный сновидческий пейзаж: образ, ощущение, мягкая дымка.\n\nОжидай визуалы полусна и лёгкое покалывание — следуй живому."
         },
         "de": {
-          "name": "Erotic Dream",
-          "description": "Erotische Traumlandschaft aus Bild, Sensation und softem Blur.\n\nErwarte Halbtraum-Visuals und Kribbeln — folge dem Lebendigen."
+          "name": "Midnight Dream",
+          "description": "Mitternächtliche Traumlandschaft aus Bild, Empfindung und weichem Schleier.\n\nErwarte Halbtraum-Bilder und leichtes Kribbeln — folge dem Lebendigen."
         }
       }
     },
@@ -3639,38 +3639,38 @@
     {
       "code": "P-07",
       "state": "PRO",
-      "name": "Succubus",
+      "name": "Siren",
       "file": "Succubus.mp3",
       "sourceOriginal": "Succubus.mp3",
       "free": false,
       "pro": true,
       "v1": true,
-      "description": "A succubus theme mixing pleasure with intentional edge.\n\nExpect charged contrast — stay in consent with yourself throughout.",
-      "descriptionTr": "Haz ile bilinçli kenarı karıştıran succubus teması.\n\nBeklenti: yüklü zıtlık — kendinle rızada kal.",
+      "description": "A siren theme mixing allure with an intentional edge.\n\nExpect charged contrast — stay at ease with yourself throughout.",
+      "descriptionTr": "Çekicilik ile bilinçli kenarı karıştıran siren teması.\n\nBeklenti: yüklü zıtlık — kendinle uyumda kal.",
       "translations": {
         "en": {
-          "name": "Succubus",
-          "description": "A succubus theme mixing pleasure with intentional edge.\n\nExpect charged contrast — stay in consent with yourself throughout."
+          "name": "Siren",
+          "description": "A siren theme mixing allure with an intentional edge.\n\nExpect charged contrast — stay at ease with yourself throughout."
         },
         "tr": {
-          "name": "Succubus",
-          "description": "Haz ile bilinçli kenarı karıştıran succubus teması.\n\nBeklenti: yüklü zıtlık — kendinle rızada kal."
+          "name": "Siren",
+          "description": "Çekicilik ile bilinçli kenarı karıştıran siren teması.\n\nBeklenti: yüklü zıtlık — kendinle uyumda kal."
         },
         "fr": {
-          "name": "Succubus",
-          "description": "Thème succubus : plaisir mêlé d’un bord choisi.\n\nAttends-toi à un contraste chargé — reste en consentement avec toi-même."
+          "name": "Siren",
+          "description": "Thème sirène : attrait mêlé d’un bord choisi.\n\nAttends-toi à un contraste chargé — reste en accord avec toi-même."
         },
         "es": {
-          "name": "Succubus",
-          "description": "Tema súcubo: placer mezclado con borde intencional.\n\nEspera contraste cargado — quédate en consentimiento contigo."
+          "name": "Siren",
+          "description": "Tema sirena: atracción mezclada con un borde intencional.\n\nEspera contraste cargado — quédate en sintonía contigo."
         },
         "ru": {
-          "name": "Succubus",
-          "description": "Тема суккуба: удовольствие, смешанное с выбранной гранью.\n\nОжидай заряженный контраст — оставайся в согласии с собой."
+          "name": "Siren",
+          "description": "Тема сирены: притяжение, смешанное с выбранной гранью.\n\nОжидай заряженный контраст — оставайся в согласии с собой."
         },
         "de": {
-          "name": "Succubus",
-          "description": "Succubus-Thema: Lust gemischt mit intentionaler Kante.\n\nErwarte geladenen Kontrast — bleib in Consent mit dir."
+          "name": "Siren",
+          "description": "Sirenen-Thema: Anziehung gemischt mit bewusster Kante.\n\nErwarte geladenen Kontrast — bleib im Einklang mit dir."
         }
       }
     }

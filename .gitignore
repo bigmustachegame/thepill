@@ -52,3 +52,6 @@ yarn-error.*
 iconThepill.png
 withoutbgicon.png
 .r2-upload*.log
+
+# Playwright MCP session output
+.playwright-mcp/
